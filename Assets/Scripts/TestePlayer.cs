@@ -7,10 +7,12 @@ public class TestePlayer : MonoBehaviour
     public MovimentJoystick movimentJoystick;
     public float playerSpeed;
     private Rigidbody2D rb;
+    public bool isAlive;
     // Start is called before the first frame update
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        isAlive = true;
     }
 
     private void FixedUpdate()
@@ -21,6 +23,16 @@ public class TestePlayer : MonoBehaviour
         }
         else
             rb.velocity = Vector2.zero;
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.CompareTag("EdgeOfPlayableArea"))
+        {
+            isAlive = false;
+            Destroy(gameObject, .5f);
+            Debug.Log("You Lose");
+        }
     }
 
 }
