@@ -567,6 +567,7 @@ MonoBehaviour:
   movimentJoystick: {fileID: 293901010}
   playerSpeed: 3
   isAlive: 0
+  spriteRenderer: {fileID: 953448279}
 --- !u!95 &953448282
 Animator:
   serializedVersion: 5
