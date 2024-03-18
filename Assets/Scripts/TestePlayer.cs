@@ -21,22 +21,25 @@ public class TestePlayer : MonoBehaviour
 
     private void FixedUpdate()
     {
-        // Verifica se o joystick está sendo movido
-        if (movimentJoystick.joystickVec != Vector2.zero)
+        if (isAlive)
         {
-            // Move o jogador de acordo com a direção do joystick e a velocidade do jogador
-            rb.velocity = movimentJoystick.joystickVec * playerSpeed;
+            // Verifica se o joystick está sendo movido
+            if (movimentJoystick.joystickVec != Vector2.zero)
+            {
+                // Move o jogador de acordo com a direção do joystick e a velocidade do jogador
+                rb.velocity = movimentJoystick.joystickVec * playerSpeed;
 
-            // Define os parâmetros da animação com base na direção do joystick
-            SetAnimationParameters(movimentJoystick.joystickVec);
-        }
-        else
-        {
-            // Se o joystick não estiver sendo movido, pare o jogador
-            rb.velocity = Vector2.zero;
+                // Define os parâmetros da animação com base na direção do joystick
+                SetAnimationParameters(movimentJoystick.joystickVec);
+            }
+            else
+            {
+                // Se o joystick não estiver sendo movido, pare o jogador
+                rb.velocity = Vector2.zero;
 
-            // Define a animação para o jogador parado
-            animator.SetBool("IsMoving", false);
+                // Define a animação para o jogador parado
+                animator.SetBool("IsMoving", false);
+            }
         }
     }
 
@@ -84,7 +87,6 @@ public class TestePlayer : MonoBehaviour
         if (collision.gameObject.CompareTag("EdgeOfPlayableArea"))
         {
             isAlive = false;
-            Destroy(gameObject, .5f);
             Debug.Log("You Lose");
         }
     }
