@@ -5,15 +5,22 @@ using UnityEngine;
 public class TestePlayer : MonoBehaviour
 {
     public MovimentJoystick movimentJoystick;
+    public GameManager gameManager;
+    public PlayerHealthBar playerHealthBar;
+
     public float playerSpeed;
     private Rigidbody2D rb;
     private Animator animator;
     public bool isAlive;
     public SpriteRenderer spriteRenderer;
 
-    // Start is called before the first frame update
+    
+    public int CurrentHealth;
     void Start()
     {
+        CurrentHealth = gameManager.PlayerMaxHealth;
+        playerHealthBar.SetMaxHealth(CurrentHealth);
+
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
         isAlive = true;
@@ -87,5 +94,22 @@ public class TestePlayer : MonoBehaviour
             Destroy(gameObject, .5f);
             Debug.Log("You Lose");
         }
+
+        if(collision.gameObject.CompareTag("Barril"))
+        {
+            TakeDamage(5);
+        }
+    }
+
+    void TakeDamage(int damage)
+    {
+        CurrentHealth -= damage;
+        playerHealthBar.SetHealth(CurrentHealth);
+        Imunidade(3);
+    }
+
+    void Imunidade(int time)
+    {
+
     }
 }

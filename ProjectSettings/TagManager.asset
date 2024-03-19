@@ -6,6 +6,7 @@ TagManager:
   tags:
   - EdgeOfPlayableArea
   - Obstaculo
+  - Barril
   layers:
   - Default
   - TransparentFX
