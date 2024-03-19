@@ -41,4 +41,13 @@ public class Obstaculos : MonoBehaviour
         yield return new WaitForSeconds(1);
         floatup = true;
     }
+
+    void OnCollisionEnter2D(Collision2D collision)
+    {
+        // Verifica a layer do objeto colidido
+        if (gameObject.CompareTag("Barril"))
+        {
+            Destroy(gameObject);
+        }
+    }
 }

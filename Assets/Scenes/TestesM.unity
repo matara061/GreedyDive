@@ -1278,6 +1278,7 @@ MonoBehaviour:
   gameManager: {fileID: 2003281924}
   playerHealthBar: {fileID: 250225926}
   playerSpeed: 3
+  boxCollider: {fileID: 953448283}
   isAlive: 0
   spriteRenderer: {fileID: 953448279}
   CurrentHealth: 0
