@@ -9,8 +9,16 @@ public class FishSwimming : MonoBehaviour
     public int moeda;
 
     public GameManager gameManager;
+    public DivingSceneManager divingSceneManager;
 
     private Vector3 swimDirection; // Direção de natação atual
+
+    private Dictionary<string, int> tagToMoeda = new Dictionary<string, int>
+    {
+        { "Bagre", 5 },
+        { "Tilapia", 10 },
+        { "Pacu", 20 }
+    };
 
     void Start()
     {
@@ -47,22 +55,14 @@ public class FishSwimming : MonoBehaviour
 
     void Valor()
     {
-        if (gameObject.CompareTag("Bagre"))
+        if (tagToMoeda.TryGetValue(gameObject.tag, out int valor))
         {
-            moeda = 5;
-        }
-        else if(gameObject.CompareTag("Tilapia"))
-        {
-            moeda = 10;
-        }
-        else if (gameObject.CompareTag("Pacu"))
-        {
-            moeda = 20;
+            moeda = valor;
         }
     }
 
     void Recompensa()
     {
-        gameManager.Money += moeda;
+        divingSceneManager.Money += moeda;
     }
 }

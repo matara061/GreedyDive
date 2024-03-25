@@ -9,6 +9,7 @@ TagManager:
   - Barril
   - GameManager
   - Bagre
+  - Pacu
   layers:
   - Default
   - TransparentFX
