@@ -8,6 +8,7 @@ TagManager:
   - Obstaculo
   - Barril
   - GameManager
+  - Bagre
   layers:
   - Default
   - TransparentFX
