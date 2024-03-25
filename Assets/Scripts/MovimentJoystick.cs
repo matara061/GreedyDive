@@ -13,7 +13,7 @@ public class MovimentJoystick : MonoBehaviour
     private Vector2 joystickTouchPos;
     private Vector2 joystickOriginalPos;
     private float joystickRadius;
-    
+
     void Start()
     {
         joystickOriginalPos = joystickBG.transform.position;
@@ -25,6 +25,10 @@ public class MovimentJoystick : MonoBehaviour
         joystick.transform.position = Input.mousePosition;
         joystickBG.transform.position = Input.mousePosition;
         joystickTouchPos = Input.mousePosition;
+       /* Vector3 worldTouchPosition = Camera.main.ScreenToWorldPoint(Input.GetTouch(0).position);
+        joystick.transform.position = Input.GetTouch(0).position;
+        joystickBG.transform.position = Input.GetTouch(0).position;
+        joystickTouchPos = Input.GetTouch(0).position;*/
     }
 
     public void Drag(BaseEventData baseEventData)
@@ -38,11 +42,12 @@ public class MovimentJoystick : MonoBehaviour
         if (joystickDist < joystickRadius)
         {
             joystick.transform.position = joystickTouchPos + joystickVec * joystickDist;
-        }else
+        }
+        else
         {
             joystick.transform.position = joystickTouchPos + joystickVec * joystickRadius;
         }
-        
+
     }
 
     public void PointerUp()

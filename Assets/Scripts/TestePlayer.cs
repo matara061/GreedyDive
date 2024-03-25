@@ -5,18 +5,35 @@ using UnityEngine;
 public class TestePlayer : MonoBehaviour
 {
     public MovimentJoystick movimentJoystick;
+    public GameManager gameManager;
+    public PlayerHealthBar playerHealthBar;
+
     public float playerSpeed;
+    private int segundos = 0;
     private Rigidbody2D rb;
     private Animator animator;
+    public BoxCollider2D boxCollider;
     public bool isAlive;
     public SpriteRenderer spriteRenderer;
 
-    // Start is called before the first frame update
+    
+    public int CurrentHealth;
     void Start()
     {
+        CurrentHealth = gameManager.PlayerMaxHealth;
+        playerHealthBar.SetMaxHealth(CurrentHealth);
+
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
         isAlive = true;
+    }
+
+    private void Update()
+    {
+        if(segundos != 0)
+        {
+            StartCoroutine(ReativarColliderAposDelay(segundos));
+        }
     }
 
     private void FixedUpdate()
@@ -89,5 +106,32 @@ public class TestePlayer : MonoBehaviour
             isAlive = false;
             Debug.Log("You Lose");
         }
+
+        if(collision.gameObject.CompareTag("Barril"))
+        {
+            TakeDamage(5);
+            Imunidade(3);
+        }
+    }
+
+    void TakeDamage(int damage)
+    {
+        CurrentHealth -= damage;
+        playerHealthBar.SetHealth(CurrentHealth);
+    }
+
+    void Imunidade(int time)
+    {
+        boxCollider.enabled = false;
+        segundos = time;
+    }
+
+    IEnumerator ReativarColliderAposDelay(int delay)
+    {
+        yield return new WaitForSeconds(delay);
+
+        // Reativa o Box Collider 2D após o atraso
+        boxCollider.enabled = true;
+        segundos = 0;
     }
 }
