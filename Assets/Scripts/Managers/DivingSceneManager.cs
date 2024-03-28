@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 
-public class DivingSceneManager : MonoBehaviour
+public class DivingSceneManager : MonoBehaviour, IDataPersistence
 {
     public GameManager gameManager;
 
@@ -16,6 +16,16 @@ public class DivingSceneManager : MonoBehaviour
     void Start()
     {
        
+    }
+
+    public void LoadData(GameData data)
+    {
+        this.Money = data.Money;
+    }
+
+    public void SaveData(ref GameData data)
+    {
+        data.Money = this.Money;
     }
 
     // Update is called once per frame
