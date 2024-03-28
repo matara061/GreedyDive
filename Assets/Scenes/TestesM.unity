@@ -347,7 +347,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 68c61f76cba6d5d469cfc7a3c270c067, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fileName: dataTeste.game
+  fileName: data.game
+  useEncryption: 1
 --- !u!4 &136899691
 Transform:
   m_ObjectHideFlags: 0
