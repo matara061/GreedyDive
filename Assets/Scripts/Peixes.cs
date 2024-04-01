@@ -21,7 +21,7 @@ public class FishSwimming : MonoBehaviour
     };
 
     void Start()
-    {
+    { 
         Valor();
         // Inicializa a direção de natação aleatoriamente
         swimDirection = Random.insideUnitSphere.normalized;

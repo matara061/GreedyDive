@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 public class DivingSceneManager : MonoBehaviour, IDataPersistence
 {
@@ -47,5 +48,10 @@ public class DivingSceneManager : MonoBehaviour, IDataPersistence
     public void Fim()
     {
         gameManager.BankMoney += Money;
+    }
+
+    public void Pause()
+    {
+        SceneManager.LoadScene("Pause", LoadSceneMode.Additive);
     }
 }
