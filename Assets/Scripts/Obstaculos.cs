@@ -5,6 +5,7 @@ using UnityEngine;
 public class Obstaculos : MonoBehaviour
 {
     private bool floatup;
+    private TestePlayer player;
 
     public float velocidadeRotacao = 50f;
     public float speed;
@@ -12,6 +13,7 @@ public class Obstaculos : MonoBehaviour
 
     void Start()
     {
+        player = FindAnyObjectByType<TestePlayer>();
         floatup = false;
     }
 
@@ -49,9 +51,24 @@ public class Obstaculos : MonoBehaviour
     void OnCollisionEnter2D(Collision2D collision)
     {
         // Verifica a layer do objeto colidido
-        if (gameObject.CompareTag("Barril"))
+       /* if (gameObject.CompareTag("Barril"))
         {
             Destroy(gameObject);
+        }*/
+
+        if (collision.gameObject.CompareTag("Player"))
+        {
+            ObstaculoDano();
+            Destroy(gameObject);
+        }
+    }
+
+    void ObstaculoDano()
+    {
+        Damage damage = GetComponent<Damage>();
+        if (damage != null)
+        {
+            player.TakeDamage(damage.damage);
         }
     }
 

@@ -135,6 +135,7 @@ GameObject:
   - component: {fileID: 38476763}
   - component: {fileID: 38476764}
   - component: {fileID: 38476765}
+  - component: {fileID: 38476766}
   m_Layer: 0
   m_Name: Barril
   m_TagString: Barril
@@ -245,6 +246,19 @@ MonoBehaviour:
   velocidadeRotacao: 50
   speed: 25
   rb: {fileID: 38476763}
+--- !u!114 &38476766
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 38476761}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8a6a86c4f9f156749bcbf7579e3af306, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damage: 0
 --- !u!1 &58806766
 GameObject:
   m_ObjectHideFlags: 0
@@ -2290,9 +2304,9 @@ GameObject:
   m_Component:
   - component: {fileID: 1697034580}
   - component: {fileID: 1697034579}
+  - component: {fileID: 1697034583}
   - component: {fileID: 1697034582}
   - component: {fileID: 1697034581}
-  - component: {fileID: 1697034583}
   m_Layer: 0
   m_Name: Peixe
   m_TagString: Pacu
@@ -2314,8 +2328,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   swimSpeed: 2
   rotationSpeed: 50
-  gameManager: {fileID: 1504156820}
-  divingSceneManager: {fileID: 545136730}
 --- !u!4 &1697034580
 Transform:
   m_ObjectHideFlags: 0

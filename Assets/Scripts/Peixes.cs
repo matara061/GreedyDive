@@ -7,13 +7,15 @@ public class FishSwimming : MonoBehaviour
     public float swimSpeed = 2f; // Velocidade de natação
     public float rotationSpeed = 5f; // Velocidade de rotação
 
-    public GameManager gameManager;
-    public DivingSceneManager divingSceneManager;
+    private GameManager gameManager;
+    private DivingSceneManager divingSceneManager;
 
     private Vector2 swimDirection; // Direção de natação atual
 
     void Start()
     {
+        gameManager = FindAnyObjectByType<GameManager>();
+        divingSceneManager = FindAnyObjectByType<DivingSceneManager>();
         // Inicializa a direção de natação aleatoriamente
         swimDirection = Random.insideUnitCircle.normalized;
     }
@@ -49,7 +51,6 @@ public class FishSwimming : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Player"))
         {
-            // mandar moeda para o game manager
             Recompensa();
             Destroy(gameObject);
         }

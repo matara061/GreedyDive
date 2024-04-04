@@ -107,17 +107,18 @@ public class TestePlayer : MonoBehaviour
             Debug.Log("You Lose");
         }
 
-        if(collision.gameObject.CompareTag("Barril"))
+       /* if(collision.gameObject.CompareTag("Barril"))
         {
             TakeDamage(5);
             Imunidade(3);
-        }
+        }*/
     }
 
-    void TakeDamage(int damage)
+    public void TakeDamage(int damage)
     {
         CurrentHealth -= damage;
         playerHealthBar.SetHealth(CurrentHealth);
+        Imunidade(3);
     }
 
     void Imunidade(int time)
