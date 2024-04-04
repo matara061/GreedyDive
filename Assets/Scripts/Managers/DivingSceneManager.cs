@@ -19,12 +19,12 @@ public class DivingSceneManager : MonoBehaviour, IDataPersistence
        
     }
 
-    public void LoadData(GameData data)
+    public void LoadData(GameData data) // jogar isso para o gameManager dps
     {
         this.Money = data.Money;
     }
 
-    public void SaveData(ref GameData data)
+    public void SaveData(ref GameData data) // jogar isso para o gameManager dps
     {
         data.Money = this.Money;
     }

@@ -5,7 +5,7 @@ using UnityEngine;
 public class Obstaculos : MonoBehaviour
 {
     private bool floatup;
-    private TestePlayer player;
+    private Player player;
 
     public float velocidadeRotacao = 50f;
     public float speed;
@@ -13,7 +13,7 @@ public class Obstaculos : MonoBehaviour
 
     void Start()
     {
-        player = FindAnyObjectByType<TestePlayer>();
+        player = FindAnyObjectByType<Player>();
         floatup = false;
     }
 

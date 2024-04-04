@@ -16,7 +16,7 @@ public class MyCamera : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-            if (player.GetComponent<TestePlayer>().isAlive)
+            if (player.GetComponent<Player>().isAlive)
             {
                 transform.position += speed * Time.deltaTime * Vector3.down;
             }
