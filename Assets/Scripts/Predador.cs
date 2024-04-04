@@ -4,26 +4,62 @@ using UnityEngine;
 
 public class Predador : MonoBehaviour
 {
-    public State currentState = State.Idle;
+    [SerializeField]
+    private float _speed;
 
-    void Update()
+    [SerializeField]
+    private float _rotationSpeed;
+
+    private Rigidbody2D _rigidbody;
+    private PlayerAwarenessController _playerAwarenessController;
+    private Vector2 _targetDirection;
+
+    private void Awake()
     {
-        switch (currentState)
+        _rigidbody = GetComponent<Rigidbody2D>();
+        _playerAwarenessController = GetComponent<PlayerAwarenessController>();
+    }
+
+    private void FixedUpdate()
+    {
+        UpdateTargetDirection();
+        RotateTowardsTarget();
+        SetVelocity();
+    }
+
+    private void UpdateTargetDirection()
+    {
+        if(_playerAwarenessController.AwareOfPlayer)
         {
-            case State.Idle:
-                Debug.Log("Waiting...");
-                break;
+            _targetDirection = _playerAwarenessController.DirectionToPlayer;
+        }
+        else
+        {
+            _targetDirection = Vector2.zero;
+        }
+    }
 
-            case State.Attack:
-                Debug.Log("Attacking!");
-                break;
+    private void RotateTowardsTarget()
+    {
+        if(_targetDirection == Vector2.zero)
+        {
+            return;
+        }
 
-            case State.Retreat:
-                Debug.Log("Run Away!");
-                break;
+        float targetAngle = Mathf.Atan2(_targetDirection.y, _targetDirection.x) * Mathf.Rad2Deg;
+        Quaternion targetRotation = Quaternion.Euler(new Vector3(0, 0, targetAngle));
+        transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, _rotationSpeed * Time.deltaTime);
+    }
+
+    private void SetVelocity()
+    {
+        if (_targetDirection == Vector2.zero)
+        {
+            _rigidbody.velocity = Vector2.zero;
+        }
+        else
+        {
+            _rigidbody.velocity = transform.right * _speed;
         }
     }
 }
-
-[System.Serializable]
-public enum State { Idle, Attack, Retreat }

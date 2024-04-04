@@ -6,25 +6,16 @@ public class FishSwimming : MonoBehaviour
 {
     public float swimSpeed = 2f; // Velocidade de natação
     public float rotationSpeed = 5f; // Velocidade de rotação
-    public int moeda;
 
     public GameManager gameManager;
     public DivingSceneManager divingSceneManager;
 
-    private Vector3 swimDirection; // Direção de natação atual
-
-    private Dictionary<string, int> tagToMoeda = new Dictionary<string, int>
-    {
-        { "Bagre", 5 },
-        { "Tilapia", 10 },
-        { "Pacu", 20 }
-    };
+    private Vector2 swimDirection; // Direção de natação atual
 
     void Start()
-    { 
-        Valor();
+    {
         // Inicializa a direção de natação aleatoriamente
-        swimDirection = Random.insideUnitSphere.normalized;
+        swimDirection = Random.insideUnitCircle.normalized;
     }
 
     void Update()
@@ -33,14 +24,25 @@ public class FishSwimming : MonoBehaviour
         transform.Translate(swimDirection * swimSpeed * Time.deltaTime);
 
         // Rotaciona o peixe suavemente na direção de natação
-       // Quaternion targetRotation = Quaternion.LookRotation(swimDirection);
-      //  transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, rotationSpeed * Time.deltaTime);
+        RotateTowardsTarget();
 
         // Altera aleatoriamente a direção de natação a cada 2 segundos
         if (Time.time % 2f < 0.1f)
         {
-            swimDirection = Random.insideUnitSphere.normalized;
+            swimDirection = Random.insideUnitCircle.normalized;
         }
+    }
+
+    void RotateTowardsTarget()
+    {
+        if (swimDirection == Vector2.zero)
+        {
+            return;
+        }
+
+        float targetAngle = Mathf.Atan2(swimDirection.y, swimDirection.x) * Mathf.Rad2Deg - 90f;
+        Quaternion targetRotation = Quaternion.Euler(new Vector3(0, 0, targetAngle));
+        transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, rotationSpeed * Time.deltaTime);
     }
 
     void OnCollisionEnter2D(Collision2D collision)
@@ -53,16 +55,12 @@ public class FishSwimming : MonoBehaviour
         }
     }
 
-    void Valor()
-    {
-        if (tagToMoeda.TryGetValue(gameObject.tag, out int valor))
-        {
-            moeda = valor;
-        }
-    }
-
     void Recompensa()
     {
-        divingSceneManager.Money += moeda;
+        FishValue fishValue = GetComponent<FishValue>();
+        if (fishValue != null)
+        {
+            divingSceneManager.Money += fishValue.moeda;
+        }
     }
 }
