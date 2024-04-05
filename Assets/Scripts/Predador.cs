@@ -10,14 +10,38 @@ public class Predador : MonoBehaviour
     [SerializeField]
     private float _rotationSpeed;
 
+    [SerializeField]
+    private PredadorValues _values;
+
     private Rigidbody2D _rigidbody;
     private PlayerAwarenessController _playerAwarenessController;
     private Vector2 _targetDirection;
 
+    public BoxCollider2D Collider;
+
+    public int CurrentHP;
+    public int Damage;
+    private int segundos = 0;
+
     private void Awake()
     {
+        _values = gameObject.GetComponent<PredadorValues>();
         _rigidbody = GetComponent<Rigidbody2D>();
         _playerAwarenessController = GetComponent<PlayerAwarenessController>();
+    }
+
+    private void Start()
+    {
+        CurrentHP = _values.HP;
+        Damage = _values.Damage;    
+    }
+
+    private void Update()
+    {
+        if (segundos != 0)
+        {
+            StartCoroutine(ReativarColliderAposDelay(segundos));
+        }
     }
 
     private void FixedUpdate()
@@ -61,5 +85,34 @@ public class Predador : MonoBehaviour
         {
             _rigidbody.velocity = transform.right * _speed;
         }
+    }
+
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.gameObject.CompareTag("Player"))
+        {
+            Debug.Log("mordeu");
+        }
+    }
+
+    public void TakeDamage(int damage)
+    {
+        CurrentHP -= damage;
+        Imunidade(1);
+    }
+
+    void Imunidade(int time)
+    {
+        Collider.enabled = false;
+        segundos = time;
+    }
+
+    IEnumerator ReativarColliderAposDelay(int delay)
+    {
+        yield return new WaitForSeconds(delay);
+
+        // Reativa o Box Collider 2D após o atraso
+        Collider.enabled = true;
+        segundos = 0;
     }
 }
