@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 37fdce1db65606344ba2194ca5c72732
+guid: b0163e28d25f82144986e13856a9b079
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -94,19 +94,6 @@ TextureImporter:
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
-    buildTarget: iPhone
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 3
     buildTarget: Android
     maxTextureSize: 2048
     resizeAlgorithm: 0
@@ -136,12 +123,12 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Tilemap_Teste_L
+      name: Coral_Tilemap_L
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 22
+        width: 49
         height: 960
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -150,19 +137,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5ff541bdfc524674ea3bd053e14ad2bc
-      internalID: -1042302218
+      spriteID: f6f3cde2025be6b4890d5a575286c1ed
+      internalID: -1083476074
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Tilemap_Teste_R
+      name: Coral_Tilemap_R
       rect:
         serializedVersion: 2
-        x: 248
+        x: 226
         y: 0
-        width: 22
+        width: 44
         height: 960
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -171,8 +158,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6c2a1191e6b926647807f04ac13f114a
-      internalID: -1443665241
+      spriteID: cf52f46138b1d1b4db839670957690ac
+      internalID: 1093706111
       vertices: []
       indices: 
       edges: []
@@ -188,8 +175,8 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Tilemap_Teste_L: -1042302218
-      Tilemap_Teste_R: -1443665241
+      Coral_Tilemap_L: -1083476074
+      Coral_Tilemap_R: 1093706111
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
