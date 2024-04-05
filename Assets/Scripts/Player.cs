@@ -13,8 +13,9 @@ public class Player : MonoBehaviour
     private Rigidbody2D rb;
     private Animator animator;
     public BoxCollider2D boxCollider;
+
     public bool isAlive;
-    public SpriteRenderer spriteRenderer;
+    private SpriteRenderer spriteRenderer;
 
     
     public int CurrentHealth;
@@ -23,13 +24,21 @@ public class Player : MonoBehaviour
         CurrentHealth = gameManager.PlayerMaxHealth;
         playerHealthBar.SetMaxHealth(CurrentHealth);
 
+        spriteRenderer = GetComponentInChildren<SpriteRenderer>();
         rb = GetComponent<Rigidbody2D>();
-        animator = GetComponent<Animator>();
+        animator = GetComponentInChildren<Animator>();
         isAlive = true;
     }
 
     private void Update()
     {
+        if(CurrentHealth <= 0)
+        {
+            isAlive = false;
+            animator.SetBool("IsDeath", true);
+        }
+
+
         if(segundos != 0)
         {
             StartCoroutine(ReativarColliderAposDelay(segundos));
@@ -99,19 +108,15 @@ public class Player : MonoBehaviour
         }
     }
 
-    private void OnTriggerEnter2D(Collider2D collision)
+    private void OnTriggerEnter2D(Collider2D other)
     {
-        if (collision.gameObject.CompareTag("EdgeOfPlayableArea"))
-        {
-            isAlive = false;
-            Debug.Log("You Lose");
-        }
-
-       /* if(collision.gameObject.CompareTag("Barril"))
-        {
-            TakeDamage(5);
-            Imunidade(3);
-        }*/
+            if (other.gameObject.CompareTag("EdgeOfPlayableArea"))
+            {
+                isAlive = false;
+                Debug.Log("You Lose");
+            }
+        
+        
     }
 
     public void TakeDamage(int damage)
