@@ -15,7 +15,7 @@ public class PredadorValues : MonoBehaviour
         { "Peixe espada", new Tuple<int, int>(60, 5) }
     };
 
-    void Start()
+    private void Awake()
     {
         Valor();
     }

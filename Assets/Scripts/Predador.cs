@@ -15,6 +15,7 @@ public class Predador : MonoBehaviour
 
     private Rigidbody2D _rigidbody;
     private PlayerAwarenessController _playerAwarenessController;
+    private Player player;
     private Vector2 _targetDirection;
 
     public BoxCollider2D Collider;
@@ -22,6 +23,7 @@ public class Predador : MonoBehaviour
     public int CurrentHP;
     public int Damage;
     private int segundos = 0;
+    private bool isCoroutineRunning = false;
 
     private void Awake()
     {
@@ -32,13 +34,14 @@ public class Predador : MonoBehaviour
 
     private void Start()
     {
+        player = FindAnyObjectByType<Player>();
         CurrentHP = _values.HP;
         Damage = _values.Damage;    
     }
 
     private void Update()
     {
-        if (segundos != 0)
+        if (segundos != 0 && !isCoroutineRunning)
         {
             StartCoroutine(ReativarColliderAposDelay(segundos));
         }
@@ -91,14 +94,19 @@ public class Predador : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Player"))
         {
-            Debug.Log("mordeu");
+            player.TakeDamage(Damage);
+        }
+
+        if (other.gameObject.layer == LayerMask.NameToLayer("AttackArea"))
+        {
+            TakeDamage(player.playerDam);
         }
     }
 
     public void TakeDamage(int damage)
     {
         CurrentHP -= damage;
-        Imunidade(1);
+        Imunidade(2);
     }
 
     void Imunidade(int time)
@@ -109,10 +117,12 @@ public class Predador : MonoBehaviour
 
     IEnumerator ReativarColliderAposDelay(int delay)
     {
+        isCoroutineRunning = true;
         yield return new WaitForSeconds(delay);
 
         // Reativa o Box Collider 2D após o atraso
         Collider.enabled = true;
         segundos = 0;
+        isCoroutineRunning = false;
     }
 }

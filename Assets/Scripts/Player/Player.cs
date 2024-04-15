@@ -9,12 +9,15 @@ public class Player : MonoBehaviour
     public PlayerHealthBar playerHealthBar;
 
     public float playerSpeed;
+    public int playerDam;
     private int segundos = 0;
     private Rigidbody2D rb;
     private Animator animator;
     public BoxCollider2D boxCollider;
 
     public bool isAlive;
+    public bool isInvencivel = false;
+    private bool isCoroutineRunning = false;
     private SpriteRenderer spriteRenderer;
 
     
@@ -39,7 +42,7 @@ public class Player : MonoBehaviour
         }
 
 
-        if(segundos != 0)
+        if(segundos != 0 && !isCoroutineRunning)
         {
             StartCoroutine(ReativarColliderAposDelay(segundos));
         }
@@ -121,23 +124,33 @@ public class Player : MonoBehaviour
 
     public void TakeDamage(int damage)
     {
-        CurrentHealth -= damage;
-        playerHealthBar.SetHealth(CurrentHealth);
-        Imunidade(3);
+        if (isInvencivel == false)
+        {
+            CurrentHealth -= damage;
+            playerHealthBar.SetHealth(CurrentHealth);
+            Imunidade(3);
+        }
     }
 
-    void Imunidade(int time)
+    public void Imunidade(int time)
     {
         boxCollider.enabled = false;
         segundos = time;
+        Debug.Log("I'm fucking invincible!");
+        
+        isInvencivel = true;
     }
 
     IEnumerator ReativarColliderAposDelay(int delay)
     {
+        isCoroutineRunning = true;
         yield return new WaitForSeconds(delay);
 
         // Reativa o Box Collider 2D após o atraso
+        
+        isInvencivel = false;
         boxCollider.enabled = true;
         segundos = 0;
+        isCoroutineRunning = false;
     }
 }
