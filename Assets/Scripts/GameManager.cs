@@ -5,7 +5,6 @@ using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
-    public int PlayerMaxHealth;
     public int CurrentOxygenTank;
     public int CurrentDivingSuit;
     public int CurrentHarpoon;

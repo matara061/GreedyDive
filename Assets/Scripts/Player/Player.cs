@@ -24,7 +24,6 @@ public class Player : MonoBehaviour
     public int CurrentHealth;
     void Start()
     {
-        CurrentHealth = gameManager.PlayerMaxHealth;
         playerHealthBar.SetMaxHealth(CurrentHealth);
 
         spriteRenderer = GetComponentInChildren<SpriteRenderer>();
@@ -77,39 +76,32 @@ public class Player : MonoBehaviour
         // Define a animação para o jogador se movendo
         animator.SetBool("IsMoving", true);
 
-        // Calcula o ângulo da direção do joystick em relação ao eixo x
-        float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
+        // Adiciona um limiar para o movimento diagonal
+        float diagonalThreshold = 0.5f;
 
-        // Define o parâmetro da animação para a direção do jogador com base no ângulo
-        if (angle > -45 && angle <= 45)
+        // Verifica a direção do joystick
+        if (Mathf.Abs(direction.x) > Mathf.Abs(direction.y) + diagonalThreshold)
         {
-            // Direção para a direita
-            animator.SetFloat("MoveX", 1f);
+            // Direção para a direita ou esquerda
+            animator.SetFloat("MoveX", Mathf.Sign(direction.x));
             animator.SetFloat("MoveY", 0f);
 
-            spriteRenderer.flipX = false;
+            spriteRenderer.flipX = direction.x < 0;
         }
-        else if (angle > 45 && angle <= 135)
+        else if (Mathf.Abs(direction.y) > Mathf.Abs(direction.x) + diagonalThreshold)
         {
-            // Direção para cima
+            // Direção para cima ou para baixo
             animator.SetFloat("MoveX", 0f);
-            animator.SetFloat("MoveY", 1f);
+            animator.SetFloat("MoveY", Mathf.Sign(direction.y));
         }
-        else if (angle > 135 || angle <= -135)
+        else
         {
-            // Direção para a esquerda
-            animator.SetFloat("MoveX", -1f);
-            animator.SetFloat("MoveY", 0f);
-
-            spriteRenderer.flipX = true;
-        }
-        else if (angle > -135 && angle <= -45)
-        {
-            // Direção para baixo
-            animator.SetFloat("MoveX", 0f);
-            animator.SetFloat("MoveY", -1f);
+            // Movimento diagonal
+            animator.SetFloat("MoveX", direction.x);
+            animator.SetFloat("MoveY", direction.y);
         }
     }
+
 
     private void OnTriggerEnter2D(Collider2D other)
     {
