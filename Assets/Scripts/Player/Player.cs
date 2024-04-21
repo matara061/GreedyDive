@@ -67,6 +67,7 @@ public class Player : MonoBehaviour
 
                 // Define a animação para o jogador parado
                 animator.SetBool("IsMoving", false);
+                animator.SetBool("IsDiag", false);
             }
         }
     }
@@ -83,6 +84,7 @@ public class Player : MonoBehaviour
         if (Mathf.Abs(direction.x) > Mathf.Abs(direction.y) + diagonalThreshold)
         {
             // Direção para a direita ou esquerda
+            animator.SetBool("IsDiag", false);
             animator.SetFloat("MoveX", Mathf.Sign(direction.x));
             animator.SetFloat("MoveY", 0f);
 
@@ -91,14 +93,18 @@ public class Player : MonoBehaviour
         else if (Mathf.Abs(direction.y) > Mathf.Abs(direction.x) + diagonalThreshold)
         {
             // Direção para cima ou para baixo
+            animator.SetBool("IsDiag", false);
             animator.SetFloat("MoveX", 0f);
             animator.SetFloat("MoveY", Mathf.Sign(direction.y));
         }
         else
         {
             // Movimento diagonal
+            animator.SetBool("IsDiag", true);
             animator.SetFloat("MoveX", direction.x);
             animator.SetFloat("MoveY", direction.y);
+
+            spriteRenderer.flipX = direction.x < 0;
         }
     }
 
