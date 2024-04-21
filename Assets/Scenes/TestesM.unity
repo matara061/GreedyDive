@@ -2098,6 +2098,7 @@ MonoBehaviour:
   movimentJoystick: {fileID: 293901010}
   gameManager: {fileID: 1504156820}
   playerHealthBar: {fileID: 250225926}
+  trigger: {fileID: 1337579365}
   playerSpeed: 0
   playerDam: 0
   boxCollider: {fileID: 1052478948}
@@ -2322,6 +2323,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   anim: {fileID: 1044635511}
   playerTransform: {fileID: 1052478951}
+  spriteRenderer: {fileID: 1044635512}
+  Attack: 0
 --- !u!1 &1346453040
 GameObject:
   m_ObjectHideFlags: 0

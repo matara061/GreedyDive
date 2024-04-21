@@ -7,6 +7,7 @@ public class Player : MonoBehaviour
     public MovimentJoystick movimentJoystick;
     public GameManager gameManager;
     public PlayerHealthBar playerHealthBar;
+    public PlayerAttackTrigger trigger;
 
     public float playerSpeed;
     public int playerDam;
@@ -80,31 +81,34 @@ public class Player : MonoBehaviour
         // Adiciona um limiar para o movimento diagonal
         float diagonalThreshold = 0.5f;
 
-        // Verifica a direção do joystick
-        if (Mathf.Abs(direction.x) > Mathf.Abs(direction.y) + diagonalThreshold)
+        if (!trigger.Attack)
         {
-            // Direção para a direita ou esquerda
-            animator.SetBool("IsDiag", false);
-            animator.SetFloat("MoveX", Mathf.Sign(direction.x));
-            animator.SetFloat("MoveY", 0f);
+            // Verifica a direção do joystick
+            if (Mathf.Abs(direction.x) > Mathf.Abs(direction.y) + diagonalThreshold)
+            {
+                // Direção para a direita ou esquerda
+                animator.SetBool("IsDiag", false);
+                animator.SetFloat("MoveX", Mathf.Sign(direction.x));
+                animator.SetFloat("MoveY", 0f);
 
-            spriteRenderer.flipX = direction.x < 0;
-        }
-        else if (Mathf.Abs(direction.y) > Mathf.Abs(direction.x) + diagonalThreshold)
-        {
-            // Direção para cima ou para baixo
-            animator.SetBool("IsDiag", false);
-            animator.SetFloat("MoveX", 0f);
-            animator.SetFloat("MoveY", Mathf.Sign(direction.y));
-        }
-        else
-        {
-            // Movimento diagonal
-            animator.SetBool("IsDiag", true);
-            animator.SetFloat("MoveX", direction.x);
-            animator.SetFloat("MoveY", direction.y);
+                spriteRenderer.flipX = direction.x < 0;
+            }
+            else if (Mathf.Abs(direction.y) > Mathf.Abs(direction.x) + diagonalThreshold)
+            {
+                // Direção para cima ou para baixo
+                animator.SetBool("IsDiag", false);
+                animator.SetFloat("MoveX", 0f);
+                animator.SetFloat("MoveY", Mathf.Sign(direction.y));
+            }
+            else
+            {
+                // Movimento diagonal
+                animator.SetBool("IsDiag", true);
+                animator.SetFloat("MoveX", direction.x);
+                animator.SetFloat("MoveY", direction.y);
 
-            spriteRenderer.flipX = direction.x < 0;
+                spriteRenderer.flipX = direction.x < 0;
+            }
         }
     }
 
