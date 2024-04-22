@@ -6,6 +6,7 @@ using UnityEngine.UI;
 public class PlayerO2 : MonoBehaviour
 {
     public Slider oxygenSlider; // Referência ao slider de oxigênio
+    public PlayerValues playerValues;
     public float maxOxygen = 100f; // Quantidade máxima de oxigênio
     public float oxygenDecreaseRate = 0.5f; // Taxa de diminuição de oxigênio por segundo
 
@@ -13,7 +14,8 @@ public class PlayerO2 : MonoBehaviour
 
     void Start()
     {
-        SetMaxOxygen(maxOxygen); // Inicializa o oxigênio no máximo
+        //SetMaxOxygen(maxOxygen); // Inicializa o oxigênio no máximo
+        SetMaxOxygen(playerValues.O2);
     }
 
     void Update()

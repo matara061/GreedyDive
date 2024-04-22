@@ -583,6 +583,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   oxygenSlider: {fileID: 155353524}
+  playerValues: {fileID: 1052478952}
   maxOxygen: 100
   oxygenDecreaseRate: 0.5
 --- !u!114 &155353524
@@ -2304,11 +2305,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5910449beaa54b14891bfdd16b3610ac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MaxHealth: 0
-  Damage: 0
-  Speed: 0
   gameManager: {fileID: 1504156820}
   player: {fileID: 1052478949}
+  HP: 0
+  Damage: 0
+  Speed: 0
+  O2: 0
+  Amuleto: 0
 --- !u!114 &1052478953
 MonoBehaviour:
   m_ObjectHideFlags: 0
