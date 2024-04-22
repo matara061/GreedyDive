@@ -26,16 +26,29 @@ public class FishSwimming : MonoBehaviour
         transform.Translate(swimDirection * swimSpeed * Time.deltaTime);
 
         // Rotaciona o peixe suavemente na direção de natação
-        RotateTowardsTarget();
+        //RotateTowardsTarget();
 
         // Altera aleatoriamente a direção de natação a cada 2 segundos
         if (Time.time % 2f < 0.1f)
         {
             swimDirection = Random.insideUnitCircle.normalized;
+            FlipFish();
         }
     }
 
-    void RotateTowardsTarget()
+    void FlipFish()
+    {
+        if (swimDirection.x > 0)
+        {
+            transform.localScale = new Vector3(1, 1, 1);
+        }
+        else if (swimDirection.x < 0)
+        {
+            transform.localScale = new Vector3(-1, 1, 1);
+        }
+    }
+
+   /* void RotateTowardsTarget()
     {
         if (swimDirection == Vector2.zero)
         {
@@ -45,7 +58,7 @@ public class FishSwimming : MonoBehaviour
         float targetAngle = Mathf.Atan2(swimDirection.y, swimDirection.x) * Mathf.Rad2Deg - 90f;
         Quaternion targetRotation = Quaternion.Euler(new Vector3(0, 0, targetAngle));
         transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, rotationSpeed * Time.deltaTime);
-    }
+    }*/
 
     void OnCollisionEnter2D(Collision2D collision)
     {

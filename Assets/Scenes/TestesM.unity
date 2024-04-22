@@ -1214,7 +1214,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &459066376
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1241,10 +1241,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4591ac88cab57294d9f70301a83ad39a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _speed: 2
+  _speed: 0
   _rotationSpeed: 100
   _values: {fileID: 0}
   Collider: {fileID: 459066382}
+  diveManager: {fileID: 545136730}
   CurrentHP: 0
   Damage: 0
 --- !u!50 &459066378
@@ -1349,6 +1350,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   HP: 0
   Damage: 0
+  Speed: 0
+  Moeda: 0
+  Diamante: 0
 --- !u!61 &459066382
 BoxCollider2D:
   m_ObjectHideFlags: 0

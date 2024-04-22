@@ -19,6 +19,7 @@ public class Predador : MonoBehaviour
     private Vector2 _targetDirection;
 
     public BoxCollider2D Collider;
+    public DivingSceneManager diveManager;
 
     public int CurrentHP;
     public int Damage;
@@ -36,7 +37,8 @@ public class Predador : MonoBehaviour
     {
         player = FindAnyObjectByType<Player>();
         CurrentHP = _values.HP;
-        Damage = _values.Damage;    
+        Damage = _values.Damage;   
+        _speed = _values.Speed;
     }
 
     private void Update()
@@ -44,6 +46,11 @@ public class Predador : MonoBehaviour
         if (segundos != 0 && !isCoroutineRunning)
         {
             StartCoroutine(ReativarColliderAposDelay(segundos));
+        }
+
+        if (CurrentHP <= 0)
+        {
+            Death();
         }
     }
 
@@ -113,6 +120,21 @@ public class Predador : MonoBehaviour
     {
         Collider.enabled = false;
         segundos = time;
+    }
+
+    void Death()
+    {
+        Recompensa();
+        Destroy(gameObject);
+    }
+
+    void Recompensa()
+    {
+        if(_values != null)
+        {
+            diveManager.Money += _values.Moeda;
+            diveManager.Diamantes += _values.Diamante;
+        }
     }
 
     IEnumerator ReativarColliderAposDelay(int delay)
