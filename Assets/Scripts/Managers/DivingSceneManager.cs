@@ -9,6 +9,7 @@ public class DivingSceneManager : MonoBehaviour, IDataPersistence
 {
     public GameManager gameManager;
     public Player player;
+    public float depth;
 
     public int Money;
 
@@ -38,7 +39,7 @@ public class DivingSceneManager : MonoBehaviour, IDataPersistence
     void Update()
     {
         // Calcula a profundidade baseada na posição Y inicial e a posição Y atual
-        float depth = initialY - player.transform.position.y;
+        depth = initialY - player.transform.position.y;
         // Atualiza o texto da profundidade na UI
         depthText.text = depth.ToString("0.00");
 
