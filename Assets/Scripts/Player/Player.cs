@@ -134,6 +134,12 @@ public class Player : MonoBehaviour
         }
     }
 
+    public void ContinuosDamage(int damage)
+    {
+        CurrentHealth -= damage;
+        playerHealthBar.SetHealth(CurrentHealth);
+    }
+
     public void Imunidade(int time)
     {
         boxCollider.enabled = false;

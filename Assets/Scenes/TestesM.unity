@@ -1214,7 +1214,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &459066376
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1425,6 +1425,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gameManager: {fileID: 1504156820}
   player: {fileID: 1052478949}
+  depth: 0
   Money: 0
   scoreMoney: {fileID: 642865396}
   depthText: {fileID: 912739080}
@@ -1984,6 +1985,7 @@ GameObject:
   - component: {fileID: 1052478950}
   - component: {fileID: 1052478949}
   - component: {fileID: 1052478952}
+  - component: {fileID: 1052478953}
   - component: {fileID: 1052478948}
   - component: {fileID: 1052478947}
   m_Layer: 0
@@ -2166,6 +2168,23 @@ MonoBehaviour:
   Speed: 0
   gameManager: {fileID: 1504156820}
   player: {fileID: 1052478949}
+--- !u!114 &1052478953
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1052478946}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 568f7e9c41f34ba4aac4bccac91783a3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 1052478949}
+  diveManager: {fileID: 545136730}
+  depth: 0
+  Dano: 0
+  IsInvoke: 0
 --- !u!1 &1302680070
 GameObject:
   m_ObjectHideFlags: 0

@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class PlayerAttackTrigger : MonoBehaviour
 {
-    
     public Animator anim;
     public Transform playerTransform;
     public SpriteRenderer spriteRenderer;
@@ -12,6 +11,16 @@ public class PlayerAttackTrigger : MonoBehaviour
     public bool Attack = false;
 
     private void OnTriggerEnter2D(Collider2D col)
+    {
+        CheckPredator(col);
+    }
+
+    private void OnTriggerStay2D(Collider2D col)
+    {
+        CheckPredator(col);
+    }
+
+    private void CheckPredator(Collider2D col)
     {
         if (col.gameObject.layer == LayerMask.NameToLayer("Predador"))
         {
@@ -23,20 +32,6 @@ public class PlayerAttackTrigger : MonoBehaviour
             Vector2 InimigoDirection = col.transform.position - playerTransform.position;
 
             SetAnimationParameters(InimigoDirection);
-
-            // Define os parâmetros de animação com base na direção
-            /* if (Mathf.Abs(InimigoDirection.x) > Mathf.Abs(InimigoDirection.y))
-             {
-                 // Movimento horizontal
-                 anim.SetFloat("MoveX", Mathf.Sign(InimigoDirection.x));
-                 anim.SetFloat("MoveY", 0f);
-             }
-             else
-             {
-                 // Movimento vertical
-                 anim.SetFloat("MoveX", 0f);
-                 anim.SetFloat("MoveY", Mathf.Sign(InimigoDirection.y));
-             }*/
         }
         else
         {
