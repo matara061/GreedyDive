@@ -9,7 +9,7 @@ public class Menus : MonoBehaviour
 {
     public void Resume()
     {
-        SceneManager.UnloadScene("Pause");
+        SceneManager.UnloadSceneAsync("Pause");
     }
 
     public void Desistir()

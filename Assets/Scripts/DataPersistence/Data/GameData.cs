@@ -6,6 +6,7 @@ using UnityEngine;
 public class GameData
 {
     public int Money;
+    public int Diamantes;
 
     // the values difined in this constructor will be the default values 
     // the game starts with when there's no data to load
@@ -13,5 +14,6 @@ public class GameData
     public GameData()
     {
         this.Money = 0;
+        this.Diamantes = 0;
     }
 }

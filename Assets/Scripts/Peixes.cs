@@ -62,6 +62,7 @@ public class FishSwimming : MonoBehaviour
         if (fishValue != null)
         {
             divingSceneManager.Money += fishValue.moeda;
+            divingSceneManager.Diamantes += fishValue.diamantes;
         }
     }
 }

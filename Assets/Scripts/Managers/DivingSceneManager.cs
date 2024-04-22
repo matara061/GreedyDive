@@ -12,8 +12,10 @@ public class DivingSceneManager : MonoBehaviour, IDataPersistence
     public float depth;
 
     public int Money;
+    public int Diamantes;
 
     public TMP_Text scoreMoney;
+    public TMP_Text scoreDiamond;
     public TMP_Text depthText;
 
     private float initialY;
@@ -28,11 +30,13 @@ public class DivingSceneManager : MonoBehaviour, IDataPersistence
     public void LoadData(GameData data) // jogar isso para o gameManager dps
     {
         this.Money = data.Money;
+        this.Diamantes = data.Diamantes;
     }
 
     public void SaveData(ref GameData data) // jogar isso para o gameManager dps
     {
         data.Money = this.Money;
+        data.Diamantes = this.Diamantes;
     }
 
     // Update is called once per frame
@@ -43,12 +47,14 @@ public class DivingSceneManager : MonoBehaviour, IDataPersistence
         // Atualiza o texto da profundidade na UI
         depthText.text = depth.ToString("0.00");
 
-        UpdateScoreText(Money);
+        UpdateScoreText(Money, Diamantes);
     }
 
-    public void UpdateScoreText(int newScore)
+    public void UpdateScoreText(int newScore, int newScore2)
     {
-        scoreMoney.text = "<rotate=90>"+ newScore.ToString();
+        scoreMoney.text = newScore.ToString();
+        scoreDiamond.text = newScore2.ToString();
+        
     }
 
     public void Fim()

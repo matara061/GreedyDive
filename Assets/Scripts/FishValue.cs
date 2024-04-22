@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -5,12 +6,13 @@ using UnityEngine;
 public class FishValue : MonoBehaviour
 {
     public int moeda;
+    public int diamantes;
 
-    private Dictionary<string, int> tagToMoeda = new Dictionary<string, int>
+    private Dictionary<string, Tuple<int, int>> tagToMoeda = new Dictionary<string, Tuple<int, int>>
     {
-        { "Bagre", 5 },
-        { "Tilapia", 10 },
-        { "Pacu", 20 }
+        { "Bagre", new Tuple<int, int>(10, 0) },
+        { "Tilapia", new Tuple<int, int>(20, 0) },
+        { "Pacu", new Tuple<int, int>(0, 1) }
     };
 
     void Start()
@@ -20,9 +22,10 @@ public class FishValue : MonoBehaviour
 
     void Valor()
     {
-        if (tagToMoeda.TryGetValue(gameObject.tag, out int valor))
+        if (tagToMoeda.TryGetValue(gameObject.tag, out Tuple<int, int> valor))
         {
-            moeda = valor;
+            moeda = valor.Item1;
+            diamantes = valor.Item2;
         }
     }
 }
