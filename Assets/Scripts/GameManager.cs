@@ -12,15 +12,20 @@ public class GameManager : MonoBehaviour
     public string CurrentAmuleto;
 
     public int BankMoney;
+    public int BankDiamantes;
 
-    // Start is called before the first frame update
-    void Start()
+    private void Awake()
     {
         CurrentHarpoon = "Arma1";
         CurrentDivingSuit = "Roupa1";
         CurrentDivingFins = "Pes1";
         CurrentOxygenTank = "Tank1";
         CurrentAmuleto = string.Empty;
+    }
+
+    void Start()
+    {
+        
     }
 
     // Update is called once per frame
