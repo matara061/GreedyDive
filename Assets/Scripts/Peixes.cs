@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
 public class FishSwimming : MonoBehaviour
@@ -8,6 +9,8 @@ public class FishSwimming : MonoBehaviour
     public float rotationSpeed = 5f; // Velocidade de rotação
 
     private GameManager gameManager;
+    public GameObject floatingGold;
+    public GameObject floatingDiamond;
     private DivingSceneManager divingSceneManager;
 
     private Vector2 swimDirection; // Direção de natação atual
@@ -76,6 +79,17 @@ public class FishSwimming : MonoBehaviour
         {
             divingSceneManager.Money += fishValue.moeda;
             divingSceneManager.Diamantes += fishValue.diamantes;
+
+            if(fishValue.moeda > 0)
+            {
+                GameObject Gold = Instantiate(floatingGold, transform.position, Quaternion.identity);
+                Gold.transform.GetChild(0).GetComponent<TextMeshPro>().text = fishValue.moeda.ToString();
+            }else 
+                if(fishValue.diamantes > 0)
+            {
+                GameObject Diamond = Instantiate(floatingDiamond, transform.position, Quaternion.identity);
+                Diamond.transform.GetChild(0).GetComponent<TextMeshPro>().text = fishValue.diamantes.ToString();
+            }
         }
     }
 }

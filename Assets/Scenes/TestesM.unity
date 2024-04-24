@@ -2306,6 +2306,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gameManager: {fileID: 1504156820}
+  diveManager: {fileID: 0}
   player: {fileID: 1052478949}
   HP: 0
   Damage: 0
@@ -2954,25 +2955,9 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 1216061904222020199, guid: 266302dacc7951242a7594e6d32dfe00, type: 3}
-      propertyPath: m_Layer
-      value: 7
-      objectReference: {fileID: 0}
     - target: {fileID: 3008884559031144041, guid: 266302dacc7951242a7594e6d32dfe00, type: 3}
       propertyPath: m_Name
       value: Peixe
-      objectReference: {fileID: 0}
-    - target: {fileID: 3008884559031144041, guid: 266302dacc7951242a7594e6d32dfe00, type: 3}
-      propertyPath: m_Layer
-      value: 7
-      objectReference: {fileID: 0}
-    - target: {fileID: 3008884559031144041, guid: 266302dacc7951242a7594e6d32dfe00, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6418799736105113220, guid: 266302dacc7951242a7594e6d32dfe00, type: 3}
-      propertyPath: m_ExcludeLayers.m_Bits
-      value: 320
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
