@@ -21,11 +21,12 @@ public class Player : MonoBehaviour
     private bool isCoroutineRunning = false;
     private SpriteRenderer spriteRenderer;
 
-    
+    public int MaxHealth;
     public int CurrentHealth;
     void Start()
     {
-        playerHealthBar.SetMaxHealth(CurrentHealth);
+        CurrentHealth = MaxHealth;
+        playerHealthBar.SetMaxHealth(MaxHealth);
 
         spriteRenderer = GetComponentInChildren<SpriteRenderer>();
         rb = GetComponent<Rigidbody2D>();
@@ -120,8 +121,26 @@ public class Player : MonoBehaviour
                 isAlive = false;
                 Debug.Log("You Lose");
             }
+
+            if (other.gameObject.layer == LayerMask.NameToLayer("Cura"))
+            {
+                Cura();
+
+            }
         
         
+    }
+
+    public void Cura()
+    {
+        CurrentHealth += Mathf.RoundToInt(MaxHealth * 0.1f);// Adiciona 10% do MaxHealth ao CurrentHealth
+        playerHealthBar.SetHealth(CurrentHealth);
+
+        if (CurrentHealth > MaxHealth)
+        {
+            CurrentHealth = MaxHealth; // Garante que CurrentHealth não exceda MaxHealth
+            playerHealthBar.SetHealth(CurrentHealth);
+        }
     }
 
     public void TakeDamage(int damage)

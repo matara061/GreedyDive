@@ -108,7 +108,7 @@ public class PlayerValues : MonoBehaviour
         if (MaxHealth.TryGetValue(gameManager.CurrentDivingSuit, out int valor))
         {
             HP = valor;
-            player.CurrentHealth = valor;
+            player.MaxHealth = valor;
         }
     }
 
