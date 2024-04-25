@@ -17,6 +17,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Grupo de peixes1.unity
     guid: a1f383f1b8e299f4199f887f28d493fc
+  - enabled: 1
+    path: Assets/Scenes/BoatScene.unity
+    guid: 31774d880b86d5345a9d7b5e31c6b287
   m_configObjects:
     com.unity.adaptiveperformance.loader_settings: {fileID: 11400000, guid: 26d448429ad920940a18e56d909d0bb8, type: 2}
     com.unity.adaptiveperformance.simulator.provider_settings: {fileID: 11400000, guid: f552750c5eb3fa64d9c9d3b1d78a1b56, type: 2}

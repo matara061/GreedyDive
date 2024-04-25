@@ -7,6 +7,9 @@ using UnityEngine.SceneManagement;
 
 public class Menus : MonoBehaviour
 {
+    [SerializeField]
+    private Slider barraProgresso;
+
     public void Resume()
     {
         SceneManager.UnloadSceneAsync("Pause");
@@ -14,6 +17,17 @@ public class Menus : MonoBehaviour
 
     public void Desistir()
     {
+        StartCoroutine(CarregarCena());
+    }
 
+    private IEnumerator CarregarCena()
+    {
+        AsyncOperation asyncOperation = SceneManager.LoadSceneAsync("BoatScene");
+        while (!asyncOperation.isDone)
+        {
+            //Debug.Log("Carregando: " + (asyncOperation.progress * 100f) + "%");
+            this.barraProgresso.value = asyncOperation.progress;
+            yield return null;
+        }
     }
 }

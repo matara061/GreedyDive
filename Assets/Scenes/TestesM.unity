@@ -2760,18 +2760,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: GameManager
       objectReference: {fileID: 0}
-    - target: {fileID: 1250278612487765612, guid: 189bffb6a24a25b4ca1b05b11298f5e1, type: 3}
-      propertyPath: CurrentHarpoon
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1250278612487765612, guid: 189bffb6a24a25b4ca1b05b11298f5e1, type: 3}
-      propertyPath: CurrentDivingFins
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1250278612487765612, guid: 189bffb6a24a25b4ca1b05b11298f5e1, type: 3}
-      propertyPath: CurrentDivingSuit
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 4376148818691444278, guid: 189bffb6a24a25b4ca1b05b11298f5e1, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
