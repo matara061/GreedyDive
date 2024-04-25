@@ -20,6 +20,16 @@ public class Menus : MonoBehaviour
         StartCoroutine(CarregarCena());
     }
 
+    public void Loja1()
+    {
+        Debug.Log("loja");
+    }
+
+    public void Esquerda()
+    {
+        Debug.Log("esquerda");
+    }
+
     private IEnumerator CarregarCena()
     {
         AsyncOperation asyncOperation = SceneManager.LoadSceneAsync("BoatScene");

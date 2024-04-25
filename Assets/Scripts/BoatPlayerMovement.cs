@@ -1,36 +1,87 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.UI;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class BoatPlayerMovement : MonoBehaviour
 {
     public Transform pointA, pointB, pointC;
+    public SpriteRenderer sprite;
+    public GameObject diveButton;
     public float speed;
-    private float timer = 0;
-    
-    // Start is called before the first frame update
+    private Transform nextPoint;
+
+    [SerializeField]
+    private Slider barraProgresso;
+
     void Start()
     {
         transform.position = pointA.position;
+        nextPoint = pointA;
     }
 
     // Update is called once per frame
     void Update()
     {
-        timer += Time.deltaTime;
-        
-        if (timer >= 5 && timer < 10)
+        if (transform.position != nextPoint.position)
         {
-            transform.position = Vector2.MoveTowards(transform.position, pointB.position, speed * Time.deltaTime);
-            Debug.Log("I live in a low income housing environment that goes by the government name of Section 8. Me and a group of my allies control certain areas of this section to run our illegitimate business. We possess unregistered firearms, stolen vehicles, mind altering inhibitors and only use cash for financial purchases. If anyone would like to settle unfinished altercations, I will be more than happy to release my address. I would like to warn you, I am a very dangerous person and I regularly disobey the law.");
+            transform.position = Vector2.MoveTowards(transform.position, nextPoint.position, speed * Time.deltaTime);
         }
-        else if  (timer >= 10 && timer < 15)
+
+        if(transform.position == pointA.position)
         {
-            transform.position = Vector2.MoveTowards(transform.position, pointC.position, speed * Time.deltaTime);
+            diveButton.SetActive(true);
+        }else
+            diveButton.SetActive(false);
+    }
+
+    public void Loja1()
+    {
+        Debug.Log("loja");
+    }
+
+    public void Dive()
+    {
+        StartCoroutine(CarregarCena());
+    }
+
+    public void Direita()
+    {
+        if (nextPoint == pointA)
+        {
+            sprite.flipX = false;
+            nextPoint = pointB;
         }
-        else if (timer >= 15)
+        else if (nextPoint == pointB)
         {
-            transform.position = Vector2.MoveTowards(transform.position, pointA.position, speed * Time.deltaTime);
+            sprite.flipX = false;
+            nextPoint = pointC;
+        }
+    }
+
+    public void Esquerda()
+    {
+        if (nextPoint == pointC)
+        {
+            sprite.flipX = true;
+            nextPoint = pointB;
+        }
+        else if (nextPoint == pointB)
+        {
+            sprite.flipX = true;
+            nextPoint = pointA;
+        }
+    }
+
+    private IEnumerator CarregarCena()
+    {
+        AsyncOperation asyncOperation = SceneManager.LoadSceneAsync("TestesM");
+        while (!asyncOperation.isDone)
+        {
+            //Debug.Log("Carregando: " + (asyncOperation.progress * 100f) + "%");
+            this.barraProgresso.value = asyncOperation.progress;
+            yield return null;
         }
     }
 }
