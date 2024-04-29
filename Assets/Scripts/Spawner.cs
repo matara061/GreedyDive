@@ -12,26 +12,48 @@ public class Spawner : MonoBehaviour
 
     public GameObject pacu, bagre, tubarao, barril;
 
+    public bool tier1Spawner, tier2Spawner, tier3Spawner, isRockSpawner;
+
     private void Awake()
     {
-        initialThrow = Random.Range(0, 4);
+        if (tier1Spawner)
+        {
+            initialThrow = Random.Range(0, 30);
+        }
+        if (tier2Spawner)
+        {
+            initialThrow = Random.Range(0, 20);
+        }
+        if (tier2Spawner)
+        {
+            initialThrow = Random.Range(0, 10);
+        }
     }
 
     // Start is called before the first frame update
     void Start()
     {
-        switch (initialThrow)
+        if (!isRockSpawner)
         {
-            case 0:
-                spawnObstacle = true;
-                obstacleTypeNumber = Random.Range(0, 2);
-                break;
-            case 1:
-            case 2:
-                spawnFish = true;
-                fishTypeNumber = Random.Range(0, 3);
-                break;
-                
+            switch (initialThrow)
+            {
+                case 0:
+                case 1:
+                    spawnObstacle = true;
+                    obstacleTypeNumber = Random.Range(0, 2);
+                    break;
+                case 3:
+                case 4:
+                case 5:
+                case 6:
+                case 7:
+                case 8:
+                case 9:
+                    spawnFish = true;
+                    fishTypeNumber = Random.Range(0, 1);
+                    break;
+
+            }
         }
     }
 
@@ -40,36 +62,35 @@ public class Spawner : MonoBehaviour
     {
         if (canSpawn)
         {
-            if (spawnFish)
+            if (!isRockSpawner)
             {
-                switch (fishTypeNumber)
+                if (spawnFish)
                 {
-                    case 0:
-                        Instantiate(pacu, transform.position, Quaternion.identity);
-                        canSpawn = false;
-                        break;
-                    case 1:
-                        Instantiate(bagre, transform.position, Quaternion.identity);
-                        canSpawn = false;
-                        break;
-                    case 2:
-                        Instantiate(tubarao, transform.position, Quaternion.identity);
-                        canSpawn = false;
-                        break;
+                    switch (fishTypeNumber)
+                    {
+                        case 0:
+                            Instantiate(pacu, transform.position, Quaternion.identity);
+                            canSpawn = false;
+                            break;                           
+                        case 1:
+                            Instantiate(bagre, transform.position, Quaternion.identity);
+                            canSpawn = false;
+                            break;
+                    }
                 }
-            }
-            if (spawnObstacle)
-            {
-                switch(obstacleTypeNumber)
+                if (spawnObstacle)
                 {
-                    case 0:
-                        Instantiate(barril, transform.position, Quaternion.identity);
-                        canSpawn = false;
-                        break;
-                    case 1:
-                        Debug.Log("There is a rock here, but it's invisible!");
-                        canSpawn = false;
-                        break;
+                    switch (obstacleTypeNumber)
+                    {
+                        case 0:
+                            Instantiate(barril, transform.position, Quaternion.identity);
+                            canSpawn = false;
+                            break;
+                        case 1:
+                            Instantiate(tubarao, transform.position, Quaternion.identity);
+                            canSpawn = false;
+                            break;
+                    }
                 }
             }
         }
