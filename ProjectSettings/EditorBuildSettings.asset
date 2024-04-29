@@ -20,6 +20,12 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/BoatScene.unity
     guid: 31774d880b86d5345a9d7b5e31c6b287
+  - enabled: 1
+    path: Assets/Scenes/Loja.unity
+    guid: 0199d4fdec18d714fbb6fed29b16a868
+  - enabled: 1
+    path: Assets/Scenes/Loja2.unity
+    guid: 5e8d5c8417a2a7344b034d0792be50dd
   m_configObjects:
     com.unity.adaptiveperformance.loader_settings: {fileID: 11400000, guid: 26d448429ad920940a18e56d909d0bb8, type: 2}
     com.unity.adaptiveperformance.simulator.provider_settings: {fileID: 11400000, guid: f552750c5eb3fa64d9c9d3b1d78a1b56, type: 2}
