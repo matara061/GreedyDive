@@ -4,12 +4,15 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 public class StoreManager : MonoBehaviour
 {
     public int Gold;
     public int Diamond;
     public GameManager gameManager;
+
+    public Animator anim;
 
     public TextMeshProUGUI armaPriceText;
     public TextMeshProUGUI roupaPriceText;
@@ -442,6 +445,21 @@ public class StoreManager : MonoBehaviour
         {
             Debug.Log("O valor atual de CurrentOxygenTank não está no dicionário Tanks.");
         }
+    }
+
+    public void sair()
+    {
+        SceneManager.UnloadSceneAsync("Loja");
+    }
+
+    public void SetaR()
+    {
+        anim.Play("LojaDiamantes");
+    }
+
+    public void SetaL()
+    {
+        anim.Play("LojaAmuletos");
     }
 
 

@@ -3,17 +3,17 @@ using System.Collections.Generic;
 using UnityEngine.UI;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.EventSystems;
 
 public class BoatPlayerMovement : MonoBehaviour
 {
     public Transform pointA, pointB, pointC;
     public SpriteRenderer sprite;
     public GameObject diveButton;
+    public GameObject loja1Button;
+    public GameObject loja2Button;
     public float speed;
     private Transform nextPoint;
-
-    [SerializeField]
-    private Slider barraProgresso;
 
     void Start()
     {
@@ -34,16 +34,20 @@ public class BoatPlayerMovement : MonoBehaviour
             diveButton.SetActive(true);
         }else
             diveButton.SetActive(false);
-    }
 
-    public void Loja1()
-    {
-        Debug.Log("loja");
-    }
+        if (transform.position == pointB.position)
+        {
+            loja1Button.SetActive(true);
+        }
+        else
+            loja1Button.SetActive(false);
 
-    public void Dive()
-    {
-        StartCoroutine(CarregarCena());
+        if (transform.position == pointC.position)
+        {
+            loja2Button.SetActive(true);
+        }
+        else
+            loja2Button.SetActive(false);
     }
 
     public void Direita()
@@ -71,17 +75,6 @@ public class BoatPlayerMovement : MonoBehaviour
         {
             sprite.flipX = true;
             nextPoint = pointA;
-        }
-    }
-
-    private IEnumerator CarregarCena()
-    {
-        AsyncOperation asyncOperation = SceneManager.LoadSceneAsync("TestesM");
-        while (!asyncOperation.isDone)
-        {
-            //Debug.Log("Carregando: " + (asyncOperation.progress * 100f) + "%");
-            this.barraProgresso.value = asyncOperation.progress;
-            yield return null;
         }
     }
 }
