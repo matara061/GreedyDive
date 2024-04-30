@@ -13,7 +13,7 @@ public class PredadorValues : MonoBehaviour
 
     private Dictionary<string, Tuple<int, int, int, int, int>> tagToStatus = new Dictionary<string, Tuple<int, int, int, int, int>>
 {
-    { "Tubarao", new Tuple< int, int, int, int, int >(100, 10, 2, 50, 1) },
+    { "Tubarao", new Tuple< int, int, int, int, int >(15, 5, 2, 50, 0) },
     { "Piranha", new Tuple< int, int, int, int, int >(40, 3, 5, 20, 0) },
     { "Peixe espada", new Tuple< int, int, int, int, int >(60, 3, 3, 10, 0) }
 };
