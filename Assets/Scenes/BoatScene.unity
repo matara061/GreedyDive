@@ -617,7 +617,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 2609e5b5e1f36be49af3c1af362f5231, type: 3}
+  m_Sprite: {fileID: 21300000, guid: ee03cda1791213c439501b0f3da1c074, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -2582,7 +2582,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: ad05380db1a992041b49361c54870edc, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 89342062489a67f44baa5b2632cd3494, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -2745,6 +2745,7 @@ GameObject:
   - component: {fileID: 2058245047}
   - component: {fileID: 2058245046}
   - component: {fileID: 2058245048}
+  - component: {fileID: 2058245049}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -2793,9 +2794,9 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -9095717837082945937, guid: 207ee8102dd4143d288186ef0be518ee, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 2d5e85f3b5adeed4eb33741847e7ceb6, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_FlipX: 0
+  m_FlipX: 1
   m_FlipY: 0
   m_DrawMode: 0
   m_Size: {x: 1, y: 2}
@@ -2839,6 +2840,28 @@ MonoBehaviour:
   loja1Button: {fileID: 225260846}
   loja2Button: {fileID: 1964239947}
   speed: 2
+  anim: {fileID: 2058245049}
+--- !u!95 &2058245049
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2058245043}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 1333b95a756c44c4f94488f820f66262, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &2111386227
 GameObject:
   m_ObjectHideFlags: 0

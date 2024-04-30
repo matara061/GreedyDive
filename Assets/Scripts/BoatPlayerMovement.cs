@@ -15,6 +15,8 @@ public class BoatPlayerMovement : MonoBehaviour
     public float speed;
     private Transform nextPoint;
 
+    public Animator anim;
+
     void Start()
     {
         transform.position = pointA.position;
@@ -54,12 +56,14 @@ public class BoatPlayerMovement : MonoBehaviour
     {
         if (nextPoint == pointA)
         {
-            sprite.flipX = false;
+            sprite.flipX = true;
+            anim.Play("Player_Boat_Walk");
             nextPoint = pointB;
         }
         else if (nextPoint == pointB)
         {
-            sprite.flipX = false;
+            sprite.flipX = true;
+            anim.Play("Player_Boat_Walk");
             nextPoint = pointC;
         }
     }
@@ -68,12 +72,14 @@ public class BoatPlayerMovement : MonoBehaviour
     {
         if (nextPoint == pointC)
         {
-            sprite.flipX = true;
+            sprite.flipX = false;
+            anim.Play("Player_Boat_Walk");
             nextPoint = pointB;
         }
         else if (nextPoint == pointB)
         {
-            sprite.flipX = true;
+            sprite.flipX = false;
+            anim.Play("Player_Boat_Walk");
             nextPoint = pointA;
         }
     }
