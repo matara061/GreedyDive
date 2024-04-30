@@ -1551,9 +1551,9 @@ MonoBehaviour:
   player: {fileID: 0}
   bagre: []
   pacu: []
-  tubarao: []
   barril: []
-  uppiesSpeed: 0
+  tubarao: []
+  uppiesSpeed: 1
 --- !u!4 &813083863
 Transform:
   m_ObjectHideFlags: 0

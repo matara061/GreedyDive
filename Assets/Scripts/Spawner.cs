@@ -8,25 +8,27 @@ public class Spawner : MonoBehaviour
 
     private bool canSpawn = true;
 
-    private float obstacleTypeNumber, fishTypeNumber, initialThrow;
+    private float obstacleTypeNumber, fishTypeNumber, diceRoll;
 
     public GameObject pacu, bagre, tubarao, barril;
 
     public bool tier1Spawner, tier2Spawner, tier3Spawner, isRockSpawner;
 
+    public float spawnerCooldown;
+
     private void Awake()
     {
         if (tier1Spawner)
         {
-            initialThrow = Random.Range(0, 30);
+            diceRoll = Random.Range(0, 10);
         }
         if (tier2Spawner)
         {
-            initialThrow = Random.Range(0, 20);
+            diceRoll = Random.Range(0, 20);
         }
         if (tier2Spawner)
         {
-            initialThrow = Random.Range(0, 10);
+            diceRoll = Random.Range(0, 10);
         }
     }
 
@@ -35,12 +37,13 @@ public class Spawner : MonoBehaviour
     {
         if (!isRockSpawner)
         {
-            switch (initialThrow)
+            switch (diceRoll)
             {
                 case 0:
                 case 1:
+                case 2:
                     spawnObstacle = true;
-                    obstacleTypeNumber = Random.Range(0, 2);
+                    obstacleTypeNumber = Random.Range(0, 3);
                     break;
                 case 3:
                 case 4:
@@ -50,11 +53,13 @@ public class Spawner : MonoBehaviour
                 case 8:
                 case 9:
                     spawnFish = true;
-                    fishTypeNumber = Random.Range(0, 1);
+                    fishTypeNumber = Random.Range(0, 2);
                     break;
 
             }
         }
+
+        spawnerCooldown = Random.Range(5, 11);
     }
 
     // Update is called once per frame
@@ -62,6 +67,8 @@ public class Spawner : MonoBehaviour
     {
         if (canSpawn)
         {
+            spawnerCooldown = Random.Range(5, 11);
+
             if (!isRockSpawner)
             {
                 if (spawnFish)
@@ -83,15 +90,29 @@ public class Spawner : MonoBehaviour
                     switch (obstacleTypeNumber)
                     {
                         case 0:
+                        case 1:
                             Instantiate(barril, transform.position, Quaternion.identity);
                             canSpawn = false;
                             break;
-                        case 1:
+                        case 2:
                             Instantiate(tubarao, transform.position, Quaternion.identity);
                             canSpawn = false;
                             break;
                     }
                 }
+            }
+        }
+        else
+        {
+            spawnerCooldown -= Time.deltaTime;
+
+            diceRoll = Random.Range(0, 10);
+            obstacleTypeNumber = Random.Range(0, 3);
+            fishTypeNumber = Random.Range(0, 2);
+
+            if (spawnerCooldown <= 0)
+            {
+                canSpawn = true;
             }
         }
     }
