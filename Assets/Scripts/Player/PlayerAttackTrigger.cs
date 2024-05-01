@@ -39,6 +39,16 @@ public class PlayerAttackTrigger : MonoBehaviour
         }
     }
 
+    private void OnTriggerExit2D(Collider2D col)
+    {
+        if (col.gameObject.layer == LayerMask.NameToLayer("Predador"))
+        {
+            Attack = false;
+            anim.SetBool("IsAttack", false);
+        }
+    }
+
+
     private void SetAnimationParameters(Vector2 direction)
     {
         // Adiciona um limiar para o movimento diagonal

@@ -5,7 +5,7 @@ using UnityEngine.UI;
 using TMPro;
 using UnityEngine.SceneManagement;
 
-public class DivingSceneManager : MonoBehaviour, IDataPersistence
+public class DivingSceneManager : MonoBehaviour
 {
     public GameManager gameManager;
     public Player player;
@@ -17,17 +17,20 @@ public class DivingSceneManager : MonoBehaviour, IDataPersistence
     public TMP_Text scoreMoney;
     public TMP_Text scoreDiamond;
     public TMP_Text depthText;
+    public Slider barraProgresso;
+    public GameObject telaLoad;
 
     private float initialY;
 
     // Start is called before the first frame update
     void Start()
     {
+        gameManager = FindAnyObjectByType<GameManager>();
         // Salva a posição Y inicial do jogador
         initialY = player.transform.position.y;
     }
 
-    public void LoadData(GameData data) // jogar isso para o gameManager dps
+   /* public void LoadData(GameData data) // jogar isso para o gameManager dps
     {
         this.Money = data.Money;
         this.Diamantes = data.Diamantes;
@@ -37,7 +40,7 @@ public class DivingSceneManager : MonoBehaviour, IDataPersistence
     {
         data.Money = this.Money;
         data.Diamantes = this.Diamantes;
-    }
+    }*/
 
     // Update is called once per frame
     void Update()
@@ -60,10 +63,24 @@ public class DivingSceneManager : MonoBehaviour, IDataPersistence
     public void Fim()
     {
         gameManager.BankMoney += Money;
+        gameManager.BankDiamantes += Diamantes;
+        telaLoad.SetActive(true);
+        StartCoroutine(CarregarCena());
     }
 
     public void Pause()
     {
         SceneManager.LoadScene("Pause", LoadSceneMode.Additive);
+    }
+
+    private IEnumerator CarregarCena()
+    {
+        AsyncOperation asyncOperation = SceneManager.LoadSceneAsync("BoatScene");
+        while (!asyncOperation.isDone)
+        {
+            //Debug.Log("Carregando: " + (asyncOperation.progress * 100f) + "%");
+            this.barraProgresso.value = asyncOperation.progress;
+            yield return null;
+        }
     }
 }

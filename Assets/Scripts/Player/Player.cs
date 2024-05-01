@@ -25,6 +25,7 @@ public class Player : MonoBehaviour
     public int CurrentHealth;
     void Start()
     {
+        gameManager = FindAnyObjectByType<GameManager>();
         CurrentHealth = MaxHealth;
         playerHealthBar.SetMaxHealth(MaxHealth);
 

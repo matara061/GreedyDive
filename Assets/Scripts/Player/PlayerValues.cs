@@ -82,7 +82,10 @@ public class PlayerValues : MonoBehaviour
 
     private void Awake()
     {
-        if(gameManager != null)
+        gameManager = FindAnyObjectByType<GameManager>();
+        diveManager = FindAnyObjectByType<DivingSceneManager>();
+
+        if (gameManager != null)
         {
             SetTank();
             SetHealth();

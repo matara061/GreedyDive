@@ -27,7 +27,7 @@ public class BoatManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        UpdadeScoreText();
     }
 
     public void UpdadeScoreText()
@@ -45,7 +45,9 @@ public class BoatManager : MonoBehaviour
 
     public void Loja2()
     {
-
+        SceneManager.LoadScene("Loja2", LoadSceneMode.Additive);
+        Invoke("RemoveExtraEventSystems", 0.1f); // Wait a bit for the scene to load
+        Invoke("RemoveExtraAudioListeners", 0.1f); // Wait a bit for the scene to load
     }
 
     public void Dive()
