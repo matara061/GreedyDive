@@ -19,12 +19,15 @@ public class Predador : MonoBehaviour
     private Vector2 _targetDirection;
 
     public BoxCollider2D Collider;
-    public DivingSceneManager diveManager;
+    private DivingSceneManager diveManager;
 
     public int CurrentHP;
     public int Damage;
     private int segundos = 0;
     private bool isCoroutineRunning = false;
+
+    // Adicionado para movimento aleatório
+    private Vector2 swimDirection;
 
     private void Awake()
     {
@@ -36,9 +39,13 @@ public class Predador : MonoBehaviour
     private void Start()
     {
         player = FindAnyObjectByType<Player>();
+        diveManager = FindAnyObjectByType<DivingSceneManager>();
         CurrentHP = _values.HP;
         Damage = _values.Damage;   
         _speed = _values.Speed;
+
+        // Inicializa a direção de natação aleatoriamente
+        swimDirection = Random.insideUnitCircle.normalized;
     }
 
     private void Update()
@@ -51,6 +58,12 @@ public class Predador : MonoBehaviour
         if (CurrentHP <= 0)
         {
             Death();
+        }
+
+        // Altera aleatoriamente a direção de natação a cada 2 segundos
+        if (Time.time % 2f < 0.1f)
+        {
+            swimDirection = Random.insideUnitCircle.normalized;
         }
     }
 
@@ -69,7 +82,8 @@ public class Predador : MonoBehaviour
         }
         else
         {
-            _targetDirection = Vector2.zero;
+            // Se o jogador não está no alcance, use a direção de natação aleatória
+            _targetDirection = swimDirection;
         }
     }
 

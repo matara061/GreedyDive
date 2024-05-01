@@ -15,6 +15,8 @@ public class PredadorValues : MonoBehaviour
 {
     { "Tubarao", new Tuple< int, int, int, int, int >(15, 5, 2, 50, 0) },
     { "Piranha", new Tuple< int, int, int, int, int >(40, 3, 5, 20, 0) },
+    { "Moreia", new Tuple< int, int, int, int, int >(15, 6, 3, 20, 0) },
+    { "Barracuda", new Tuple< int, int, int, int, int >(20, 10, 3, 20, 0) },
     { "Peixe espada", new Tuple< int, int, int, int, int >(60, 3, 3, 10, 0) }
 };
 

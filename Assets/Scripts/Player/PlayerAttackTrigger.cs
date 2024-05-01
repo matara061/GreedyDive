@@ -24,7 +24,7 @@ public class PlayerAttackTrigger : MonoBehaviour
     {
         if (col.gameObject.layer == LayerMask.NameToLayer("Predador"))
         {
-            Debug.Log("predador");
+            //Debug.Log("predador");
             anim.SetBool("IsAttack", true);
             Attack = true;
 
