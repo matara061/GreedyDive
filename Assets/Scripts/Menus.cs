@@ -10,14 +10,30 @@ public class Menus : MonoBehaviour
     [SerializeField]
     private Slider barraProgresso;
 
+    public string[] sceneName;
+
+    private void Start()
+    {
+        sceneName[0] = "BoatScene";
+        sceneName[1] = "TestesM";
+    }
+
     public void Resume()
     {
+        Time.timeScale = 1f;
         SceneManager.UnloadSceneAsync("Pause");
     }
 
     public void Desistir()
     {
-        StartCoroutine(CarregarCena());
+        Time.timeScale = 1f;
+        StartCoroutine(CarregarCena(sceneName[0]));
+    }
+
+    public void TentarDeNovo()
+    {
+        Time.timeScale = 1f;
+        StartCoroutine(CarregarCena(sceneName[1]));
     }
 
     public void Loja1()
@@ -30,9 +46,9 @@ public class Menus : MonoBehaviour
         Debug.Log("esquerda");
     }
 
-    private IEnumerator CarregarCena()
+    private IEnumerator CarregarCena(string name)
     {
-        AsyncOperation asyncOperation = SceneManager.LoadSceneAsync("BoatScene");
+        AsyncOperation asyncOperation = SceneManager.LoadSceneAsync(name);
         while (!asyncOperation.isDone)
         {
             //Debug.Log("Carregando: " + (asyncOperation.progress * 100f) + "%");

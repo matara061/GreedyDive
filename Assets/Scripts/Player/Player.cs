@@ -6,6 +6,7 @@ public class Player : MonoBehaviour
 {
     public MovimentJoystick movimentJoystick;
     public GameManager gameManager;
+    private DivingSceneManager diveManager;
     public PlayerHealthBar playerHealthBar;
     public PlayerAttackTrigger trigger;
 
@@ -26,6 +27,7 @@ public class Player : MonoBehaviour
     void Start()
     {
         gameManager = FindAnyObjectByType<GameManager>();
+        diveManager = FindAnyObjectByType<DivingSceneManager>();
         CurrentHealth = MaxHealth;
         playerHealthBar.SetMaxHealth(MaxHealth);
 
@@ -37,10 +39,11 @@ public class Player : MonoBehaviour
 
     private void Update()
     {
-        if(CurrentHealth <= 0)
+        if(CurrentHealth <= 0 && isAlive)
         {
             isAlive = false;
             animator.SetBool("IsDeath", true);
+            diveManager.Perdeu();
         }
 
 
@@ -121,6 +124,7 @@ public class Player : MonoBehaviour
             {
                 isAlive = false;
                 Debug.Log("You Lose");
+                diveManager.Perdeu();
             }
 
             if (other.gameObject.layer == LayerMask.NameToLayer("Cura"))
