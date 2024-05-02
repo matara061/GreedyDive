@@ -32,6 +32,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/GameOver.unity
     guid: a946a5b3fdbeed44197a34abf8b93b5d
+  - enabled: 1
+    path: Assets/Scenes/Depth_1_Loop.unity
+    guid: 847747e7301351b4c825de2bcf65ea5e
   m_configObjects:
     com.unity.adaptiveperformance.loader_settings: {fileID: 11400000, guid: 26d448429ad920940a18e56d909d0bb8, type: 2}
     com.unity.adaptiveperformance.simulator.provider_settings: {fileID: 11400000, guid: f552750c5eb3fa64d9c9d3b1d78a1b56, type: 2}

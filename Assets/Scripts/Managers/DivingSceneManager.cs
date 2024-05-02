@@ -24,33 +24,20 @@ public class DivingSceneManager : MonoBehaviour
     public bool Isstage1 = false;
     public bool IsPaused = false;
 
-    private float initialY;
+    public float depthSpeed = 1f; // Velocidade de avanço da profundidade
 
     // Start is called before the first frame update
     void Start()
     {
         gameManager = FindAnyObjectByType<GameManager>();
-        // Salva a posição Y inicial do jogador
-        initialY = player.transform.position.y;
     }
-
-   /* public void LoadData(GameData data) // jogar isso para o gameManager dps
-    {
-        this.Money = data.Money;
-        this.Diamantes = data.Diamantes;
-    }
-
-    public void SaveData(ref GameData data) // jogar isso para o gameManager dps
-    {
-        data.Money = this.Money;
-        data.Diamantes = this.Diamantes;
-    }*/
 
     // Update is called once per frame
     void Update()
     {
-        // Calcula a profundidade baseada na posição Y inicial e a posição Y atual
-        depth = initialY - player.transform.position.y;
+        // Calcula a profundidade baseada no tempo
+        depth += Time.deltaTime * depthSpeed;
+
         // Atualiza o texto da profundidade na UI
         depthText.text = depth.ToString("0.00");
 
@@ -65,6 +52,12 @@ public class DivingSceneManager : MonoBehaviour
             SceneManager.LoadScene("Stage1", LoadSceneMode.Additive);
             Isstage1 = true;
         }
+    }
+
+    // Chame este método quando o jogador pegar um item que altera a velocidade de avanço da profundidade
+    public void ChangeDepthSpeed(float newSpeed)
+    {
+        depthSpeed = newSpeed;
     }
 
     public void UpdateScoreText(int newScore, int newScore2)

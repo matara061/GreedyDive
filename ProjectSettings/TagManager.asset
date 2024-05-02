@@ -17,7 +17,7 @@ TagManager:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Parede
   - Water
   - UI
   - Predador
@@ -25,7 +25,7 @@ TagManager:
   - Obstaculo
   - AttackArea
   - Cura
-  - 
+  - Player
   - 
   - 
   - 

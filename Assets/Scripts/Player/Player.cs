@@ -11,6 +11,7 @@ public class Player : MonoBehaviour
     public PlayerAttackTrigger trigger;
 
     public float playerSpeed;
+    public float UpSpeed = 2f;
     public int playerDam;
     private int segundos = 0;
     private Rigidbody2D rb;
@@ -39,7 +40,9 @@ public class Player : MonoBehaviour
 
     private void Update()
     {
-        if(CurrentHealth <= 0 && isAlive)
+        transform.position += Time.deltaTime * UpSpeed * Vector3.up;
+
+        if (CurrentHealth <= 0 && isAlive)
         {
             isAlive = false;
             animator.SetBool("IsDeath", true);
@@ -127,11 +130,11 @@ public class Player : MonoBehaviour
                 diveManager.Perdeu();
             }
 
-            if (other.gameObject.layer == LayerMask.NameToLayer("Cura"))
+          /*  if (other.gameObject.layer == LayerMask.NameToLayer("Cura"))
             {
                 Cura();
 
-            }
+            }*/
         
         
     }
