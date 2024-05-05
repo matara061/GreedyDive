@@ -10,9 +10,18 @@ TagManager:
   - GameManager
   - Bagre
   - Pacu
-  - Tubarao
   - Barracuda
   - Moreia
+  - Tubarao branco
+  - Peixe leao
+  - Enguia eletrica
+  - Peixe pedra
+  - Caranguejo
+  - Piranha
+  - Serpente do mar
+  - Peixe gato
+  - Agua viva
+  - Tubarao martelo
   layers:
   - Default
   - TransparentFX

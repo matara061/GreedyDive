@@ -14,6 +14,8 @@ public class StoreManager : MonoBehaviour
 
     public Animator anim;
 
+    public TextMeshProUGUI goldText;
+    public TextMeshProUGUI diamondText;
     public TextMeshProUGUI armaPriceText;
     public TextMeshProUGUI roupaPriceText;
     public TextMeshProUGUI pePriceText;
@@ -28,6 +30,9 @@ public class StoreManager : MonoBehaviour
     public Sprite[] roupasSprites;
     public Sprite[] pesSprites;
     public Sprite[] tankSprites;
+
+    public GameObject insufficientFundsPrefab; // O prefab da mensagem de aviso
+    public Transform canvasTransform; // O transform do canvas onde a mensagem será exibida
 
 
     private Dictionary<string, Tuple<int, int>> Roupas = new Dictionary<string, Tuple<int, int>>
@@ -103,6 +108,12 @@ public class StoreManager : MonoBehaviour
     {
         gameManager = FindAnyObjectByType<GameManager>();
         ItemDisplay();
+    }
+
+    private void Update()
+    {
+        goldText.text = gameManager.BankMoney.ToString();
+        diamondText.text = gameManager.BankDiamantes.ToString();
     }
 
     public void ItemDisplay()
@@ -285,7 +296,8 @@ public class StoreManager : MonoBehaviour
                     }
                     else
                     {
-                        Debug.Log("Você não tem dinheiro suficiente para comprar esta arma.");
+                        // O jogador não tem dinheiro suficiente, mostre a mensagem de aviso
+                        ShowInsufficientFundsMessage();
                     }
                 }
             }
@@ -334,7 +346,8 @@ public class StoreManager : MonoBehaviour
                     }
                     else
                     {
-                        Debug.Log("Você não tem dinheiro suficiente para comprar esta roupa.");
+                        // O jogador não tem dinheiro suficiente, mostre a mensagem de aviso
+                        ShowInsufficientFundsMessage();
                     }
                 }
             }
@@ -383,7 +396,8 @@ public class StoreManager : MonoBehaviour
                     }
                     else
                     {
-                        Debug.Log("Você não tem dinheiro suficiente para comprar este pe.");
+                        // O jogador não tem dinheiro suficiente, mostre a mensagem de aviso
+                        ShowInsufficientFundsMessage();
                     }
                 }
             }
@@ -432,7 +446,8 @@ public class StoreManager : MonoBehaviour
                     }
                     else
                     {
-                        Debug.Log("Você não tem dinheiro suficiente para comprar este tank.");
+                        // O jogador não tem dinheiro suficiente, mostre a mensagem de aviso
+                        ShowInsufficientFundsMessage();
                     }
                 }
             }
@@ -445,6 +460,19 @@ public class StoreManager : MonoBehaviour
         {
             Debug.Log("O valor atual de CurrentOxygenTank não está no dicionário Tanks.");
         }
+    }
+
+    private void ShowInsufficientFundsMessage()
+    {
+        // Instancia a mensagem de aviso
+        GameObject message = Instantiate(insufficientFundsPrefab, canvasTransform);
+
+        // Configura a mensagem
+        TextMeshProUGUI text = message.GetComponent<TextMeshProUGUI>();
+        text.text = "Dinheiro insuficiente";
+
+        // Destrua a mensagem após alguns segundos
+        Destroy(message, 3f);
     }
 
     public void sair()

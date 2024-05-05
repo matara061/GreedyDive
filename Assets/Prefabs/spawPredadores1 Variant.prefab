@@ -52,6 +52,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: spawPredadores1 Variant
       objectReference: {fileID: 0}
+    - target: {fileID: 7206262385873385735, guid: a790f3e33d7084c4f8308ebcb28db6fc, type: 3}
+      propertyPath: prefabs.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 7206262385873385735, guid: a790f3e33d7084c4f8308ebcb28db6fc, type: 3}
+      propertyPath: prefabs.Array.data[2]
+      value: 
+      objectReference: {fileID: 4980963745034129256, guid: 757f946ff8dd15e4cbc9441385ef24a3, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
