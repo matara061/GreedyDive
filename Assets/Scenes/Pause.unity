@@ -1620,6 +1620,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   barraProgresso: {fileID: 984962196}
+  sceneName:
+  - 
+  - 
 --- !u!1 &1068275586
 GameObject:
   m_ObjectHideFlags: 0
