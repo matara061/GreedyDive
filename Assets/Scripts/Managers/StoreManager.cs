@@ -12,10 +12,16 @@ public class StoreManager : MonoBehaviour
     public int Diamond;
     public GameManager gameManager;
 
+    [Header("Stores")]
+    public bool loja1 = true;
+    public bool loja2 = false;
+    public bool loja3 = false;
+
     string layerName;
 
     public Animator anim;
 
+    [Header("UI texts")]
     public TextMeshProUGUI goldText;
     public TextMeshProUGUI diamondText;
     public TextMeshProUGUI armaPriceText;
@@ -23,11 +29,13 @@ public class StoreManager : MonoBehaviour
     public TextMeshProUGUI pePriceText;
     public TextMeshProUGUI tankPriceText;
 
+    [Header("UI imagens")]
     public Image armaIcon;
     public Image roupaIcon;
     public Image pesIcon;
     public Image tankIcon;
 
+    [Header("UI sprites")]
     public Sprite[] armasSprites;
     public Sprite[] roupasSprites;
     public Sprite[] pesSprites;
@@ -548,12 +556,35 @@ public class StoreManager : MonoBehaviour
 
     public void SetaR()
     {
-        anim.Play("LojaDiamantes");
+        if(loja1)
+        {
+            anim.Play("LojaAmuletos2");
+            loja1 = false;
+            loja2 = true;
+        }else
+            if(loja2)
+        {
+            anim.Play("LojaDiamantes");
+            loja2 = false;
+            loja3 = true;
+        }
     }
 
     public void SetaL()
     {
-        anim.Play("LojaAmuletos");
+        if (loja2)
+        {
+            anim.Play("LojaAmuletos");
+            loja1 = true;
+            loja2 = false;
+        }
+        else
+            if (loja3)
+        {
+            anim.Play("DiamanteToAmuleto2");
+            loja2 = true;
+            loja3 = false;
+        }
     }
 
 
