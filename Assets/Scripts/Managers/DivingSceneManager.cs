@@ -22,6 +22,7 @@ public class DivingSceneManager : MonoBehaviour
     public GameObject telaLoad;
 
     public bool Isstage1 = false;
+    public bool IsVitoria = false;
     public bool IsPaused = false;
 
     public float depthSpeed = 1f; // Velocidade de avanço da profundidade
@@ -43,6 +44,11 @@ public class DivingSceneManager : MonoBehaviour
 
         UpdateScoreText(Money, Diamantes);
         Stage();
+
+        if (depth >= 5 && !IsVitoria)
+        {
+            Fim();
+        }
     }
 
     public void Stage()
@@ -71,8 +77,9 @@ public class DivingSceneManager : MonoBehaviour
     {
         gameManager.BankMoney += Money;
         gameManager.BankDiamantes += Diamantes;
-        telaLoad.SetActive(true);
-        StartCoroutine(CarregarCena());
+        IsVitoria = true;
+        SceneManager.LoadScene("Vitoria", LoadSceneMode.Additive);
+        StartCoroutine(RemoveExtraEventSystemsAndListeners());
     }
 
     public void Perdeu()

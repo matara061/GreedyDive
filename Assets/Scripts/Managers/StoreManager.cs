@@ -12,8 +12,16 @@ public class StoreManager : MonoBehaviour
     public int Diamond;
     public GameManager gameManager;
 
+    [Header("Stores")]
+    public bool loja1 = true;
+    public bool loja2 = false;
+    public bool loja3 = false;
+
+    string layerName;
+
     public Animator anim;
 
+    [Header("UI texts")]
     public TextMeshProUGUI goldText;
     public TextMeshProUGUI diamondText;
     public TextMeshProUGUI armaPriceText;
@@ -21,11 +29,13 @@ public class StoreManager : MonoBehaviour
     public TextMeshProUGUI pePriceText;
     public TextMeshProUGUI tankPriceText;
 
+    [Header("UI imagens")]
     public Image armaIcon;
     public Image roupaIcon;
     public Image pesIcon;
     public Image tankIcon;
 
+    [Header("UI sprites")]
     public Sprite[] armasSprites;
     public Sprite[] roupasSprites;
     public Sprite[] pesSprites;
@@ -107,7 +117,19 @@ public class StoreManager : MonoBehaviour
     private void Start()
     {
         gameManager = FindAnyObjectByType<GameManager>();
-        ItemDisplay();
+
+        // Obtenha o número da layer
+        int layerNumber = gameObject.layer;
+
+        // Converta o número da layer em um nome de layer
+        layerName = LayerMask.LayerToName(layerNumber);
+
+        // Verifique se o nome da layer é "loja1"
+        if (layerName == "Loja1")
+        {
+            // Se a layer for "loja1", faça alguma ação
+            ItemDisplay();
+        }
     }
 
     private void Update()
@@ -462,6 +484,53 @@ public class StoreManager : MonoBehaviour
         }
     }
 
+    public void ComprarAmuleto1()
+    {
+
+    }
+
+    public void ComprarAmuleto2()
+    {
+
+    }
+
+    public void ComprarAmuleto3()
+    {
+
+    }
+
+    public void ComprarAmuleto4()
+    {
+
+    }
+
+    public void ComprarAmuleto5()
+    {
+
+    }
+
+    public void ComprarAmuleto6()
+    {
+
+    }
+
+    public void ComprarAmuleto7()
+    {
+
+    }
+    public void ComprarAmuleto8()
+    {
+
+    }
+    public void ComprarAmuleto9()
+    {
+
+    }
+    public void ComprarAmuleto10()
+    {
+
+    }
+
     private void ShowInsufficientFundsMessage()
     {
         // Instancia a mensagem de aviso
@@ -477,17 +546,45 @@ public class StoreManager : MonoBehaviour
 
     public void sair()
     {
-        SceneManager.UnloadSceneAsync("Loja");
+        if (layerName == "Loja1")
+        {
+            SceneManager.UnloadSceneAsync("Loja");
+        }else
+            SceneManager.UnloadSceneAsync("Loja2");
+
     }
 
     public void SetaR()
     {
-        anim.Play("LojaDiamantes");
+        if(loja1)
+        {
+            anim.Play("LojaAmuletos2");
+            loja1 = false;
+            loja2 = true;
+        }else
+            if(loja2)
+        {
+            anim.Play("LojaDiamantes");
+            loja2 = false;
+            loja3 = true;
+        }
     }
 
     public void SetaL()
     {
-        anim.Play("LojaAmuletos");
+        if (loja2)
+        {
+            anim.Play("LojaAmuletos");
+            loja1 = true;
+            loja2 = false;
+        }
+        else
+            if (loja3)
+        {
+            anim.Play("DiamanteToAmuleto2");
+            loja2 = true;
+            loja3 = false;
+        }
     }
 
 
