@@ -118,7 +118,7 @@ public class Predador : MonoBehaviour
             player.TakeDamage(Damage);
         }
 
-        if (other.gameObject.layer == LayerMask.NameToLayer("AttackArea"))
+        if (other.gameObject.CompareTag("PlayerAttackHitbox"))
         {
             TakeDamage(player.playerDam);
         }

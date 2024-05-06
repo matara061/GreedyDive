@@ -40,12 +40,15 @@ public class Player : MonoBehaviour
 
     private void Update()
     {
-        transform.position += Time.deltaTime * UpSpeed * Vector3.up;
+        //transform.position += Time.deltaTime * UpSpeed * Vector3.up;
 
         if (CurrentHealth <= 0 && isAlive)
         {
             isAlive = false;
-            animator.SetBool("IsDeath", true);
+            animator.SetBool("Moving", false);
+            animator.SetBool("MovingDiagonally", false);
+            animator.SetBool("Attacking", false);
+            animator.SetBool("Dead", true);
             diveManager.Perdeu();
         }
 
@@ -75,8 +78,9 @@ public class Player : MonoBehaviour
                 rb.velocity = Vector2.zero;
 
                 // Define a animação para o jogador parado
-                animator.SetBool("IsMoving", false);
-                animator.SetBool("IsDiag", false);
+                animator.SetBool("Moving", false);
+                animator.SetBool("MovingDiagonally", false);
+                animator.SetBool("Idle", true);
             }
         }
     }
@@ -84,7 +88,8 @@ public class Player : MonoBehaviour
     private void SetAnimationParameters(Vector2 direction)
     {
         // Define a animação para o jogador se movendo
-        animator.SetBool("IsMoving", true);
+        animator.SetBool("Idle", false);
+        animator.SetBool("Moving", true);
 
         // Adiciona um limiar para o movimento diagonal
         float diagonalThreshold = 0.5f;
@@ -95,7 +100,7 @@ public class Player : MonoBehaviour
             if (Mathf.Abs(direction.x) > Mathf.Abs(direction.y) + diagonalThreshold)
             {
                 // Direção para a direita ou esquerda
-                animator.SetBool("IsDiag", false);
+                animator.SetBool("MovingDiagonally", false);
                 animator.SetFloat("MoveX", Mathf.Sign(direction.x));
                 animator.SetFloat("MoveY", 0f);
 
@@ -104,14 +109,14 @@ public class Player : MonoBehaviour
             else if (Mathf.Abs(direction.y) > Mathf.Abs(direction.x) + diagonalThreshold)
             {
                 // Direção para cima ou para baixo
-                animator.SetBool("IsDiag", false);
+                animator.SetBool("MovingDiagonally", false);
                 animator.SetFloat("MoveX", 0f);
                 animator.SetFloat("MoveY", Mathf.Sign(direction.y));
             }
             else
             {
                 // Movimento diagonal
-                animator.SetBool("IsDiag", true);
+                animator.SetBool("MovingDiagonally", true);
                 animator.SetFloat("MoveX", direction.x);
                 animator.SetFloat("MoveY", direction.y);
 
@@ -171,7 +176,6 @@ public class Player : MonoBehaviour
     {
         boxCollider.enabled = false;
         segundos = time;
-        Debug.Log("I'm fucking invincible!");
         
         isInvencivel = true;
     }

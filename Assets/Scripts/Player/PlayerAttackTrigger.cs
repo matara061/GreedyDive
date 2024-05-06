@@ -7,6 +7,7 @@ public class PlayerAttackTrigger : MonoBehaviour
     public Animator anim;
     public Transform playerTransform;
     public SpriteRenderer spriteRenderer;
+    public GameObject playerAttackHitbox;
 
     public bool Attack = false;
 
@@ -25,7 +26,7 @@ public class PlayerAttackTrigger : MonoBehaviour
         if (col.gameObject.layer == LayerMask.NameToLayer("Predador"))
         {
             //Debug.Log("predador");
-            anim.SetBool("IsAttack", true);
+            anim.SetBool("Attacking", true);
             Attack = true;
 
             // Calcula a direção para o inimigo
@@ -44,7 +45,7 @@ public class PlayerAttackTrigger : MonoBehaviour
         if (col.gameObject.layer == LayerMask.NameToLayer("Predador"))
         {
             Attack = false;
-            anim.SetBool("IsAttack", false);
+            anim.SetBool("Attacking", false);
         }
     }
 
@@ -57,7 +58,7 @@ public class PlayerAttackTrigger : MonoBehaviour
         if (Mathf.Abs(direction.x) > Mathf.Abs(direction.y) + diagonalThreshold)
         {
             // Direção para a direita ou esquerda
-            anim.SetBool("IsDiag", false);
+            anim.SetBool("MovingDiagonally", false);
             anim.SetFloat("MoveX", Mathf.Sign(direction.x));
             anim.SetFloat("MoveY", 0f);
 
@@ -66,14 +67,14 @@ public class PlayerAttackTrigger : MonoBehaviour
         else if (Mathf.Abs(direction.y) > Mathf.Abs(direction.x) + diagonalThreshold)
         {
             // Direção para cima ou para baixo
-            anim.SetBool("IsDiag", false);
+            anim.SetBool("MovingDiagonally", false);
             anim.SetFloat("MoveX", 0f);
             anim.SetFloat("MoveY", Mathf.Sign(direction.y));
         }
         else
         {
             // Movimento diagonal
-            anim.SetBool("IsDiag", true);
+            anim.SetBool("MovingDiagonally", true);
             anim.SetFloat("MoveX", direction.x);
             anim.SetFloat("MoveY", direction.y);
 
