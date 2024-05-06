@@ -12,6 +12,8 @@ public class StoreManager : MonoBehaviour
     public int Diamond;
     public GameManager gameManager;
 
+    string layerName;
+
     public Animator anim;
 
     public TextMeshProUGUI goldText;
@@ -107,7 +109,19 @@ public class StoreManager : MonoBehaviour
     private void Start()
     {
         gameManager = FindAnyObjectByType<GameManager>();
-        ItemDisplay();
+
+        // Obtenha o número da layer
+        int layerNumber = gameObject.layer;
+
+        // Converta o número da layer em um nome de layer
+        layerName = LayerMask.LayerToName(layerNumber);
+
+        // Verifique se o nome da layer é "loja1"
+        if (layerName == "Loja1")
+        {
+            // Se a layer for "loja1", faça alguma ação
+            ItemDisplay();
+        }
     }
 
     private void Update()
@@ -462,6 +476,53 @@ public class StoreManager : MonoBehaviour
         }
     }
 
+    public void ComprarAmuleto1()
+    {
+
+    }
+
+    public void ComprarAmuleto2()
+    {
+
+    }
+
+    public void ComprarAmuleto3()
+    {
+
+    }
+
+    public void ComprarAmuleto4()
+    {
+
+    }
+
+    public void ComprarAmuleto5()
+    {
+
+    }
+
+    public void ComprarAmuleto6()
+    {
+
+    }
+
+    public void ComprarAmuleto7()
+    {
+
+    }
+    public void ComprarAmuleto8()
+    {
+
+    }
+    public void ComprarAmuleto9()
+    {
+
+    }
+    public void ComprarAmuleto10()
+    {
+
+    }
+
     private void ShowInsufficientFundsMessage()
     {
         // Instancia a mensagem de aviso
@@ -477,7 +538,12 @@ public class StoreManager : MonoBehaviour
 
     public void sair()
     {
-        SceneManager.UnloadSceneAsync("Loja");
+        if (layerName == "Loja1")
+        {
+            SceneManager.UnloadSceneAsync("Loja");
+        }else
+            SceneManager.UnloadSceneAsync("Loja2");
+
     }
 
     public void SetaR()

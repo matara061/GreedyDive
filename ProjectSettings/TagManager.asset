@@ -22,6 +22,7 @@ TagManager:
   - Peixe gato
   - Agua viva
   - Tubarao martelo
+  - Tubarao
   layers:
   - Default
   - TransparentFX
@@ -35,8 +36,8 @@ TagManager:
   - AttackArea
   - Cura
   - Player
-  - 
-  - 
+  - Loja1
+  - Loja2
   - 
   - 
   - 

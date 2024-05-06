@@ -1579,7 +1579,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1204093181}
   - component: {fileID: 1204093180}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: StoreManager
   m_TagString: Untagged
   m_Icon: {fileID: 0}

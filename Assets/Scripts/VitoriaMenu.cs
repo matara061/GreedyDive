@@ -5,48 +5,50 @@ using UnityEngine.UI;
 using TMPro;
 using UnityEngine.SceneManagement;
 
-public class Menus : MonoBehaviour
+public class VitoriaMenu : MonoBehaviour
 {
+
     [SerializeField]
     private Slider barraProgresso;
 
- 
-    public string[] sceneName;
+    public TextMeshProUGUI gold;
+    public TextMeshProUGUI diamond;
 
-    private void Start()
+    [SerializeField]
+    DivingSceneManager divingSceneManager;
+
+    public string[] sceneName;
+    
+    void Start()
     {
-        
+        divingSceneManager = FindAnyObjectByType<DivingSceneManager>();
+
+        Vitoria();
 
         sceneName[0] = "BoatScene";
         sceneName[1] = "TestesM";
     }
 
-    public void Resume()
+    // Update is called once per frame
+    void Update()
     {
-        Time.timeScale = 1f;
-        SceneManager.UnloadSceneAsync("Pause");
+        
     }
 
-    public void Desistir()
+    public void Vitoria()
+    {
+        if (divingSceneManager != null)
+        {
+            gold.text = divingSceneManager.Money.ToString();
+            diamond.text = divingSceneManager.Diamantes.ToString();
+            Time.timeScale = 0f;
+        }
+    }
+
+    public void Sair()
     {
         Time.timeScale = 1f;
         StartCoroutine(CarregarCena(sceneName[0]));
-    }
-
-    public void TentarDeNovo()
-    {
-        Time.timeScale = 1f;
-        StartCoroutine(CarregarCena(sceneName[1]));
-    }
-
-    public void Loja1()
-    {
-        Debug.Log("loja");
-    }
-
-    public void Esquerda()
-    {
-        Debug.Log("esquerda");
     }
 
     private IEnumerator CarregarCena(string name)
