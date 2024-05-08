@@ -21,11 +21,6 @@ public class FishValue : MonoBehaviour
         Valor();
     }
 
-    void Start()
-    {
-        //Valor();
-    }
-
     void Valor()
     {
         if (tagToMoeda.TryGetValue(gameObject.tag, out Tuple<int, int, int> valor))

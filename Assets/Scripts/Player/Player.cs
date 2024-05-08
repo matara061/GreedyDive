@@ -14,6 +14,8 @@ public class Player : MonoBehaviour
     public float UpSpeed = 2f;
     public int playerDam;
     private int segundos = 0;
+    public int bonusAmuleto3 = 0;
+    public float bonusAmuleto4 = 0f;
     private Rigidbody2D rb;
     private Animator animator;
     public BoxCollider2D boxCollider;
@@ -25,6 +27,7 @@ public class Player : MonoBehaviour
 
     public int MaxHealth;
     public float CurrentHealth;
+    public float CuraNum = 0.1f;
     void Start()
     {
         gameManager = FindAnyObjectByType<GameManager>();
@@ -146,7 +149,7 @@ public class Player : MonoBehaviour
 
     public void Cura()
     {
-        CurrentHealth += Mathf.RoundToInt(MaxHealth * 0.1f);// Adiciona 10% do MaxHealth ao CurrentHealth
+        CurrentHealth += Mathf.RoundToInt(MaxHealth * CuraNum);// Adiciona 10% ou 20% do MaxHealth ao CurrentHealth
         playerHealthBar.SetHealth(CurrentHealth);
 
         if (CurrentHealth > MaxHealth)
@@ -168,6 +171,7 @@ public class Player : MonoBehaviour
 
     public void ContinuosDamage(float damage)
     {
+        damage -= bonusAmuleto4;// amuleto4
         CurrentHealth -= damage;
         playerHealthBar.SetHealth(CurrentHealth);
     }
@@ -175,7 +179,7 @@ public class Player : MonoBehaviour
     public void Imunidade(int time)
     {
         boxCollider.enabled = false;
-        segundos = time;
+        segundos = time + bonusAmuleto3;
         
         isInvencivel = true;
     }

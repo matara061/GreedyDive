@@ -20,11 +20,13 @@ public class Predador : MonoBehaviour
 
     public BoxCollider2D Collider;
     private DivingSceneManager diveManager;
+    GameManager gameManager;
 
     public int CurrentHP;
     public int Damage;
     private int segundos = 0;
     private bool isCoroutineRunning = false;
+    public int bonusAmuleto5 = 0;
 
     // Adicionado para movimento aleatório
     private Vector2 swimDirection;
@@ -38,6 +40,16 @@ public class Predador : MonoBehaviour
 
     private void Start()
     {
+        gameManager = FindAnyObjectByType<GameManager>();
+
+        if (gameManager != null)
+        {
+            if (gameManager.AmuletoAtivo[4])
+            {
+                bonusAmuleto5 = 2;
+            }
+        }
+
         player = FindAnyObjectByType<Player>();
         diveManager = FindAnyObjectByType<DivingSceneManager>();
         CurrentHP = _values.HP;
@@ -146,6 +158,8 @@ public class Predador : MonoBehaviour
     {
         if(_values != null)
         {
+            _values.Diamante *= bonusAmuleto5;
+
             diveManager.Money += _values.Moeda;
             diveManager.Diamantes += _values.Diamante;
         }

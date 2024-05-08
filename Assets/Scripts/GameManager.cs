@@ -12,6 +12,7 @@ public class GameManager : MonoBehaviour,IDataPersistence
     public string CurrentAmuleto;
 
     public bool[] Amuleto = new bool[9];
+    public bool[] AmuletoAtivo = new bool[9];
 
     public int BankMoney;
     public int BankDiamantes;
@@ -36,11 +37,16 @@ public class GameManager : MonoBehaviour,IDataPersistence
         CurrentDivingSuit = "Roupa1";
         CurrentDivingFins = "Pes1";
         CurrentOxygenTank = "Tank1";
-        CurrentAmuleto = string.Empty;
+        CurrentAmuleto = string.Empty; // apagar dps
 
         for (int i = 0; i < Amuleto.Length; i++)
         {
             Amuleto[i] = false;
+        }
+
+        for (int i = 0; i < AmuletoAtivo.Length; i++)
+        {
+            AmuletoAtivo[i] = false;
         }
 
         // Isso fará com que o GameManager não seja destruído ao carregar uma nova cena
