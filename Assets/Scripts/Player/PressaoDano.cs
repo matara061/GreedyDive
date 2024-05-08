@@ -9,7 +9,7 @@ public class PressaoDano : MonoBehaviour
     public DivingSceneManager diveManager;
 
     public float depth;
-    public int Dano;
+    public float Dano;
     public bool IsInvoke = false;
 
 
@@ -19,13 +19,21 @@ public class PressaoDano : MonoBehaviour
     {
         depth = diveManager.depth;
 
-        if (depth > 50 && depth < 80 && ChamaDanoCoroutine == null)
+        if (depth > 100 && depth < 500 && ChamaDanoCoroutine == null)
         {
-            Dano = 1;
+            Dano = 0.5f;
             ChamaDanoCoroutine = ChamaDano();
             StartCoroutine(ChamaDanoCoroutine);
         }
-        else if (depth > 80 && depth < 130 && Dano != 2)
+        else if (depth > 500 && depth < 1000 && Dano != 1.5f)
+        {
+            StopCoroutine(ChamaDanoCoroutine);
+            ChamaDanoCoroutine = null;
+            Dano = 1.5f;
+            ChamaDanoCoroutine = ChamaDano();
+            StartCoroutine(ChamaDanoCoroutine);
+        }
+        else if (depth > 1000 && depth < 1500 && Dano != 2)
         {
             StopCoroutine(ChamaDanoCoroutine);
             ChamaDanoCoroutine = null;
@@ -33,11 +41,27 @@ public class PressaoDano : MonoBehaviour
             ChamaDanoCoroutine = ChamaDano();
             StartCoroutine(ChamaDanoCoroutine);
         }
-        else if (depth > 130 && depth < 180 && Dano != 3)
+        else if (depth > 1500 && depth < 2000 && Dano != 2.5f)
+        {
+            StopCoroutine(ChamaDanoCoroutine);
+            ChamaDanoCoroutine = null;
+            Dano = 2.5f;
+            ChamaDanoCoroutine = ChamaDano();
+            StartCoroutine(ChamaDanoCoroutine);
+        }
+        else if (depth > 2000 && depth < 2500 && Dano != 3)
         {
             StopCoroutine(ChamaDanoCoroutine);
             ChamaDanoCoroutine = null;
             Dano = 3;
+            ChamaDanoCoroutine = ChamaDano();
+            StartCoroutine(ChamaDanoCoroutine);
+        }
+        else if (depth > 2500 && depth < 3000 && Dano != 3.5f)
+        {
+            StopCoroutine(ChamaDanoCoroutine);
+            ChamaDanoCoroutine = null;
+            Dano = 3.5f;
             ChamaDanoCoroutine = ChamaDano();
             StartCoroutine(ChamaDanoCoroutine);
         }

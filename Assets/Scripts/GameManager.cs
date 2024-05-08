@@ -11,6 +11,8 @@ public class GameManager : MonoBehaviour,IDataPersistence
     public string CurrentDivingFins;
     public string CurrentAmuleto;
 
+    public bool[] Amuleto = new bool[9];
+
     public int BankMoney;
     public int BankDiamantes;
 
@@ -35,6 +37,11 @@ public class GameManager : MonoBehaviour,IDataPersistence
         CurrentDivingFins = "Pes1";
         CurrentOxygenTank = "Tank1";
         CurrentAmuleto = string.Empty;
+
+        for (int i = 0; i < Amuleto.Length; i++)
+        {
+            Amuleto[i] = false;
+        }
 
         // Isso fará com que o GameManager não seja destruído ao carregar uma nova cena
         DontDestroyOnLoad(gameObject);

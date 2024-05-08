@@ -41,6 +41,8 @@ public class StoreManager : MonoBehaviour
     public Sprite[] pesSprites;
     public Sprite[] tankSprites;
 
+    public int[] AmuletosPrice = new int[9];
+
     public GameObject insufficientFundsPrefab; // O prefab da mensagem de aviso
     public Transform canvasTransform; // O transform do canvas onde a mensagem será exibida
 
@@ -129,6 +131,10 @@ public class StoreManager : MonoBehaviour
         {
             // Se a layer for "loja1", faça alguma ação
             ItemDisplay();
+        }
+        else
+        {
+            // display amuletos caso ja tenha comprado algum 
         }
     }
 
@@ -486,49 +492,249 @@ public class StoreManager : MonoBehaviour
 
     public void ComprarAmuleto1()
     {
+        AmuletosPrice[0] = 10; // barra no tank
 
+        if (!gameManager.Amuleto[0])
+        {
+            if(gameManager.BankDiamantes >= AmuletosPrice[0])
+            {
+                gameManager.Amuleto[0] = true;
+                gameManager.BankDiamantes -= AmuletosPrice[0];
+
+                // trocar icon do amuleto
+            }
+            else
+            {
+                // mensagem instantiate
+                ShowInsufficientFundsMessage();
+            }
+        }
+        else
+        {
+            // mensagem instantiate
+        }
     }
 
     public void ComprarAmuleto2()
     {
+        AmuletosPrice[1] = 150; // mais bolhas de cura
 
+        if (!gameManager.Amuleto[1])
+        {
+            if (gameManager.BankDiamantes >= AmuletosPrice[1])
+            {
+                gameManager.Amuleto[1] = true;
+                gameManager.BankDiamantes -= AmuletosPrice[1];
+
+                // trocar icon do amuleto
+            }
+            else
+            {
+                // mensagem instantiate
+                ShowInsufficientFundsMessage();
+            }
+        }
+        else
+        {
+            // mensagem instantiate
+        }
     }
 
     public void ComprarAmuleto3()
     {
+        AmuletosPrice[2] = 300; // profundidade avanca mais rapido
 
+        if (!gameManager.Amuleto[2])
+        {
+            if (gameManager.BankDiamantes >= AmuletosPrice[2])
+            {
+                gameManager.Amuleto[2] = true;
+                gameManager.BankDiamantes -= AmuletosPrice[2];
+
+                // trocar icon do amuleto
+            }
+            else
+            {
+                // mensagem instantiate
+                ShowInsufficientFundsMessage();
+            }
+        }
+        else
+        {
+            // mensagem instantiate
+        }
     }
 
     public void ComprarAmuleto4()
     {
+        AmuletosPrice[3] = 340; // mais tempo de invencibilidade
 
+        if (!gameManager.Amuleto[3])
+        {
+            if (gameManager.BankDiamantes >= AmuletosPrice[3])
+            {
+                gameManager.Amuleto[3] = true;
+                gameManager.BankDiamantes -= AmuletosPrice[3];
+
+                // trocar icon do amuleto
+            }
+            else
+            {
+                // mensagem instantiate
+                ShowInsufficientFundsMessage();
+            }
+        }
+        else
+        {
+            // mensagem instantiate
+        }
     }
 
     public void ComprarAmuleto5()
     {
+        AmuletosPrice[4] = 500; // menos dano de pressao 
 
+        if (!gameManager.Amuleto[4])
+        {
+            if (gameManager.BankDiamantes >= AmuletosPrice[4])
+            {
+                gameManager.Amuleto[4] = true;
+                gameManager.BankDiamantes -= AmuletosPrice[4];
+
+                // trocar icon do amuleto
+            }
+            else
+            {
+                // mensagem instantiate
+                ShowInsufficientFundsMessage();
+            }
+        }
+        else
+        {
+            // mensagem instantiate
+        }
     }
 
     public void ComprarAmuleto6()
     {
+        AmuletosPrice[5] = 600; // diamantes x2
 
+        if (!gameManager.Amuleto[5])
+        {
+            if (gameManager.BankDiamantes >= AmuletosPrice[5])
+            {
+                gameManager.Amuleto[5] = true;
+                gameManager.BankDiamantes -= AmuletosPrice[5];
+
+                // trocar icon do amuleto
+            }
+            else
+            {
+                // mensagem instantiate
+                ShowInsufficientFundsMessage();
+            }
+        }
+        else
+        {
+            // mensagem instantiate
+        }
     }
 
     public void ComprarAmuleto7()
     {
+        AmuletosPrice[6] = 650; // cura x2
 
+        if (!gameManager.Amuleto[6])
+        {
+            if (gameManager.BankDiamantes >= AmuletosPrice[6])
+            {
+                gameManager.Amuleto[6] = true;
+                gameManager.BankDiamantes -= AmuletosPrice[6];
+
+                // trocar icon do amuleto
+            }
+            else
+            {
+                // mensagem instantiate
+                ShowInsufficientFundsMessage();
+            }
+        }
+        else
+        {
+            // mensagem instantiate
+        }
     }
     public void ComprarAmuleto8()
     {
+        AmuletosPrice[7] = 700; // menos obstaculos
 
+        if (!gameManager.Amuleto[7])
+        {
+            if (gameManager.BankDiamantes >= AmuletosPrice[7])
+            {
+                gameManager.Amuleto[7] = true;
+                gameManager.BankDiamantes -= AmuletosPrice[7];
+
+                // trocar icon do amuleto
+            }
+            else
+            {
+                // mensagem instantiate
+                ShowInsufficientFundsMessage();
+            }
+        }
+        else
+        {
+            // mensagem instantiate
+        }
     }
     public void ComprarAmuleto9()
     {
+        AmuletosPrice[8] = 760; // menos predadores
 
+        if (!gameManager.Amuleto[8])
+        {
+            if (gameManager.BankDiamantes >= AmuletosPrice[8])
+            {
+                gameManager.Amuleto[8] = true;
+                gameManager.BankDiamantes -= AmuletosPrice[8];
+
+                // trocar icon do amuleto
+            }
+            else
+            {
+                // mensagem instantiate
+                ShowInsufficientFundsMessage();
+            }
+        }
+        else
+        {
+            // mensagem instantiate
+        }
     }
     public void ComprarAmuleto10()
     {
+        AmuletosPrice[9] = 1500; // gold x2
 
+        if (!gameManager.Amuleto[9])
+        {
+            if (gameManager.BankDiamantes >= AmuletosPrice[9])
+            {
+                gameManager.Amuleto[9] = true;
+                gameManager.BankDiamantes -= AmuletosPrice[9];
+
+                // trocar icon do amuleto
+            }
+            else
+            {
+                // mensagem instantiate
+                ShowInsufficientFundsMessage();
+            }
+        }
+        else
+        {
+            // mensagem instantiate
+        }
     }
 
     private void ShowInsufficientFundsMessage()

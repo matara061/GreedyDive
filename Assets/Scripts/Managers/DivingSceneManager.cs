@@ -45,7 +45,7 @@ public class DivingSceneManager : MonoBehaviour
         UpdateScoreText(Money, Diamantes);
         Stage();
 
-        if (depth >= 5 && !IsVitoria)
+        if (depth >= 40 && !IsVitoria)
         {
             Fim();
         }

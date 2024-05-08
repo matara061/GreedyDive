@@ -24,7 +24,7 @@ public class Player : MonoBehaviour
     private SpriteRenderer spriteRenderer;
 
     public int MaxHealth;
-    public int CurrentHealth;
+    public float CurrentHealth;
     void Start()
     {
         gameManager = FindAnyObjectByType<GameManager>();
@@ -166,7 +166,7 @@ public class Player : MonoBehaviour
         }
     }
 
-    public void ContinuosDamage(int damage)
+    public void ContinuosDamage(float damage)
     {
         CurrentHealth -= damage;
         playerHealthBar.SetHealth(CurrentHealth);

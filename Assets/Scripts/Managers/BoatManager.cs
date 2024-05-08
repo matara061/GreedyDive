@@ -85,4 +85,9 @@ public class BoatManager : MonoBehaviour
             Destroy(audioListeners[i]);
         }
     }
+
+    public void Quit()
+    {
+        Application.Quit();
+    }
 }
