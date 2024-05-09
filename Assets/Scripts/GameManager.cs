@@ -53,17 +53,6 @@ public class GameManager : MonoBehaviour,IDataPersistence
         DontDestroyOnLoad(gameObject);
     }
 
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
     public void LoadData(GameData data) 
     {
         this.BankMoney = data.Money;
@@ -72,6 +61,9 @@ public class GameManager : MonoBehaviour,IDataPersistence
         this.CurrentDivingSuit = data.CurrentDivingSuit;
         this.CurrentDivingFins = data.CurrentDivingFins;
         this.CurrentOxygenTank = data.CurrentOxygenTank;
+
+        this.Amuleto = data.Amuleto;
+        this.AmuletoAtivo = data.AmuletoAtivo;
     }
 
     public void SaveData(ref GameData data) 
@@ -82,5 +74,8 @@ public class GameManager : MonoBehaviour,IDataPersistence
         data.CurrentDivingSuit = this.CurrentDivingSuit;
         data.CurrentDivingFins = this.CurrentDivingFins;
         data.CurrentOxygenTank = this.CurrentOxygenTank;
+
+        data.Amuleto = this.Amuleto;
+        data.AmuletoAtivo = this.AmuletoAtivo;
     }
 }

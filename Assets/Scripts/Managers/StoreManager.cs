@@ -29,17 +29,23 @@ public class StoreManager : MonoBehaviour
     public TextMeshProUGUI pePriceText;
     public TextMeshProUGUI tankPriceText;
 
-    [Header("UI imagens")]
+    [Header("Equipamentos imagens")]
     public Image armaIcon;
     public Image roupaIcon;
     public Image pesIcon;
     public Image tankIcon;
 
-    [Header("UI sprites")]
+    [Header("Equipamentos sprites")]
     public Sprite[] armasSprites;
     public Sprite[] roupasSprites;
     public Sprite[] pesSprites;
     public Sprite[] tankSprites;
+
+    [Header("Amuletos imagens")]
+    public Image[] amuletosIcon;
+
+    [Header("Amuletos sprites")]
+    public Sprite[] amuletosSprites;
 
     public int[] AmuletosPrice = new int[9];
 
@@ -134,7 +140,13 @@ public class StoreManager : MonoBehaviour
         }
         else
         {
-            // display amuletos caso ja tenha comprado algum 
+            for(int i = 0; i < gameManager.Amuleto.Length; i++)
+            {
+                if (gameManager.Amuleto[i])
+                {
+                    amuletosIcon[i].sprite = amuletosSprites[i];
+                }
+            } 
         }
     }
 
@@ -502,6 +514,7 @@ public class StoreManager : MonoBehaviour
                 gameManager.BankDiamantes -= AmuletosPrice[0];
 
                 // trocar icon do amuleto
+                amuletosIcon[0].sprite = amuletosSprites[0];
             }
             else
             {
@@ -527,6 +540,7 @@ public class StoreManager : MonoBehaviour
                 gameManager.BankDiamantes -= AmuletosPrice[1];
 
                 // trocar icon do amuleto
+                amuletosIcon[1].sprite = amuletosSprites[1];
             }
             else
             {
@@ -552,6 +566,7 @@ public class StoreManager : MonoBehaviour
                 gameManager.BankDiamantes -= AmuletosPrice[2];
 
                 // trocar icon do amuleto
+                amuletosIcon[2].sprite = amuletosSprites[2];
             }
             else
             {
@@ -577,6 +592,7 @@ public class StoreManager : MonoBehaviour
                 gameManager.BankDiamantes -= AmuletosPrice[3];
 
                 // trocar icon do amuleto
+                amuletosIcon[3].sprite = amuletosSprites[3];
             }
             else
             {
@@ -602,6 +618,7 @@ public class StoreManager : MonoBehaviour
                 gameManager.BankDiamantes -= AmuletosPrice[4];
 
                 // trocar icon do amuleto
+                amuletosIcon[4].sprite = amuletosSprites[4];
             }
             else
             {
@@ -627,6 +644,7 @@ public class StoreManager : MonoBehaviour
                 gameManager.BankDiamantes -= AmuletosPrice[5];
 
                 // trocar icon do amuleto
+                amuletosIcon[5].sprite = amuletosSprites[5];
             }
             else
             {
@@ -652,6 +670,7 @@ public class StoreManager : MonoBehaviour
                 gameManager.BankDiamantes -= AmuletosPrice[6];
 
                 // trocar icon do amuleto
+                amuletosIcon[6].sprite = amuletosSprites[6];
             }
             else
             {
@@ -676,6 +695,7 @@ public class StoreManager : MonoBehaviour
                 gameManager.BankDiamantes -= AmuletosPrice[7];
 
                 // trocar icon do amuleto
+                amuletosIcon[7].sprite = amuletosSprites[7];
             }
             else
             {
@@ -700,6 +720,7 @@ public class StoreManager : MonoBehaviour
                 gameManager.BankDiamantes -= AmuletosPrice[8];
 
                 // trocar icon do amuleto
+                amuletosIcon[8].sprite = amuletosSprites[8];
             }
             else
             {
@@ -724,6 +745,7 @@ public class StoreManager : MonoBehaviour
                 gameManager.BankDiamantes -= AmuletosPrice[9];
 
                 // trocar icon do amuleto
+                amuletosIcon[9].sprite = amuletosSprites[9];
             }
             else
             {

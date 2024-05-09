@@ -795,7 +795,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 583711021}
         m_TargetAssemblyTypeName: StoreManager, Assembly-CSharp
-        m_MethodName: ComprarRoupa
+        m_MethodName: ComprarAmuleto4
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -825,9 +825,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
-  m_PreserveAspect: 0
+  m_Sprite: {fileID: 21300000, guid: 53232050ba874304daa5c3177702aa43, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 1
   m_FillCenter: 1
   m_FillMethod: 4
   m_FillAmount: 1
@@ -1065,7 +1065,7 @@ GameObject:
   - component: {fileID: 406167737}
   - component: {fileID: 406167736}
   m_Layer: 5
-  m_Name: Amuleto3
+  m_Name: Amuleto9
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1137,7 +1137,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 583711021}
         m_TargetAssemblyTypeName: StoreManager, Assembly-CSharp
-        m_MethodName: ComprarRoupa
+        m_MethodName: ComprarAmuleto9
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1167,9 +1167,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
-  m_PreserveAspect: 0
+  m_Sprite: {fileID: 21300000, guid: 53232050ba874304daa5c3177702aa43, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 1
   m_FillCenter: 1
   m_FillMethod: 4
   m_FillAmount: 1
@@ -1728,11 +1728,11 @@ MonoBehaviour:
   goldText: {fileID: 232296406}
   diamondText: {fileID: 1583596193}
   armaPriceText: {fileID: 0}
-  roupaPriceText: {fileID: 93299694}
+  roupaPriceText: {fileID: 0}
   pePriceText: {fileID: 0}
   tankPriceText: {fileID: 0}
   armaIcon: {fileID: 0}
-  roupaIcon: {fileID: 1913612208}
+  roupaIcon: {fileID: 0}
   pesIcon: {fileID: 0}
   tankIcon: {fileID: 0}
   armasSprites:
@@ -1751,6 +1751,28 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 21300000, guid: 6b0b11fc4f1695449b6def930921a76b, type: 3}
   - {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
+  amuletosIcon:
+  - {fileID: 1474419023}
+  - {fileID: 1913612208}
+  - {fileID: 1725813431}
+  - {fileID: 251962203}
+  - {fileID: 2059705919}
+  - {fileID: 1358814279}
+  - {fileID: 1369228349}
+  - {fileID: 1815381535}
+  - {fileID: 406167737}
+  - {fileID: 767433619}
+  amuletosSprites:
+  - {fileID: -1743819802, guid: fec7232235473044c972529957cf9cb0, type: 3}
+  - {fileID: -1743819802, guid: fec7232235473044c972529957cf9cb0, type: 3}
+  - {fileID: -1743819802, guid: fec7232235473044c972529957cf9cb0, type: 3}
+  - {fileID: -1743819802, guid: fec7232235473044c972529957cf9cb0, type: 3}
+  - {fileID: -1743819802, guid: fec7232235473044c972529957cf9cb0, type: 3}
+  - {fileID: -1743819802, guid: fec7232235473044c972529957cf9cb0, type: 3}
+  - {fileID: -1743819802, guid: fec7232235473044c972529957cf9cb0, type: 3}
+  - {fileID: -1743819802, guid: fec7232235473044c972529957cf9cb0, type: 3}
+  - {fileID: -1743819802, guid: fec7232235473044c972529957cf9cb0, type: 3}
+  - {fileID: -1743819802, guid: fec7232235473044c972529957cf9cb0, type: 3}
   AmuletosPrice: 000000000000000000000000000000000000000000000000000000000000000000000000
   insufficientFundsPrefab: {fileID: 8249293432758990078, guid: 3fe671f5a8bd0204f8d2de84f969b8e4, type: 3}
   canvasTransform: {fileID: 1003901767}
@@ -2220,7 +2242,7 @@ GameObject:
   - component: {fileID: 767433619}
   - component: {fileID: 767433618}
   m_Layer: 5
-  m_Name: Amuleto4
+  m_Name: Amuleto10
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2292,7 +2314,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 583711021}
         m_TargetAssemblyTypeName: StoreManager, Assembly-CSharp
-        m_MethodName: ComprarRoupa
+        m_MethodName: ComprarAmuleto10
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2322,9 +2344,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
-  m_PreserveAspect: 0
+  m_Sprite: {fileID: 21300000, guid: 53232050ba874304daa5c3177702aa43, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 1
   m_FillCenter: 1
   m_FillMethod: 4
   m_FillAmount: 1
@@ -3555,7 +3577,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 583711021}
         m_TargetAssemblyTypeName: StoreManager, Assembly-CSharp
-        m_MethodName: ComprarRoupa
+        m_MethodName: ComprarAmuleto6
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -3585,9 +3607,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
-  m_PreserveAspect: 0
+  m_Sprite: {fileID: 21300000, guid: 53232050ba874304daa5c3177702aa43, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 1
   m_FillCenter: 1
   m_FillMethod: 4
   m_FillAmount: 1
@@ -3616,7 +3638,7 @@ GameObject:
   - component: {fileID: 1369228349}
   - component: {fileID: 1369228348}
   m_Layer: 5
-  m_Name: Amuleto1
+  m_Name: Amuleto7
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3688,7 +3710,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 583711021}
         m_TargetAssemblyTypeName: StoreManager, Assembly-CSharp
-        m_MethodName: ComprarRoupa
+        m_MethodName: ComprarAmuleto7
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -3718,9 +3740,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
-  m_PreserveAspect: 0
+  m_Sprite: {fileID: 21300000, guid: 53232050ba874304daa5c3177702aa43, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 1
   m_FillCenter: 1
   m_FillMethod: 4
   m_FillAmount: 1
@@ -3955,7 +3977,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 583711021}
         m_TargetAssemblyTypeName: StoreManager, Assembly-CSharp
-        m_MethodName: ComprarRoupa
+        m_MethodName: ComprarAmuleto1
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -3985,9 +4007,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
-  m_PreserveAspect: 0
+  m_Sprite: {fileID: 21300000, guid: 53232050ba874304daa5c3177702aa43, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 1
   m_FillCenter: 1
   m_FillMethod: 4
   m_FillAmount: 1
@@ -4984,7 +5006,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 583711021}
         m_TargetAssemblyTypeName: StoreManager, Assembly-CSharp
-        m_MethodName: ComprarRoupa
+        m_MethodName: ComprarAmuleto3
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -5014,9 +5036,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
-  m_PreserveAspect: 0
+  m_Sprite: {fileID: 21300000, guid: 53232050ba874304daa5c3177702aa43, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 1
   m_FillCenter: 1
   m_FillMethod: 4
   m_FillAmount: 1
@@ -5216,7 +5238,7 @@ GameObject:
   - component: {fileID: 1815381535}
   - component: {fileID: 1815381534}
   m_Layer: 5
-  m_Name: Amuleto2
+  m_Name: Amuleto8
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5288,7 +5310,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 583711021}
         m_TargetAssemblyTypeName: StoreManager, Assembly-CSharp
-        m_MethodName: ComprarRoupa
+        m_MethodName: ComprarAmuleto8
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -5318,9 +5340,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
-  m_PreserveAspect: 0
+  m_Sprite: {fileID: 21300000, guid: 53232050ba874304daa5c3177702aa43, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 1
   m_FillCenter: 1
   m_FillMethod: 4
   m_FillAmount: 1
@@ -5546,9 +5568,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
-  m_PreserveAspect: 0
+  m_Sprite: {fileID: 21300000, guid: 53232050ba874304daa5c3177702aa43, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 1
   m_FillCenter: 1
   m_FillMethod: 4
   m_FillAmount: 1
@@ -5602,7 +5624,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 583711021}
         m_TargetAssemblyTypeName: StoreManager, Assembly-CSharp
-        m_MethodName: ComprarRoupa
+        m_MethodName: ComprarAmuleto2
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -6190,7 +6212,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 583711021}
         m_TargetAssemblyTypeName: StoreManager, Assembly-CSharp
-        m_MethodName: ComprarRoupa
+        m_MethodName: ComprarAmuleto5
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -6220,9 +6242,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
-  m_PreserveAspect: 0
+  m_Sprite: {fileID: 21300000, guid: 53232050ba874304daa5c3177702aa43, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 1
   m_FillCenter: 1
   m_FillMethod: 4
   m_FillAmount: 1

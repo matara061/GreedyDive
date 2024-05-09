@@ -27,6 +27,7 @@ public class Predador : MonoBehaviour
     private int segundos = 0;
     private bool isCoroutineRunning = false;
     public int bonusAmuleto5 = 0;
+    public int bonusAmuleto9 = 0;
 
     // Adicionado para movimento aleatório
     private Vector2 swimDirection;
@@ -47,6 +48,11 @@ public class Predador : MonoBehaviour
             if (gameManager.AmuletoAtivo[4])
             {
                 bonusAmuleto5 = 2;
+            }
+
+            if (gameManager.AmuletoAtivo[9])
+            {
+                bonusAmuleto9 = 2;
             }
         }
 
@@ -159,6 +165,7 @@ public class Predador : MonoBehaviour
         if(_values != null)
         {
             _values.Diamante *= bonusAmuleto5;
+            _values.Moeda *= bonusAmuleto9;
 
             diveManager.Money += _values.Moeda;
             diveManager.Diamantes += _values.Diamante;

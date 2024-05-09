@@ -8,6 +8,7 @@ public class FishSwimming : MonoBehaviour
     public float swimSpeed = 2f; // Velocidade de natação
     public float rotationSpeed = 5f; // Velocidade de rotação
     public int bonusAmuleto5 = 0;
+    public int bonusAmuleto9 = 0;
 
     private GameManager gameManager;
     public GameObject floatingGold;
@@ -26,6 +27,11 @@ public class FishSwimming : MonoBehaviour
             if (gameManager.AmuletoAtivo[4])
             {
                 bonusAmuleto5 = 2;
+            }
+
+            if (gameManager.AmuletoAtivo[9])
+            {
+                bonusAmuleto9 = 2;
             }
         }
 
@@ -73,7 +79,9 @@ public class FishSwimming : MonoBehaviour
     {
         if (fishValue != null)
         {
-            fishValue.moeda *= bonusAmuleto5;
+            fishValue.diamantes *= bonusAmuleto5;
+            fishValue.moeda *= bonusAmuleto9;
+
             divingSceneManager.Money += fishValue.moeda;
             divingSceneManager.Diamantes += fishValue.diamantes;
 

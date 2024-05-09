@@ -8,6 +8,9 @@ public class GameData
     public int Money;
     public int Diamantes;
 
+    public bool[] Amuleto;
+    public bool[] AmuletoAtivo;
+
     public string CurrentOxygenTank;
     public string CurrentDivingSuit;
     public string CurrentHarpoon;
@@ -25,5 +28,8 @@ public class GameData
         this.CurrentDivingSuit = "Roupa1";
         this.CurrentDivingFins = "Pes1";
         this.CurrentOxygenTank = "Tank1";
+
+        this.Amuleto = new bool[9];
+        this.AmuletoAtivo = new bool[9];
     }
 }
