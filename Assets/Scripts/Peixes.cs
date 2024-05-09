@@ -7,8 +7,8 @@ public class FishSwimming : MonoBehaviour
 {
     public float swimSpeed = 2f; // Velocidade de natação
     public float rotationSpeed = 5f; // Velocidade de rotação
-    public int bonusAmuleto5 = 0;
-    public int bonusAmuleto9 = 0;
+    public int bonusAmuleto5;
+    public int bonusAmuleto9;
 
     private GameManager gameManager;
     public GameObject floatingGold;
@@ -20,6 +20,9 @@ public class FishSwimming : MonoBehaviour
 
     void Start()
     {
+        bonusAmuleto5 = 1;
+        bonusAmuleto9 = 1;
+
         gameManager = FindAnyObjectByType<GameManager>();
 
         if (gameManager != null)

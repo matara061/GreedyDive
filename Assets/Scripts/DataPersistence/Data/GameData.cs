@@ -29,7 +29,7 @@ public class GameData
         this.CurrentDivingFins = "Pes1";
         this.CurrentOxygenTank = "Tank1";
 
-        this.Amuleto = new bool[9];
-        this.AmuletoAtivo = new bool[9];
+        this.Amuleto = new bool[10];
+        this.AmuletoAtivo = new bool[10];
     }
 }

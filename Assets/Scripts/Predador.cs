@@ -26,8 +26,8 @@ public class Predador : MonoBehaviour
     public int Damage;
     private int segundos = 0;
     private bool isCoroutineRunning = false;
-    public int bonusAmuleto5 = 0;
-    public int bonusAmuleto9 = 0;
+    public int bonusAmuleto5;
+    public int bonusAmuleto9;
 
     // Adicionado para movimento aleatório
     private Vector2 swimDirection;
@@ -41,6 +41,9 @@ public class Predador : MonoBehaviour
 
     private void Start()
     {
+        bonusAmuleto5 = 1;
+        bonusAmuleto9 = 1;
+
         gameManager = FindAnyObjectByType<GameManager>();
 
         if (gameManager != null)

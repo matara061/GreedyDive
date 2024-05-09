@@ -11,8 +11,8 @@ public class GameManager : MonoBehaviour,IDataPersistence
     public string CurrentDivingFins;
     public string CurrentAmuleto;
 
-    public bool[] Amuleto = new bool[9];
-    public bool[] AmuletoAtivo = new bool[9];
+    public bool[] Amuleto = new bool[10];
+    public bool[] AmuletoAtivo = new bool[10];
 
     public int BankMoney;
     public int BankDiamantes;

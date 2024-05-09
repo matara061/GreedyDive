@@ -17,6 +17,9 @@ public class BoatManager : MonoBehaviour
     public TextMeshProUGUI gold;
     public TextMeshProUGUI diamond;
 
+    public GameObject insufficientFundsPrefab; // O prefab da mensagem de aviso
+    public Transform canvasTransform; // O transform do canvas onde a mensagem será exibida
+
     // Start is called before the first frame update
     void Start()
     {
@@ -61,11 +64,14 @@ public class BoatManager : MonoBehaviour
         {
             // mudar sprite do botao
             gameManager.AmuletoAtivo[0] = false;
+            ShowMessage("Amuleto desativado");
+
         }
         else
         {
             // mudar sprite do botao
             gameManager.AmuletoAtivo[0] = true;
+            ShowMessage("Amuleto ativado");
         }
     }
 
@@ -75,11 +81,13 @@ public class BoatManager : MonoBehaviour
         {
             // mudar sprite do botao
             gameManager.AmuletoAtivo[1] = false;
+            ShowMessage("Amuleto desativado");
         }
         else
         {
             // mudar sprite do botao
             gameManager.AmuletoAtivo[1] = true;
+            ShowMessage("Amuleto ativado");
         }
     }
 
@@ -95,6 +103,19 @@ public class BoatManager : MonoBehaviour
             // mudar sprite do botao
             gameManager.AmuletoAtivo[2] = true;
         }
+    }
+
+    private void ShowMessage(string warning)
+    {
+        // Instancia a mensagem de aviso
+        GameObject message = Instantiate(insufficientFundsPrefab, canvasTransform);
+
+        // Configura a mensagem
+        TextMeshProUGUI text = message.GetComponent<TextMeshProUGUI>();
+        text.text = warning;
+
+        // Destrua a mensagem após alguns segundos
+        Destroy(message, 3f);
     }
 
     private IEnumerator CarregarCena()

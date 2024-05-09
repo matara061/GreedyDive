@@ -47,7 +47,7 @@ public class StoreManager : MonoBehaviour
     [Header("Amuletos sprites")]
     public Sprite[] amuletosSprites;
 
-    public int[] AmuletosPrice = new int[9];
+    public int[] AmuletosPrice = new int[10];
 
     public GameObject insufficientFundsPrefab; // O prefab da mensagem de aviso
     public Transform canvasTransform; // O transform do canvas onde a mensagem será exibida
