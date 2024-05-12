@@ -16,7 +16,10 @@ public class TutorialManager : MonoBehaviour
 
     public GameObject Screen;
 
+    public Animator anim;
+
     public string[] fala;
+    private int falaAtual = 0; // Adiciona uma variável para rastrear a fala atual
     void Start()
     {
         // Verifica se é a primeira vez que o jogador entra no jogo
@@ -40,7 +43,7 @@ public class TutorialManager : MonoBehaviour
 
     private void Update()
     {
-        if (player.transform.position == pointA.position)
+       /* if (player.transform.position == pointA.position)
         {
             Screen.SetActive(true);
         }
@@ -59,6 +62,26 @@ public class TutorialManager : MonoBehaviour
             Screen.SetActive(true);
         }
         else
-            Screen.SetActive(false);
+            Screen.SetActive(false);*/
     }
+
+    public void ProximaFala()
+    {
+        if (falaAtual < fala.Length)
+        {
+            falaTxt.text = fala[falaAtual];
+            if (falaAtual == 0)
+            {
+                anim.Play("Tutorial_moveAnim");
+            }else
+                anim.Play("Tutorial_moveIdle");
+
+            falaAtual++;
+        }
+        else
+        {
+            Debug.Log("Fim das falas");
+        }
+    }
+
 }
