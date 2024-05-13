@@ -28,6 +28,9 @@ public class Player : MonoBehaviour
     public int MaxHealth;
     public float CurrentHealth;
     public float CuraNum = 0.1f;
+
+    public GameObject topHitbox, topSideHitbox, middleHitbox, bottomHitbox, bottomSideHitbox;
+
     void Start()
     {
         gameManager = FindAnyObjectByType<GameManager>();
@@ -108,6 +111,19 @@ public class Player : MonoBehaviour
                 animator.SetFloat("MoveY", 0f);
 
                 spriteRenderer.flipX = direction.x < 0;
+
+                if (direction.x > transform.position.x)
+                {
+                    topSideHitbox.transform.position = new Vector2(1.3f, 1.5f);
+                    middleHitbox.transform.position = new Vector2(1.3f, 0f);
+                    bottomSideHitbox.transform.position = new Vector2(1.3f, -1.5f);
+                }
+                else
+                {
+                    topSideHitbox.transform.position = new Vector2(-1.3f, 1.5f);
+                    middleHitbox.transform.position = new Vector2(-1.3f, 0f);
+                    bottomSideHitbox.transform.position = new Vector2(-1.3f, -1.5f);
+                }
             }
             else if (Mathf.Abs(direction.y) > Mathf.Abs(direction.x) + diagonalThreshold)
             {

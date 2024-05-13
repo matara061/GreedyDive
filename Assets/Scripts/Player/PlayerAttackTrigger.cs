@@ -7,7 +7,7 @@ public class PlayerAttackTrigger : MonoBehaviour
     public Animator anim;
     public Transform playerTransform;
     public SpriteRenderer spriteRenderer;
-    public GameObject playerAttackHitbox;
+    public GameObject topHitbox, topSideHitbox, middleHitbox, bottomHitbox, bottomSideHitbox;
 
     public bool Attack = false;
 
@@ -80,5 +80,55 @@ public class PlayerAttackTrigger : MonoBehaviour
 
             spriteRenderer.flipX = direction.x < 0;
         }
+    }
+
+    //Top Hitbox
+    public void TopHitboxOn()
+    {
+        topHitbox.SetActive(true);
+    }
+    public void TopHitboxOff()
+    {
+        topHitbox.SetActive(false);
+    }
+
+    //Bottom Hitbox
+    public void BottomHitboxOn()
+    {
+        bottomHitbox.SetActive(true);
+    }
+    public void BottomHitboxOff()
+    {
+        bottomHitbox.SetActive(false);
+    }
+
+    //Top Side Hitbox
+    public void TopSideHitboxOn()
+    {
+        topSideHitbox.SetActive(true);
+    }
+    public void TopSideHitboxOff()
+    {
+        topSideHitbox.SetActive(false);
+    }
+
+    //Middle Hitbox
+    public void MiddleHitboxOn()
+    {
+        middleHitbox.SetActive(true);
+    }
+    public void MiddleHitboxOff()
+    {
+        middleHitbox.SetActive(false);
+    }
+
+    //Bottom Side Hitbox
+    public void BottomSideHitboxOn()
+    {
+        bottomSideHitbox.SetActive(true);
+    }
+    public void BottomSideHitboxOff()
+    {
+        bottomSideHitbox.SetActive(false);
     }
 }

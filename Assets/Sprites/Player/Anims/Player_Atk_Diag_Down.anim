@@ -22,27 +22,27 @@ AnimationClip:
     curve:
     - time: 0
       value: {fileID: 21300000, guid: cec90107f23796647b6e85d3baf22691, type: 3}
-    - time: 0.06666667
+    - time: 0.083333336
       value: {fileID: 21300000, guid: 9f244ed2f3654ef46ac5929166b60211, type: 3}
-    - time: 0.13333334
+    - time: 0.16666667
       value: {fileID: 21300000, guid: 648ec432252d04843a34d7a63b4a2e40, type: 3}
-    - time: 0.18333334
-      value: {fileID: 21300000, guid: b04face7059918e4a9b2da40d8f69470, type: 3}
     - time: 0.25
+      value: {fileID: 21300000, guid: b04face7059918e4a9b2da40d8f69470, type: 3}
+    - time: 0.33333334
       value: {fileID: 21300000, guid: 154e24303d3a86a43a6160868bfa0655, type: 3}
-    - time: 0.31666666
+    - time: 0.41666666
       value: {fileID: 21300000, guid: 2bb73025b1ee1d7438b379fd605c81b4, type: 3}
-    - time: 0.38333333
+    - time: 0.5833333
       value: {fileID: 21300000, guid: d595cf285839c394988aad2cb09f7c62, type: 3}
-    - time: 0.45
+    - time: 0.6666667
       value: {fileID: 21300000, guid: 5a8f1473a12901e43a976e926f2a06d4, type: 3}
-    - time: 0.51666665
+    - time: 0.75
       value: {fileID: 21300000, guid: 2aed6fa8b330fcd4da023e101f1d338d, type: 3}
-    - time: 0.56666666
+    - time: 0.8333333
       value: {fileID: 21300000, guid: 601568316fc7d7c468b6761fcf6256b9, type: 3}
-    - time: 0.6333333
+    - time: 0.9166667
       value: {fileID: 21300000, guid: 443776d5e78c71b438dd526c59b0efe9, type: 3}
-    - time: 0.7
+    - time: 1
       value: {fileID: 21300000, guid: 3ffede63c17644f4ba175405a8a63b8b, type: 3}
     attribute: m_Sprite
     path: 
@@ -83,7 +83,7 @@ AnimationClip:
     m_AdditiveReferencePoseClip: {fileID: 0}
     m_AdditiveReferencePoseTime: 0
     m_StartTime: 0
-    m_StopTime: 0.71666664
+    m_StopTime: 1.0166667
     m_OrientationOffsetY: 0
     m_Level: 0
     m_CycleOffset: 0
@@ -102,4 +102,18 @@ AnimationClip:
   m_EulerEditorCurves: []
   m_HasGenericRootTransform: 0
   m_HasMotionFloatCurves: 0
-  m_Events: []
+  m_Events:
+  - time: 0.5833333
+    functionName: BottomSideHitboxOn
+    data: 
+    objectReferenceParameter: {fileID: 0}
+    floatParameter: 0
+    intParameter: 0
+    messageOptions: 0
+  - time: 0.8333333
+    functionName: BottomSideHitboxOff
+    data: 
+    objectReferenceParameter: {fileID: 0}
+    floatParameter: 0
+    intParameter: 0
+    messageOptions: 0
