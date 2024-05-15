@@ -10,12 +10,14 @@ public class Menus : MonoBehaviour
     [SerializeField]
     private Slider barraProgresso;
 
+    public AudioManager audioManager;
+
  
     public string[] sceneName;
 
     private void Start()
     {
-        
+        audioManager = FindAnyObjectByType<AudioManager>();
 
         sceneName[0] = "BoatScene";
         sceneName[1] = "TestesM";
@@ -24,12 +26,14 @@ public class Menus : MonoBehaviour
     public void Resume()
     {
         Time.timeScale = 1f;
+        audioManager.IsPaused = false;
         SceneManager.UnloadSceneAsync("Pause");
     }
 
     public void Desistir()
     {
         Time.timeScale = 1f;
+        audioManager.IsPaused = false;
         StartCoroutine(CarregarCena(sceneName[0]));
     }
 

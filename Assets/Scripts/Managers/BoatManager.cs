@@ -13,6 +13,7 @@ public class BoatManager : MonoBehaviour
     private Slider barraProgresso;
 
     public GameManager gameManager;
+    public AudioManager audioManager;
 
     public TextMeshProUGUI gold;
     public TextMeshProUGUI diamond;
@@ -24,7 +25,14 @@ public class BoatManager : MonoBehaviour
     void Start()
     {
         gameManager = FindAnyObjectByType<GameManager>();
+        audioManager = FindAnyObjectByType<AudioManager>();
+
         UpdadeScoreText();
+
+        if (audioManager != null)
+        {
+            audioManager.PlayMusic(audioManager.barcoBG);
+        }
     }
 
     // Update is called once per frame

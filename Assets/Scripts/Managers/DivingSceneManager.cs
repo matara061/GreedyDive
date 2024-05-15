@@ -9,6 +9,7 @@ using UnityEngine.EventSystems;
 public class DivingSceneManager : MonoBehaviour
 {
     public GameManager gameManager;
+    public AudioManager audioManager;
     public Player player;
     public float depth;
 
@@ -31,8 +32,9 @@ public class DivingSceneManager : MonoBehaviour
     void Start()
     {
         gameManager = FindAnyObjectByType<GameManager>();
+        audioManager = FindAnyObjectByType<AudioManager>();
 
-        if(gameManager != null )
+        if (gameManager != null )
         {
             if (gameManager.AmuletoAtivo[1])
             {
@@ -55,6 +57,11 @@ public class DivingSceneManager : MonoBehaviour
             }
         }
 
+        if(audioManager != null)
+        {
+            audioManager.PlayMusic(audioManager.mergulhoCenaBG);
+        }
+
         
     }
 
@@ -70,7 +77,7 @@ public class DivingSceneManager : MonoBehaviour
         UpdateScoreText(Money, Diamantes);
         Stage();
 
-        if (depth >= 40 && !IsVitoria)
+        if (depth >= 40 && !IsVitoria) // mudar dps???
         {
             Fim();
         }
@@ -102,6 +109,7 @@ public class DivingSceneManager : MonoBehaviour
     {
         gameManager.BankMoney += Money;
         gameManager.BankDiamantes += Diamantes;
+        audioManager.IsPaused = true;
         IsVitoria = true;
         SceneManager.LoadScene("Vitoria", LoadSceneMode.Additive);
         StartCoroutine(RemoveExtraEventSystemsAndListeners());
@@ -109,6 +117,7 @@ public class DivingSceneManager : MonoBehaviour
 
     public void Perdeu()
     {
+        audioManager.IsPaused = true;
         Time.timeScale = 0f;
         SceneManager.LoadScene("GameOver", LoadSceneMode.Additive);
         StartCoroutine(RemoveExtraEventSystemsAndListeners());
@@ -116,6 +125,7 @@ public class DivingSceneManager : MonoBehaviour
 
     public void Pause()
     {
+        audioManager.IsPaused = true;
         Time.timeScale = 0f;
         SceneManager.LoadScene("Pause", LoadSceneMode.Additive);
         StartCoroutine(RemoveExtraEventSystemsAndListeners());

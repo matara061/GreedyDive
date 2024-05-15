@@ -11,6 +11,7 @@ public class StoreManager : MonoBehaviour
     public int Gold;
     public int Diamond;
     public GameManager gameManager;
+    public AudioManager audioManager;
 
     [Header("Stores")]
     public bool loja1 = true;
@@ -125,6 +126,7 @@ public class StoreManager : MonoBehaviour
     private void Start()
     {
         gameManager = FindAnyObjectByType<GameManager>();
+        audioManager = FindAnyObjectByType<AudioManager>();
 
         // Obtenha o número da layer
         int layerNumber = gameObject.layer;
@@ -338,6 +340,7 @@ public class StoreManager : MonoBehaviour
                     {
                         // O jogador não tem dinheiro suficiente, mostre a mensagem de aviso
                         ShowInsufficientFundsMessage();
+                        audioManager.PlaySFX(audioManager.botao);
                     }
                 }
             }
