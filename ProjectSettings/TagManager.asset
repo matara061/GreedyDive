@@ -23,6 +23,7 @@ TagManager:
   - Agua viva
   - Tubarao martelo
   - Tubarao
+  - Caixa
   layers:
   - Default
   - TransparentFX

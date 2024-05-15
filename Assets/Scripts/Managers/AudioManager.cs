@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class AudioManager : MonoBehaviour
 {
-    [SerializeField] AudioSource musicSource;
-    [SerializeField] AudioSource SFXSource;
+    public AudioSource musicSource;
+    public AudioSource SFXSource;
 
     public AudioClip barcoBG;
     public AudioClip mergulhoCenaBG;
