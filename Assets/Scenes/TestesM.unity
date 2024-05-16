@@ -378,8 +378,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 0, y: 0.5}
-  m_AnchoredPosition: {x: 49.696, y: -19.167}
-  m_SizeDelta: {x: 62.883, y: 154.718}
+  m_AnchoredPosition: {x: 26.474, y: -18.442}
+  m_SizeDelta: {x: 34.069, y: 156.209}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &155353523
 MonoBehaviour:
@@ -1624,6 +1624,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gameManager: {fileID: 0}
+  audioManager: {fileID: 0}
   player: {fileID: 1052478949}
   depth: 0
   Money: 0
@@ -3761,7 +3762,7 @@ MonoBehaviour:
       m_Calls: []
   m_Sprite: {fileID: 321677753, guid: 4230c1a6656a1fe4e928f7b7ee212054, type: 3}
   m_Type: 0
-  m_PreserveAspect: 0
+  m_PreserveAspect: 1
   m_FillCenter: 1
   m_FillMethod: 4
   m_FillAmount: 1
