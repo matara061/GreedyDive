@@ -68,50 +68,224 @@ public class BoatManager : MonoBehaviour
 
     public void Amuleto1()
     {
-        if (gameManager.AmuletoAtivo[0]) // dps add tb "&& gameManager.Amuleto[0] == true"
+        if (gameManager.Amuleto[0])
         {
-            // mudar sprite do botao
-            gameManager.AmuletoAtivo[0] = false;
-            ShowMessage("Amuleto desativado");
+            if (gameManager.AmuletoAtivo[0]) 
+            {
+                // mudar sprite do botao
+                gameManager.AmuletoAtivo[0] = false;
+                ShowMessage("Amuleto desativado");
 
-        }
-        else
-        {
-            // mudar sprite do botao
-            gameManager.AmuletoAtivo[0] = true;
-            ShowMessage("Amuleto ativado");
-        }
+            }
+            else
+            {
+                // mudar sprite do botao
+                gameManager.AmuletoAtivo[0] = true;
+                ShowMessage("Amuleto ativado");
+            }
+        }else
+            ShowMessage("Não possui o amuleto");
     }
 
     public void Amuleto2()
     {
-        if (gameManager.AmuletoAtivo[1]) // dps add tb "&& gameManager.Amuleto[0] == true"
+        if (gameManager.Amuleto[1])
         {
-            // mudar sprite do botao
-            gameManager.AmuletoAtivo[1] = false;
-            ShowMessage("Amuleto desativado");
+            if (gameManager.AmuletoAtivo[1])
+            {
+                // mudar sprite do botao
+                gameManager.AmuletoAtivo[1] = false;
+                ShowMessage("Amuleto desativado");
+
+            }
+            else
+            {
+                // mudar sprite do botao
+                gameManager.AmuletoAtivo[1] = true;
+                ShowMessage("Amuleto ativado");
+            }
         }
         else
-        {
-            // mudar sprite do botao
-            gameManager.AmuletoAtivo[1] = true;
-            ShowMessage("Amuleto ativado");
-        }
+            ShowMessage("Não possui o amuleto");
     }
 
     public void Amuleto3()
     {
-        if (gameManager.AmuletoAtivo[2]) // dps add tb "&& gameManager.Amuleto[0] == true"
+        if (gameManager.Amuleto[2])
         {
-            // mudar sprite do botao
-            gameManager.AmuletoAtivo[2] = false;
+            if (gameManager.AmuletoAtivo[2])
+            {
+                // mudar sprite do botao
+                gameManager.AmuletoAtivo[2] = false;
+                ShowMessage("Amuleto desativado");
+
+            }
+            else
+            {
+                // mudar sprite do botao
+                gameManager.AmuletoAtivo[2] = true;
+                ShowMessage("Amuleto ativado");
+            }
         }
         else
-        {
-            // mudar sprite do botao
-            gameManager.AmuletoAtivo[2] = true;
-        }
+            ShowMessage("Não possui o amuleto");
     }
+
+    public void Amuleto4()
+    {
+        if (gameManager.Amuleto[3])
+        {
+            if (gameManager.AmuletoAtivo[3])
+            {
+                // mudar sprite do botao
+                gameManager.AmuletoAtivo[3] = false;
+                ShowMessage("Amuleto desativado");
+
+            }
+            else
+            {
+                // mudar sprite do botao
+                gameManager.AmuletoAtivo[3] = true;
+                ShowMessage("Amuleto ativado");
+            }
+        }
+        else
+            ShowMessage("Não possui o amuleto");
+    }
+
+    public void Amuleto5()
+    {
+        if (gameManager.Amuleto[4])
+        {
+            if (gameManager.AmuletoAtivo[4])
+            {
+                // mudar sprite do botao
+                gameManager.AmuletoAtivo[4] = false;
+                ShowMessage("Amuleto desativado");
+
+            }
+            else
+            {
+                // mudar sprite do botao
+                gameManager.AmuletoAtivo[4] = true;
+                ShowMessage("Amuleto ativado");
+            }
+        }
+        else
+            ShowMessage("Não possui o amuleto");
+    }
+
+    public void Amuleto6()
+    {
+        if (gameManager.Amuleto[5])
+        {
+            if (gameManager.AmuletoAtivo[5])
+            {
+                // mudar sprite do botao
+                gameManager.AmuletoAtivo[5] = false;
+                ShowMessage("Amuleto desativado");
+
+            }
+            else
+            {
+                // mudar sprite do botao
+                gameManager.AmuletoAtivo[5] = true;
+                ShowMessage("Amuleto ativado");
+            }
+        }
+        else
+            ShowMessage("Não possui o amuleto");
+    }
+
+    public void Amuleto7()
+    {
+        if (gameManager.Amuleto[6])
+        {
+            if (gameManager.AmuletoAtivo[6])
+            {
+                // mudar sprite do botao
+                gameManager.AmuletoAtivo[6] = false;
+                ShowMessage("Amuleto desativado");
+
+            }
+            else
+            {
+                // mudar sprite do botao
+                gameManager.AmuletoAtivo[6] = true;
+                ShowMessage("Amuleto ativado");
+            }
+        }
+        else
+            ShowMessage("Não possui o amuleto");
+    }
+
+    public void Amuleto8()
+    {
+        if (gameManager.Amuleto[7])
+        {
+            if (gameManager.AmuletoAtivo[7])
+            {
+                // mudar sprite do botao
+                gameManager.AmuletoAtivo[7] = false;
+                ShowMessage("Amuleto desativado");
+
+            }
+            else
+            {
+                // mudar sprite do botao
+                gameManager.AmuletoAtivo[7] = true;
+                ShowMessage("Amuleto ativado");
+            }
+        }
+        else
+            ShowMessage("Não possui o amuleto");
+    }
+
+    public void Amuleto9()
+    {
+        if (gameManager.Amuleto[8])
+        {
+            if (gameManager.AmuletoAtivo[8])
+            {
+                // mudar sprite do botao
+                gameManager.AmuletoAtivo[8] = false;
+                ShowMessage("Amuleto desativado");
+
+            }
+            else
+            {
+                // mudar sprite do botao
+                gameManager.AmuletoAtivo[8] = true;
+                ShowMessage("Amuleto ativado");
+            }
+        }
+        else
+            ShowMessage("Não possui o amuleto");
+    }
+
+    public void Amuleto10()
+    {
+        if (gameManager.Amuleto[9])
+        {
+            if (gameManager.AmuletoAtivo[9])
+            {
+                // mudar sprite do botao
+                gameManager.AmuletoAtivo[9] = false;
+                ShowMessage("Amuleto desativado");
+
+            }
+            else
+            {
+                // mudar sprite do botao
+                gameManager.AmuletoAtivo[9] = true;
+                ShowMessage("Amuleto ativado");
+            }
+        }
+        else
+            ShowMessage("Não possui o amuleto");
+    }
+
+
 
     private void ShowMessage(string warning)
     {
