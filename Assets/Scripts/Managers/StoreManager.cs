@@ -341,14 +341,15 @@ public class StoreManager : MonoBehaviour
                     else
                     {
                         // O jogador não tem dinheiro suficiente, mostre a mensagem de aviso
-                        ShowInsufficientFundsMessage();
+                        ShowMessage("Golds insuficiente");
                         audioManager.PlaySFX(audioManager.botao);
                     }
                 }
             }
             else
             {
-                Debug.Log("Esta é a última arma na lista.");
+               // Debug.Log("Esta é a última arma na lista.");
+                ShowMessage("Já possui a melhor arma");
             }
         }
         else
@@ -394,13 +395,14 @@ public class StoreManager : MonoBehaviour
                     else
                     {
                         // O jogador não tem dinheiro suficiente, mostre a mensagem de aviso
-                        ShowInsufficientFundsMessage();
+                        ShowMessage("Golds insuficiente");
                     }
                 }
             }
             else
             {
-                Debug.Log("Esta é a última roupa na lista.");
+               // Debug.Log("Esta é a última roupa na lista.");
+                ShowMessage("Já possui a melhor roupa");
             }
         }
         else
@@ -446,13 +448,14 @@ public class StoreManager : MonoBehaviour
                     else
                     {
                         // O jogador não tem dinheiro suficiente, mostre a mensagem de aviso
-                        ShowInsufficientFundsMessage();
+                        ShowMessage("Golds insuficiente");
                     }
                 }
             }
             else
             {
-                Debug.Log("Esta é o último pe na lista.");
+                //Debug.Log("Esta é o último pe na lista.");
+                ShowMessage("Já possui os melhores Pés");
             }
         }
         else
@@ -498,13 +501,14 @@ public class StoreManager : MonoBehaviour
                     else
                     {
                         // O jogador não tem dinheiro suficiente, mostre a mensagem de aviso
-                        ShowInsufficientFundsMessage();
+                        ShowMessage("Golds insuficiente");
                     }
                 }
             }
             else
             {
-                Debug.Log("Esta é o último tank na lista.");
+                //Debug.Log("Esta é o último tank na lista.");
+                ShowMessage("Já possui o melhor tanque");
             }
         }
         else
@@ -532,12 +536,13 @@ public class StoreManager : MonoBehaviour
             else
             {
                 // mensagem instantiate
-                ShowInsufficientFundsMessage();
+                ShowMessage("Diamantes insuficiente");
             }
         }
         else
         {
             // mensagem instantiate
+            ShowMessage("Já possui este amuleto");
         }
     }
 
@@ -559,12 +564,13 @@ public class StoreManager : MonoBehaviour
             else
             {
                 // mensagem instantiate
-                ShowInsufficientFundsMessage();
+                ShowMessage("Diamantes insuficiente");
             }
         }
         else
         {
             // mensagem instantiate
+            ShowMessage("Já possui este amuleto");
         }
     }
 
@@ -586,12 +592,13 @@ public class StoreManager : MonoBehaviour
             else
             {
                 // mensagem instantiate
-                ShowInsufficientFundsMessage();
+                ShowMessage("Diamantes insuficiente");
             }
         }
         else
         {
             // mensagem instantiate
+            ShowMessage("Já possui este amuleto");
         }
     }
 
@@ -613,12 +620,13 @@ public class StoreManager : MonoBehaviour
             else
             {
                 // mensagem instantiate
-                ShowInsufficientFundsMessage();
+                ShowMessage("Diamantes insuficiente");
             }
         }
         else
         {
             // mensagem instantiate
+            ShowMessage("Já possui este amuleto");
         }
     }
 
@@ -640,12 +648,13 @@ public class StoreManager : MonoBehaviour
             else
             {
                 // mensagem instantiate
-                ShowInsufficientFundsMessage();
+                ShowMessage("Diamantes insuficiente");
             }
         }
         else
         {
             // mensagem instantiate
+            ShowMessage("Já possui este amuleto");
         }
     }
 
@@ -667,12 +676,13 @@ public class StoreManager : MonoBehaviour
             else
             {
                 // mensagem instantiate
-                ShowInsufficientFundsMessage();
+                ShowMessage("Diamantes insuficiente");
             }
         }
         else
         {
             // mensagem instantiate
+            ShowMessage("Já possui este amuleto");
         }
     }
 
@@ -694,12 +704,13 @@ public class StoreManager : MonoBehaviour
             else
             {
                 // mensagem instantiate
-                ShowInsufficientFundsMessage();
+                ShowMessage("Diamantes insuficiente");
             }
         }
         else
         {
             // mensagem instantiate
+            ShowMessage("Já possui este amuleto");
         }
     }
     public void ComprarAmuleto8()
@@ -720,12 +731,13 @@ public class StoreManager : MonoBehaviour
             else
             {
                 // mensagem instantiate
-                ShowInsufficientFundsMessage();
+                ShowMessage("Diamantes insuficiente");
             }
         }
         else
         {
             // mensagem instantiate
+            ShowMessage("Já possui este amuleto");
         }
     }
     public void ComprarAmuleto9()
@@ -746,12 +758,13 @@ public class StoreManager : MonoBehaviour
             else
             {
                 // mensagem instantiate
-                ShowInsufficientFundsMessage();
+                ShowMessage("Diamantes insuficiente");
             }
         }
         else
         {
             // mensagem instantiate
+            ShowMessage("Já possui este amuleto");
         }
     }
     public void ComprarAmuleto10()
@@ -772,29 +785,30 @@ public class StoreManager : MonoBehaviour
             else
             {
                 // mensagem instantiate
-                ShowInsufficientFundsMessage();
+                ShowMessage("Diamantes insuficiente");
             }
         }
         else
         {
             // mensagem instantiate
+            ShowMessage("Já possui este amuleto");
         }
     }
 
-    private void ShowInsufficientFundsMessage()
+    private void ShowMessage(string warning)
     {
         // Instancia a mensagem de aviso
         GameObject message = Instantiate(insufficientFundsPrefab, canvasTransform);
 
         // Configura a mensagem
         TextMeshProUGUI text = message.GetComponent<TextMeshProUGUI>();
-        text.text = "Dinheiro insuficiente";
+        text.text = warning;
 
         // Destrua a mensagem após alguns segundos
         Destroy(message, 3f);
     }
 
-    public void sair()
+    public void Sair()
     {
         if (layerName == "Loja1")
         {

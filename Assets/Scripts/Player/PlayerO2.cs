@@ -10,6 +10,11 @@ public class PlayerO2 : MonoBehaviour
     public float maxOxygen = 100f; // Quantidade máxima de oxigênio
     public float oxygenDecreaseRate = 0.5f; // Taxa de diminuição de oxigênio por segundo
 
+    public Image fill;
+
+    public Color NormarColor = Color.blue;
+    public Color UpColor = Color.red;
+
     private float currentOxygen; // Quantidade atual de oxigênio
 
     void Start()
@@ -20,6 +25,17 @@ public class PlayerO2 : MonoBehaviour
 
     void Update()
     {
+        // Atualiza a cor da barra de O2 com base na porcentagem de O2
+        float O2Percentage = oxygenSlider.value / oxygenSlider.maxValue;
+        
+       /* if(O2Percentage <= 0.2f)
+        {
+            fill.color = UpColor;
+        }else
+        {
+            fill.color = NormarColor;
+        } */
+
         if (currentOxygen > 0)
         {
             // Diminui o oxigênio com base na taxa de diminuição

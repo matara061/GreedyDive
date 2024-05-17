@@ -2007,7 +2007,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1204093180}
         m_TargetAssemblyTypeName: StoreManager, Assembly-CSharp
-        m_MethodName: sair
+        m_MethodName: Sair
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

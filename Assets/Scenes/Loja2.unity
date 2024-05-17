@@ -2401,7 +2401,7 @@ MonoBehaviour:
   - {fileID: -1743819802, guid: fec7232235473044c972529957cf9cb0, type: 3}
   - {fileID: -1743819802, guid: fec7232235473044c972529957cf9cb0, type: 3}
   - {fileID: -1743819802, guid: fec7232235473044c972529957cf9cb0, type: 3}
-  AmuletosPrice: 000000000000000000000000000000000000000000000000000000000000000000000000
+  AmuletosPrice: 00000000000000000000000000000000000000000000000000000000000000000000000000000000
   insufficientFundsPrefab: {fileID: 8249293432758990078, guid: 3fe671f5a8bd0204f8d2de84f969b8e4, type: 3}
   canvasTransform: {fileID: 1003901767}
 --- !u!4 &583711022
@@ -3066,7 +3066,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 583711021}
         m_TargetAssemblyTypeName: StoreManager, Assembly-CSharp
-        m_MethodName: sair
+        m_MethodName: Sair
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
