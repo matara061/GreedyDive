@@ -11,6 +11,7 @@ public class AudioManager : MonoBehaviour
     public AudioClip mergulhoCenaBG;
     public AudioClip andar;
     public AudioClip botao;
+    public AudioClip compra;
     public AudioClip vitoria;
     public AudioClip derrota;
     public AudioClip mergulhoEfect;

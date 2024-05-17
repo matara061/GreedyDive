@@ -579,7 +579,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &40436412
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -592,24 +592,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 01569978ccb090f4ea9308edbc7d4170, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  falaTxt: {fileID: 0}
-  pointA: {fileID: 900380979}
-  pointB: {fileID: 50089414}
-  pointC: {fileID: 1105232223}
-  player: {fileID: 2058245047}
-  Screen: {fileID: 0}
-  anim: {fileID: 0}
-  fala:
-  - Clique nos cantos da tela para se mover
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
+  tutorialScreen: {fileID: 1239398576}
 --- !u!4 &40436413
 Transform:
   m_ObjectHideFlags: 0
@@ -9979,7 +9962,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 53232050ba874304daa5c3177702aa43, type: 3}
+  m_Sprite: {fileID: 21300000, guid: a86e11efa1dd8f445afd3809a11df848, type: 3}
   m_Type: 0
   m_PreserveAspect: 1
   m_FillCenter: 1
@@ -17599,7 +17582,8 @@ MonoBehaviour:
   barcoBG: {fileID: 8300000, guid: ba49f5e57ccaf9c45876813f0e2e70a5, type: 3}
   mergulhoCenaBG: {fileID: 8300000, guid: 0d74c2dde2565fe43a932baa2e5ecc85, type: 3}
   andar: {fileID: 0}
-  botao: {fileID: 8300000, guid: 06f9c7ec2ac431b439961f7d64e82f85, type: 3}
+  botao: {fileID: 8300000, guid: 5414578b27b7dca42a2afb67a5a92a61, type: 3}
+  compra: {fileID: 8300000, guid: c2aed7f33328df949b20e4b504431b2c, type: 3}
   vitoria: {fileID: 8300000, guid: 3de4ac5d68e6e0644a99cd4b409a509c, type: 3}
   derrota: {fileID: 0}
   mergulhoEfect: {fileID: 0}

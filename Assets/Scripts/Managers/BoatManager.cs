@@ -49,9 +49,10 @@ public class BoatManager : MonoBehaviour
 
     public void Loja1()
     {
+        audioManager.PlaySFX(audioManager.botao);
         SceneManager.LoadScene("Loja", LoadSceneMode.Additive);
-        Invoke("RemoveExtraEventSystems", 0.1f); // Wait a bit for the scene to load
-        Invoke("RemoveExtraAudioListeners", 0.1f); // Wait a bit for the scene to load
+       // Invoke("RemoveExtraEventSystems", 0.1f); // Wait a bit for the scene to load
+       // Invoke("RemoveExtraAudioListeners", 0.1f); // Wait a bit for the scene to load
     }
 
     public void Loja2()

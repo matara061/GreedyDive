@@ -332,6 +332,8 @@ public class StoreManager : MonoBehaviour
                         // Deduz o preço da arma do dinheiro do jogador
                         gameManager.BankMoney -= valor.Item1;
 
+                        audioManager.PlaySFX(audioManager.compra);
+
                         ItemDisplay();
 
                         Debug.Log("Você comprou a arma: " + nextHarpoon);
@@ -383,6 +385,8 @@ public class StoreManager : MonoBehaviour
                         // Deduz o preço da arma do dinheiro do jogador
                         gameManager.BankMoney -= valor.Item1;
 
+                        audioManager.PlaySFX(audioManager.compra);
+
                         ItemDisplay();
 
                         Debug.Log("Você comprou a roupa: " + nextDivingSuit);
@@ -432,6 +436,8 @@ public class StoreManager : MonoBehaviour
 
                         // Deduz o preço da arma do dinheiro do jogador
                         gameManager.BankMoney -= valor.Item1;
+
+                        audioManager.PlaySFX(audioManager.compra);
 
                         ItemDisplay();
 
@@ -483,6 +489,8 @@ public class StoreManager : MonoBehaviour
                         // Deduz o preço da arma do dinheiro do jogador
                         gameManager.BankMoney -= valor.Item1;
 
+                        audioManager.PlaySFX(audioManager.compra);
+
                         ItemDisplay();
 
                         Debug.Log("Você comprou o tank: " + nextOxygenTank);
@@ -516,6 +524,8 @@ public class StoreManager : MonoBehaviour
                 gameManager.Amuleto[0] = true;
                 gameManager.BankDiamantes -= AmuletosPrice[0];
 
+                audioManager.PlaySFX(audioManager.compra);
+
                 // trocar icon do amuleto
                 amuletosIcon[0].sprite = amuletosSprites[0];
             }
@@ -542,6 +552,7 @@ public class StoreManager : MonoBehaviour
                 gameManager.Amuleto[1] = true;
                 gameManager.BankDiamantes -= AmuletosPrice[1];
 
+                audioManager.PlaySFX(audioManager.compra);
                 // trocar icon do amuleto
                 amuletosIcon[1].sprite = amuletosSprites[1];
             }
@@ -568,6 +579,7 @@ public class StoreManager : MonoBehaviour
                 gameManager.Amuleto[2] = true;
                 gameManager.BankDiamantes -= AmuletosPrice[2];
 
+                audioManager.PlaySFX(audioManager.compra);
                 // trocar icon do amuleto
                 amuletosIcon[2].sprite = amuletosSprites[2];
             }
@@ -594,6 +606,7 @@ public class StoreManager : MonoBehaviour
                 gameManager.Amuleto[3] = true;
                 gameManager.BankDiamantes -= AmuletosPrice[3];
 
+                audioManager.PlaySFX(audioManager.compra);
                 // trocar icon do amuleto
                 amuletosIcon[3].sprite = amuletosSprites[3];
             }
@@ -620,6 +633,7 @@ public class StoreManager : MonoBehaviour
                 gameManager.Amuleto[4] = true;
                 gameManager.BankDiamantes -= AmuletosPrice[4];
 
+                audioManager.PlaySFX(audioManager.compra);
                 // trocar icon do amuleto
                 amuletosIcon[4].sprite = amuletosSprites[4];
             }
@@ -646,6 +660,7 @@ public class StoreManager : MonoBehaviour
                 gameManager.Amuleto[5] = true;
                 gameManager.BankDiamantes -= AmuletosPrice[5];
 
+                audioManager.PlaySFX(audioManager.compra);
                 // trocar icon do amuleto
                 amuletosIcon[5].sprite = amuletosSprites[5];
             }
@@ -672,6 +687,7 @@ public class StoreManager : MonoBehaviour
                 gameManager.Amuleto[6] = true;
                 gameManager.BankDiamantes -= AmuletosPrice[6];
 
+                audioManager.PlaySFX(audioManager.compra);
                 // trocar icon do amuleto
                 amuletosIcon[6].sprite = amuletosSprites[6];
             }
@@ -697,6 +713,7 @@ public class StoreManager : MonoBehaviour
                 gameManager.Amuleto[7] = true;
                 gameManager.BankDiamantes -= AmuletosPrice[7];
 
+                audioManager.PlaySFX(audioManager.compra);
                 // trocar icon do amuleto
                 amuletosIcon[7].sprite = amuletosSprites[7];
             }
@@ -722,6 +739,7 @@ public class StoreManager : MonoBehaviour
                 gameManager.Amuleto[8] = true;
                 gameManager.BankDiamantes -= AmuletosPrice[8];
 
+                audioManager.PlaySFX(audioManager.compra);
                 // trocar icon do amuleto
                 amuletosIcon[8].sprite = amuletosSprites[8];
             }
@@ -747,6 +765,7 @@ public class StoreManager : MonoBehaviour
                 gameManager.Amuleto[9] = true;
                 gameManager.BankDiamantes -= AmuletosPrice[9];
 
+                audioManager.PlaySFX(audioManager.compra);
                 // trocar icon do amuleto
                 amuletosIcon[9].sprite = amuletosSprites[9];
             }
