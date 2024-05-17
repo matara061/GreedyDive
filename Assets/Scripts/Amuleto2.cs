@@ -15,17 +15,17 @@ public class Amuleto2 : MonoBehaviour
 
         if(gameManager != null)
         {
-            if (gameManager.AmuletoAtivo[1])
+            if (gameManager.AmuletoAtivo[1]) // + bolhas de cura
             {
                 bolhaSpawner.SetActive(true);
             }
 
-            if (gameManager.AmuletoAtivo[6]) // amuleto 7, menos obstaculos
+            if (gameManager.AmuletoAtivo[7]) // menos obstaculos
             {
                 // desativar alguns spanewrs de obstaculos 
             }
 
-            if (gameManager.AmuletoAtivo[7]) // amuleto 8, menos predadores
+            if (gameManager.AmuletoAtivo[8]) // menos predadores
             {
                 // desativar alguns spanewrs de predadores 
             }

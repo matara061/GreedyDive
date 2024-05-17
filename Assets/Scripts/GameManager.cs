@@ -14,6 +14,22 @@ public class GameManager : MonoBehaviour,IDataPersistence
     public bool[] Amuleto = new bool[10];
     public bool[] AmuletoAtivo = new bool[10];
 
+
+    /*   
+     Amuleto 0 = marcação o2 no tanque
+    Amuleto 1 = + bolhas de cura
+    Amuleto 2 = profundidade avança mais rapido
+    Amuleto 3 = + tempo de invencibilidade
+    Amuleto 4 = - dano de pressao
+    Amuleto 5 = diamante x2
+    Amuleto 6 = cura x2
+    Amuleto 7 = - obstaculos
+    Amuleto 8 = menos predadores
+    Amuleto 9 = gold x2
+     
+     
+     */
+
     public int BankMoney;
     public int BankDiamantes;
 

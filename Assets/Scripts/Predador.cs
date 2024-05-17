@@ -50,7 +50,7 @@ public class Predador : MonoBehaviour
 
         if (gameManager != null)
         {
-            if (gameManager.AmuletoAtivo[4])
+            if (gameManager.AmuletoAtivo[5])
             {
                 bonusAmuleto5 = 2;
             }

@@ -36,22 +36,23 @@ public class DivingSceneManager : MonoBehaviour
 
         if (gameManager != null )
         {
-            if (gameManager.AmuletoAtivo[1])
+            
+            if (gameManager.AmuletoAtivo[2]) // Profundidade avança + rapido
             {
-                ChangeDepthSpeed(1.5f); // efeito do amuleto 2, profundidade avanca mais rapido
+                ChangeDepthSpeed(1.5f);
             }
 
-            if (gameManager.AmuletoAtivo[2]) // efeito do amuleto 3, mais tempo de invencibilidade
+            if (gameManager.AmuletoAtivo[3]) // + tempo de invencibilidade
             {
-                player.bonusAmuleto3 = 2;
+                player.bonusAmuleto3 = 3;
             }
 
-            if (gameManager.AmuletoAtivo[3]) // efeito do amuleto 4, menos dano de pressao
+            if (gameManager.AmuletoAtivo[4]) // - dano pressao
             {
-                player.bonusAmuleto4 = 0.3f;
+                player.bonusAmuleto4 = 0.5f;
             }
 
-            if (gameManager.AmuletoAtivo[5]) // efeito do amuleto 6, 2x cura
+            if (gameManager.AmuletoAtivo[6]) // cura x2
             {
                 player.CuraNum = 0.2f;
             }
