@@ -19,6 +19,7 @@ public class Predador : MonoBehaviour
     private Vector2 _targetDirection;
 
     public Animator anim;
+    public SpriteRenderer spriteRenderer;
 
     public BoxCollider2D Collider;
     private DivingSceneManager diveManager;
@@ -69,9 +70,6 @@ public class Predador : MonoBehaviour
 
         // Inicializa a direção de natação aleatoriamente
         swimDirection = Random.insideUnitCircle.normalized;
-
-        anim.SetBool("Swimming", true);
-        anim.SetBool("Attacking", false);
     }
 
     private void Update()
@@ -95,9 +93,12 @@ public class Predador : MonoBehaviour
 
     private void FixedUpdate()
     {
-        UpdateTargetDirection();
-        RotateTowardsTarget();
-        SetVelocity();
+        if (CurrentHP > 0)
+        {
+            UpdateTargetDirection();
+            RotateTowardsTarget();
+            SetVelocity();
+        }
     }
 
     private void UpdateTargetDirection()
@@ -142,8 +143,6 @@ public class Predador : MonoBehaviour
         if (other.gameObject.CompareTag("Player"))
         {
             //player.TakeDamage(Damage);
-            anim.SetBool("Swimming", false);
-            anim.SetBool("Attacking", true);
         }
 
         if (other.gameObject.CompareTag("PlayerAttackHitbox"))
@@ -156,7 +155,6 @@ public class Predador : MonoBehaviour
     {
         CurrentHP -= damage;
         Imunidade(2);
-        anim.SetTrigger("Hit");
     }
 
     void Imunidade(int time)
@@ -192,5 +190,10 @@ public class Predador : MonoBehaviour
         Collider.enabled = true;
         segundos = 0;
         isCoroutineRunning = false;
+    }
+
+    public void DamagePlayer()
+    {
+        player.TakeDamage(Damage);
     }
 }
