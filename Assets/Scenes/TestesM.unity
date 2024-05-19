@@ -597,11 +597,11 @@ GameObject:
   - component: {fileID: 195484384}
   m_Layer: 0
   m_Name: TopSideHitbox
-  m_TagString: Untagged
+  m_TagString: PlayerAttackHitbox
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &195484383
 Transform:
   m_ObjectHideFlags: 0
@@ -785,11 +785,11 @@ GameObject:
   - component: {fileID: 249429713}
   m_Layer: 0
   m_Name: TopHitbox
-  m_TagString: Untagged
+  m_TagString: PlayerAttackHitbox
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &249429712
 Transform:
   m_ObjectHideFlags: 0
@@ -964,11 +964,11 @@ GameObject:
   - component: {fileID: 260223546}
   m_Layer: 0
   m_Name: MiddleHitbox
-  m_TagString: Untagged
+  m_TagString: PlayerAttackHitbox
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &260223545
 Transform:
   m_ObjectHideFlags: 0
@@ -1291,11 +1291,11 @@ GameObject:
   - component: {fileID: 366793010}
   m_Layer: 0
   m_Name: BottomHitbox
-  m_TagString: Untagged
+  m_TagString: PlayerAttackHitbox
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &366793009
 Transform:
   m_ObjectHideFlags: 0
@@ -2842,11 +2842,11 @@ GameObject:
   - component: {fileID: 942123839}
   m_Layer: 0
   m_Name: BottomSideHitbox
-  m_TagString: Untagged
+  m_TagString: PlayerAttackHitbox
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!61 &942123839
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -3155,7 +3155,7 @@ CircleCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -3309,7 +3309,7 @@ MonoBehaviour:
   movimentJoystick: {fileID: 293901010}
   gameManager: {fileID: 0}
   playerHealthBar: {fileID: 250225926}
-  trigger: {fileID: 0}
+  trigger: {fileID: 1044635514}
   playerSpeed: 0
   UpSpeed: 1
   playerDam: 0
@@ -3318,14 +3318,10 @@ MonoBehaviour:
   boxCollider: {fileID: 1052478948}
   isAlive: 0
   isInvencivel: 0
+  spriteRenderer: {fileID: 0}
   MaxHealth: 0
   CurrentHealth: 0
   CuraNum: 0.1
-  topHitbox: {fileID: 0}
-  topSideHitbox: {fileID: 0}
-  middleHitbox: {fileID: 0}
-  bottomHitbox: {fileID: 0}
-  bottomSideHitbox: {fileID: 0}
 --- !u!50 &1052478950
 Rigidbody2D:
   serializedVersion: 4

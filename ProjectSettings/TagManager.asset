@@ -24,6 +24,7 @@ TagManager:
   - Tubarao martelo
   - Tubarao
   - Caixa
+  - PlayerAttackHitbox
   layers:
   - Default
   - TransparentFX

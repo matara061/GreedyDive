@@ -522,6 +522,10 @@ PrefabInstance:
       propertyPath: ItemBox
       value: 
       objectReference: {fileID: 339573864}
+    - target: {fileID: 4998592484357430675, guid: 8fc0d38f7de7c3a4f8b671f24d4d9691, type: 3}
+      propertyPath: prefabs.Array.data[1]
+      value: 
+      objectReference: {fileID: 2839123432258565568, guid: cd04c9253e0475c4db1fd8530b5db0cb, type: 3}
     - target: {fileID: 7440711504960124070, guid: 8fc0d38f7de7c3a4f8b671f24d4d9691, type: 3}
       propertyPath: m_Name
       value: spawPredadores1
