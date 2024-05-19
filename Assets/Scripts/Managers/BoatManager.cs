@@ -332,6 +332,11 @@ public class BoatManager : MonoBehaviour
         }
     }
 
+    public void Creditos()
+    {
+        SceneManager.LoadScene("SampleScene");
+    }
+
     public void Quit()
     {
         Application.Quit();

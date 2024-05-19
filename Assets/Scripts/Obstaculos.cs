@@ -9,6 +9,7 @@ public class Obstaculos : MonoBehaviour
 
     public float velocidadeRotacao = 50f;
     public float speed;
+    public float tiltSpeed = 10f; // Velocidade de inclinação
     public Rigidbody2D rb;
 
     void Start()
@@ -24,14 +25,14 @@ public class Obstaculos : MonoBehaviour
 
         AccelerometerMove();
 
-        if (floatup)
+      /*  if (floatup)
         {
             StartCoroutine(floatingUp());
         }
         else
         {
             StartCoroutine(floatingDown());
-        }
+        }*/
     }
 
     IEnumerator floatingUp()
@@ -74,22 +75,39 @@ public class Obstaculos : MonoBehaviour
 
     void AccelerometerMove()
     {
+        // Obtém a inclinação do dispositivo
+        Vector3 tilt = Input.acceleration;
 
-        float x = Input.acceleration.x;
-        //Debug.Log("X = " + x);
+        // Ignora a componente y (para cima e para baixo)
+        tilt.y = 0;
 
-        if (x < -0.1f)
+        // Se o dispositivo estiver inclinado, move o peixe na direção da inclinação
+        if (tilt.magnitude > 1)
         {
-            MoveLeft();
+            tilt.Normalize();
         }
-        else if (x > 0.1f)
-        {
-            MoveRight();
-        }
-        else
-        {
-            SetVelocityZero();
-        }
+
+        // Multiplica a inclinação pela velocidade de inclinação para obter a quantidade de movimento
+        tilt *= tiltSpeed;
+
+        // Move o peixe na direção da inclinação
+        transform.Translate(tilt * Time.deltaTime);
+
+        /*  float x = Input.acceleration.x;
+          //Debug.Log("X = " + x);
+
+          if (x < -0.1f)
+          {
+              MoveLeft();
+          }
+          else if (x > 0.1f)
+          {
+              MoveRight();
+          }
+          else
+          {
+              SetVelocityZero();
+          }*/
     }
     public void SetVelocityZero()
     {
