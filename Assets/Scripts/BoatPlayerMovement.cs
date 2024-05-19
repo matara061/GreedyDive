@@ -12,6 +12,8 @@ public class BoatPlayerMovement : MonoBehaviour
     public GameObject diveButton;
     public GameObject loja1Button;
     public GameObject loja2Button;
+    public GameObject loja1Fala;
+    public GameObject loja2Fala;
     public float speed;
     private Transform nextPoint;
 
@@ -40,16 +42,25 @@ public class BoatPlayerMovement : MonoBehaviour
         if (transform.position == pointB.position)
         {
             loja1Button.SetActive(true);
+            loja1Fala.SetActive(true);
         }
         else
+        {
             loja1Button.SetActive(false);
+            loja1Fala.SetActive(false);
+        }
+           
 
         if (transform.position == pointC.position)
         {
             loja2Button.SetActive(true);
+            loja2Fala.SetActive(true);
         }
         else
+        {
             loja2Button.SetActive(false);
+            loja2Fala.SetActive(false);
+        }
     }
 
     public void Direita()
