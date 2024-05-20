@@ -14,6 +14,7 @@ public class BoatPlayerMovement : MonoBehaviour
     public GameObject loja2Button;
     public GameObject loja1Fala;
     public GameObject loja2Fala;
+    public GameObject MoveBotoes;
     public float speed;
     private Transform nextPoint;
 
@@ -33,7 +34,14 @@ public class BoatPlayerMovement : MonoBehaviour
             transform.position = Vector2.MoveTowards(transform.position, nextPoint.position, speed * Time.deltaTime);
         }
 
-        if(transform.position == pointA.position)
+        if(transform.position != pointA.position && transform.position != pointB.position && transform.position != pointC.position)
+        {
+            MoveBotoes.SetActive(false);
+        }else
+            MoveBotoes.SetActive(true);
+
+
+        if (transform.position == pointA.position)
         {
             diveButton.SetActive(true);
         }else
