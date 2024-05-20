@@ -12,6 +12,10 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 21300000, guid: ce0d07b0407df38418634d991f373ddd, type: 3}
+    - target: {fileID: 4016763658370567429, guid: 64e37d289a950ac42848e4eb0a078084, type: 3}
+      propertyPath: m_Offset.y
+      value: -0.61
+      objectReference: {fileID: 0}
     - target: {fileID: 7052051365850493992, guid: 64e37d289a950ac42848e4eb0a078084, type: 3}
       propertyPath: m_Name
       value: Peixefundo2 Variant

@@ -10,19 +10,23 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2035234508597860468, guid: eafd70f7cb64dff4a9c609498ee5d99a, type: 3}
       propertyPath: m_Size.x
-      value: 2.011056
+      value: 1.4183799
       objectReference: {fileID: 0}
     - target: {fileID: 2035234508597860468, guid: eafd70f7cb64dff4a9c609498ee5d99a, type: 3}
       propertyPath: m_Size.y
-      value: 1.1279058
+      value: 1.4348274
       objectReference: {fileID: 0}
     - target: {fileID: 2035234508597860468, guid: eafd70f7cb64dff4a9c609498ee5d99a, type: 3}
       propertyPath: m_Offset.x
-      value: 0.004189253
+      value: -0.0011025071
       objectReference: {fileID: 0}
     - target: {fileID: 2035234508597860468, guid: eafd70f7cb64dff4a9c609498ee5d99a, type: 3}
       propertyPath: m_Offset.y
-      value: 0.09986472
+      value: -0.0059702992
+      objectReference: {fileID: 0}
+    - target: {fileID: 4499074753780565913, guid: eafd70f7cb64dff4a9c609498ee5d99a, type: 3}
+      propertyPath: dano
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 5468372519937347025, guid: eafd70f7cb64dff4a9c609498ee5d99a, type: 3}
       propertyPath: m_Sprite

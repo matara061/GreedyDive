@@ -96,7 +96,6 @@ GameObject:
   - component: {fileID: 5453101167782845662}
   - component: {fileID: 2035234508597860468}
   - component: {fileID: 4499074753780565913}
-  - component: {fileID: 3245585298385390415}
   m_Layer: 8
   m_Name: Barril
   m_TagString: Barril
@@ -204,19 +203,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 12950701071d35d438e819952519d515, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  dano: 5
   velocidadeRotacao: 50
   speed: 25
+  tiltSpeed: 10
   rb: {fileID: 5453101167782845662}
---- !u!114 &3245585298385390415
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7550547416566390387}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8a6a86c4f9f156749bcbf7579e3af306, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  damage: 0

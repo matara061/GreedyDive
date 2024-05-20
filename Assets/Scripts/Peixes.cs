@@ -76,6 +76,11 @@ public class FishSwimming : MonoBehaviour
             Recompensa();
             Destroy(gameObject);
         }
+
+        if (collision.gameObject.layer == LayerMask.NameToLayer("Limit"))
+        {
+            Destroy(gameObject);
+        }
     }
 
     void Recompensa()
