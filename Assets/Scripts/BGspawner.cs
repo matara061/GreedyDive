@@ -1,11 +1,10 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UIElements;
 
 public class BGspawner : MonoBehaviour
 {
-    public GameObject backgroundPrefab; // O prefab da imagem de fundo
+    public GameObject[] backgroundPrefabs; // O array de prefabs das imagens de fundo
     public Vector2 spawnPoint; // O ponto onde a imagem de fundo deve ser instanciada
     public float spawnInterval = 3f; // O intervalo em segundos entre cada instância
     public GameObject parentObject; // O objeto que será o pai dos backgrounds instanciados
@@ -20,6 +19,9 @@ public class BGspawner : MonoBehaviour
     {
         while (true)
         {
+            // Seleciona um prefab de background aleatório
+            GameObject backgroundPrefab = backgroundPrefabs[Random.Range(0, backgroundPrefabs.Length)];
+
             // Instancia a imagem de fundo no ponto especificado
             GameObject background = Instantiate(backgroundPrefab, spawnPoint, Quaternion.identity);
 

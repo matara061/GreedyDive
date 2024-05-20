@@ -136,7 +136,7 @@ GameObject:
   m_Layer: 0
   m_Name: BackGround
   m_TagString: Untagged
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: -5442936267250999957, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -170,7 +170,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f5052c510aa486a439487a9b43207273, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  backgroundPrefab: {fileID: 5320654288323718685, guid: bf7b3d8c11511554d81b6b19799794b8, type: 3}
+  backgroundPrefabs:
+  - {fileID: 5320654288323718685, guid: bf7b3d8c11511554d81b6b19799794b8, type: 3}
+  - {fileID: 7217252884008986049, guid: 406d4f9ea0df3c1479e9dc2f0d9f50e3, type: 3}
+  - {fileID: 3689721868012546332, guid: db586b1c09113d8449825d6ec9eaa34c, type: 3}
+  - {fileID: 484708791562063431, guid: e383acb1165fbce43860633435a0fd94, type: 3}
+  - {fileID: 5479317210196344957, guid: ffe396a341ad0d34499dbf16572fcc65, type: 3}
+  - {fileID: 648019709723010661, guid: f0a590c21241a404cbc922a7c470a42f, type: 3}
   spawnPoint: {x: 0, y: 0}
   spawnInterval: 9
   parentObject: {fileID: 107727636}

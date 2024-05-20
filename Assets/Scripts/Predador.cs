@@ -160,6 +160,14 @@ public class Predador : MonoBehaviour
         }
     }
 
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if(collision.gameObject.layer == LayerMask.NameToLayer("Limit"))
+        {
+            Destroy(gameObject);
+        }
+    }
+
     public void TakeDamage(int damage)
     {
         CurrentHP -= damage;

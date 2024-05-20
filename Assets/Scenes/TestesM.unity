@@ -706,7 +706,7 @@ GameObject:
   m_Component:
   - component: {fileID: 223170762}
   - component: {fileID: 223170763}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: parede (6)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2075,7 +2075,7 @@ GameObject:
   m_Component:
   - component: {fileID: 652516609}
   - component: {fileID: 652516610}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: parede (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
