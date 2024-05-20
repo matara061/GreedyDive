@@ -20,12 +20,12 @@ public class BolhaCura : MonoBehaviour
         if (other.gameObject.CompareTag("Player"))
         {
             player.Cura();
-            ShowMessage("+++", Color.green);
+            ShowMessage("mais");
             Destroy(gameObject);
         }
     }
 
-    private void ShowMessage(string warning, Color color)
+    private void ShowMessage(string warning)
     {
         // Instancia a mensagem de aviso
         GameObject message = Instantiate(floatingTxt, this.transform);
@@ -33,9 +33,6 @@ public class BolhaCura : MonoBehaviour
         // Configura a mensagem
         TextMeshProUGUI text = message.GetComponent<TextMeshProUGUI>();
         text.text = warning;
-
-        // Define a cor do texto
-        text.color = color;
 
         // Destrua a mensagem após alguns segundos
         Destroy(message, 3f);

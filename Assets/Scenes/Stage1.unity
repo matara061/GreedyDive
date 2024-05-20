@@ -708,6 +708,10 @@ PrefabInstance:
       value: spawCura Variant
       objectReference: {fileID: 0}
     - target: {fileID: 7343373988970750052, guid: 78fd0713a91e06c4cb400110d9b9e153, type: 3}
+      propertyPath: ItemBox
+      value: 
+      objectReference: {fileID: 2086477353}
+    - target: {fileID: 7343373988970750052, guid: 78fd0713a91e06c4cb400110d9b9e153, type: 3}
       propertyPath: seconds
       value: 40
       objectReference: {fileID: 0}
@@ -827,6 +831,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7343373988970750052, guid: 78fd0713a91e06c4cb400110d9b9e153, type: 3}
+      propertyPath: ItemBox
+      value: 
+      objectReference: {fileID: 2086477353}
     - target: {fileID: 7343373988970750052, guid: 78fd0713a91e06c4cb400110d9b9e153, type: 3}
       propertyPath: seconds
       value: 20

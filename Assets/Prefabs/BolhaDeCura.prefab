@@ -193,3 +193,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2a79289be4fc6154c980e3cfc277ee67, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  floatingTxt: {fileID: 3541394842797513015, guid: f798ac22549fb8246810d6574403619d, type: 3}
