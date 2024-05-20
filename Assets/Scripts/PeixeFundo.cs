@@ -41,4 +41,12 @@ public class PeixeFundo : MonoBehaviour
             transform.localScale = new Vector3(-0.5f, 0.5f, 0.5f);
         }
     }
+
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.gameObject.layer == LayerMask.NameToLayer("Limit"))
+        {
+            Destroy(gameObject);
+        }
+    }
 }

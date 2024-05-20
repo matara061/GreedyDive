@@ -6,6 +6,7 @@ public class Obstaculos : MonoBehaviour
 {
     private bool floatup;
     private Player player;
+    public int dano;
 
     public float velocidadeRotacao = 50f;
     public float speed;
@@ -62,15 +63,16 @@ public class Obstaculos : MonoBehaviour
             ObstaculoDano();
             Destroy(gameObject);
         }
+
+        if (collision.gameObject.layer == LayerMask.NameToLayer("Limit"))
+        {
+            Destroy(gameObject);
+        }
     }
 
     void ObstaculoDano()
     {
-        Damage damage = GetComponent<Damage>();
-        if (damage != null)
-        {
-            player.TakeDamage(damage.damage);
-        }
+        player.TakeDamage(dano);
     }
 
     void AccelerometerMove()

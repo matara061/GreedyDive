@@ -20,7 +20,12 @@ public class BolhaCura : MonoBehaviour
         if (other.gameObject.CompareTag("Player"))
         {
             player.Cura();
-            ShowMessage("mais");
+            ShowMessage("+++");
+            Destroy(gameObject);
+        }
+
+        if (other.gameObject.layer == LayerMask.NameToLayer("Limit"))
+        {
             Destroy(gameObject);
         }
     }
