@@ -183,9 +183,9 @@ GameObject:
   - component: {fileID: 1269100061379532181}
   - component: {fileID: 5157464514242259126}
   - component: {fileID: 932606768170097923}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Shark
-  m_TagString: Untagged
+  m_TagString: Tubarao branco
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -321,7 +321,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 3, y: 0.7}
+  m_Size: {x: 2.5, y: 0.6}
   m_EdgeRadius: 0
 --- !u!114 &1269100061379532181
 MonoBehaviour:
