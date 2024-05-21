@@ -7,6 +7,7 @@ public class FishSwimming : MonoBehaviour
 {
     public float swimSpeed = 2f; // Velocidade de natação
     public float rotationSpeed = 5f; // Velocidade de rotação
+    public float tiltSpeed = 5f; // Velocidade de inclinação
     public int bonusAmuleto5;
     public int bonusAmuleto9;
 
@@ -48,6 +49,8 @@ public class FishSwimming : MonoBehaviour
     {
         // Move o peixe na direção de natação
         transform.Translate(swimDirection * swimSpeed * Time.deltaTime);
+
+        AccelerometerMove();
 
         // Altera aleatoriamente a direção de natação a cada 2 segundos
         if (Time.time % 2f < 0.1f)
@@ -104,5 +107,28 @@ public class FishSwimming : MonoBehaviour
                 Diamond.transform.GetChild(0).GetComponent<TextMeshPro>().text = fishValue.diamantes.ToString();
             }
         }
+    }
+
+    void AccelerometerMove()
+    {
+        // Obtém a inclinação do dispositivo
+        Vector3 tilt = Input.acceleration;
+
+        // Ignora a componente y (para cima e para baixo)
+        tilt.y = 0;
+
+        // Se o dispositivo estiver inclinado, move o peixe na direção da inclinação
+        if (tilt.magnitude > 1)
+        {
+            tilt.Normalize();
+        }
+
+        tilt.Normalize();
+
+        // Multiplica a inclinação pela velocidade de inclinação para obter a quantidade de movimento
+        tilt *= tiltSpeed;
+
+        // Move o peixe na direção da inclinação
+        transform.Translate(tilt * Time.deltaTime);
     }
 }

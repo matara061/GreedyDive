@@ -10,7 +10,7 @@ public class Obstaculos : MonoBehaviour
 
     public float velocidadeRotacao = 50f;
     public float speed;
-    public float tiltSpeed = 10f; // Velocidade de inclinação
+    public float tiltSpeed = 6f; // Velocidade de inclinação
     public Rigidbody2D rb;
 
     void Start()
@@ -88,6 +88,8 @@ public class Obstaculos : MonoBehaviour
         {
             tilt.Normalize();
         }
+
+        tilt.Normalize();
 
         // Multiplica a inclinação pela velocidade de inclinação para obter a quantidade de movimento
         tilt *= tiltSpeed;

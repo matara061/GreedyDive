@@ -7,6 +7,8 @@ public class Predador : MonoBehaviour
     [SerializeField]
     private float _speed;
 
+    public float tiltSpeed = 5f; // Velocidade de inclinação
+
     [SerializeField]
     private float _rotationSpeed;
 
@@ -74,6 +76,9 @@ public class Predador : MonoBehaviour
 
     private void Update()
     {
+
+        //AccelerometerMove();
+
         if (segundos != 0 && !isCoroutineRunning)
         {
             StartCoroutine(ReativarColliderAposDelay(segundos));
@@ -212,5 +217,26 @@ public class Predador : MonoBehaviour
     public void DamagePlayer()
     {
         player.TakeDamage(Damage);
+    }
+
+    void AccelerometerMove()
+    {
+        // Obtém a inclinação do dispositivo
+        Vector3 tilt = Input.acceleration;
+
+        // Ignora a componente y (para cima e para baixo)
+        tilt.y = 0;
+
+        // Se o dispositivo estiver inclinado, move o peixe na direção da inclinação
+        if (tilt.magnitude > 1)
+        {
+            tilt.Normalize();
+        }
+
+        // Multiplica a inclinação pela velocidade de inclinação para obter a quantidade de movimento
+        tilt *= tiltSpeed;
+
+        // Move o peixe na direção da inclinação
+        transform.Translate(tilt * Time.deltaTime);
     }
 }
