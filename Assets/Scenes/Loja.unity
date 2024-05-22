@@ -1830,18 +1830,30 @@ MonoBehaviour:
   - {fileID: -812380378, guid: e190a05b3a8586741afb3a1f94c775e7, type: 3}
   - {fileID: -157183640, guid: e190a05b3a8586741afb3a1f94c775e7, type: 3}
   - {fileID: -189218399, guid: e190a05b3a8586741afb3a1f94c775e7, type: 3}
+  - {fileID: 21300000, guid: 9f7d083ffdd531a4d892d6f5444feb93, type: 3}
+  - {fileID: 21300000, guid: 909a1fa31038c7a4ea57b6f0cf0ca6a2, type: 3}
+  - {fileID: 21300000, guid: bf1bf644756e15940832f5d68fcedc75, type: 3}
   roupasSprites:
   - {fileID: 1203433597, guid: 9944b288ce962604bba3e3a778ceb22a, type: 3}
   - {fileID: 1316628936, guid: 9944b288ce962604bba3e3a778ceb22a, type: 3}
   - {fileID: 59886664, guid: 9944b288ce962604bba3e3a778ceb22a, type: 3}
+  - {fileID: 21300000, guid: bbbad9004ae37294181e64f10cd6050b, type: 3}
+  - {fileID: 21300000, guid: 199009f075f062745afef2e5fb68054d, type: 3}
+  - {fileID: 21300000, guid: 642fdabfacdcccb4ab2bbfc76f850b60, type: 3}
   pesSprites:
   - {fileID: -2133553627, guid: f64d6cfedc4f9b249a73c6022dcbb653, type: 3}
   - {fileID: 1863080991, guid: f64d6cfedc4f9b249a73c6022dcbb653, type: 3}
   - {fileID: 536850724, guid: f64d6cfedc4f9b249a73c6022dcbb653, type: 3}
+  - {fileID: 21300000, guid: 0d3ea10b26c3aae43816fec98f6c7597, type: 3}
+  - {fileID: 21300000, guid: 08e3ddb97b4cfaa40ad09664d035781f, type: 3}
+  - {fileID: 21300000, guid: e2c5b61e4a802c34c84bddf83d38e7b8, type: 3}
   tankSprites:
   - {fileID: -2145769080, guid: bda0fb075a118d54fb8ee9211123a190, type: 3}
   - {fileID: 1998475940, guid: bda0fb075a118d54fb8ee9211123a190, type: 3}
   - {fileID: 1119072442, guid: bda0fb075a118d54fb8ee9211123a190, type: 3}
+  - {fileID: 21300000, guid: 14c4ffe4261ad2845b3cd93ebf0bbb05, type: 3}
+  - {fileID: 21300000, guid: 528a94ba0a6cf0748a3d14c042584a81, type: 3}
+  - {fileID: 21300000, guid: 377cd52faddc19f46ab71e8031f35787, type: 3}
   amuletosIcon: []
   amuletosSprites: []
   AmuletosPrice: 00000000000000000000000000000000000000000000000000000000000000000000000000000000

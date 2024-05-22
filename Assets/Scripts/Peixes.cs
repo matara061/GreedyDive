@@ -7,7 +7,7 @@ public class FishSwimming : MonoBehaviour
 {
     public float swimSpeed = 2f; // Velocidade de natação
     public float rotationSpeed = 5f; // Velocidade de rotação
-    public float tiltSpeed = 5f; // Velocidade de inclinação
+    public float tiltSpeed = 2f; // Velocidade de inclinação
     public int bonusAmuleto5;
     public int bonusAmuleto9;
 
@@ -85,6 +85,33 @@ public class FishSwimming : MonoBehaviour
             Destroy(gameObject);
         }
     }
+    void AccelerometerMove()
+    {
+        // Obtém a inclinação do dispositivo
+        Vector3 tilt = Input.acceleration;
+
+        // Ignora a componente y (para cima e para baixo) e z
+        tilt.y = 0;
+        tilt.z = 0;
+
+        // Se a inclinação for menor que um certo limite, não move o peixe
+        if (tilt.magnitude < 0.2f)
+        {
+            return;
+        }
+
+        // Normaliza a inclinação para obter uma direção
+        tilt.Normalize();
+
+        // Multiplica a inclinação pela velocidade de inclinação para obter a quantidade de movimento
+        tilt *= tiltSpeed;
+
+        // Limita a quantidade de movimento
+        // tilt = Vector3.ClampMagnitude(tilt, 1);
+
+        // Move o peixe na direção da inclinação
+        transform.Translate(tilt * Time.deltaTime, Space.World);
+    }
 
     void Recompensa()
     {
@@ -109,26 +136,4 @@ public class FishSwimming : MonoBehaviour
         }
     }
 
-    void AccelerometerMove()
-    {
-        // Obtém a inclinação do dispositivo
-        Vector3 tilt = Input.acceleration;
-
-        // Ignora a componente y (para cima e para baixo)
-        tilt.y = 0;
-
-        // Se o dispositivo estiver inclinado, move o peixe na direção da inclinação
-        if (tilt.magnitude > 1)
-        {
-            tilt.Normalize();
-        }
-
-        tilt.Normalize();
-
-        // Multiplica a inclinação pela velocidade de inclinação para obter a quantidade de movimento
-        tilt *= tiltSpeed;
-
-        // Move o peixe na direção da inclinação
-        transform.Translate(tilt * Time.deltaTime);
-    }
 }

@@ -4,19 +4,19 @@ using UnityEngine;
 
 public class Obstaculos : MonoBehaviour
 {
-    private bool floatup;
+    //private bool floatup;
     private Player player;
     public int dano;
 
     public float velocidadeRotacao = 50f;
     public float speed;
-    public float tiltSpeed = 6f; // Velocidade de inclinação
+    public float tiltSpeed = 2f; // Velocidade de inclinação
     public Rigidbody2D rb;
 
     void Start()
     {
         player = FindAnyObjectByType<Player>();
-        floatup = false;
+        //floatup = false;
     }
 
     void Update()
@@ -36,7 +36,7 @@ public class Obstaculos : MonoBehaviour
         }*/
     }
 
-    IEnumerator floatingUp()
+  /*  IEnumerator floatingUp()
     {
         transform.position += Vector3.up * 0.3f * Time.deltaTime;
         yield return new WaitForSeconds(1);
@@ -48,7 +48,7 @@ public class Obstaculos : MonoBehaviour
         transform.position -= Vector3.up * 0.3f * Time.deltaTime;
         yield return new WaitForSeconds(1);
         floatup = true;
-    }
+    }*/
 
     void OnCollisionEnter2D(Collision2D collision)
     {
@@ -80,22 +80,27 @@ public class Obstaculos : MonoBehaviour
         // Obtém a inclinação do dispositivo
         Vector3 tilt = Input.acceleration;
 
-        // Ignora a componente y (para cima e para baixo)
+        // Ignora a componente y (para cima e para baixo) e z
         tilt.y = 0;
+        tilt.z = 0;
 
-        // Se o dispositivo estiver inclinado, move o peixe na direção da inclinação
-        if (tilt.magnitude > 1)
+        // Se a inclinação for menor que um certo limite, não move o peixe
+        if (tilt.magnitude < 0.2f)
         {
-            tilt.Normalize();
+            return;
         }
 
+        // Normaliza a inclinação para obter uma direção
         tilt.Normalize();
 
         // Multiplica a inclinação pela velocidade de inclinação para obter a quantidade de movimento
         tilt *= tiltSpeed;
 
+        // Limita a quantidade de movimento
+       // tilt = Vector3.ClampMagnitude(tilt, 1);
+
         // Move o peixe na direção da inclinação
-        transform.Translate(tilt * Time.deltaTime);
+        transform.Translate(tilt * Time.deltaTime, Space.World);
 
         /*  float x = Input.acceleration.x;
           //Debug.Log("X = " + x);

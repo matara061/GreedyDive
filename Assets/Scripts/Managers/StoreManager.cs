@@ -531,6 +531,7 @@ public class StoreManager : MonoBehaviour
                 audioManager.PlaySFX(audioManager.compra);
 
                 // trocar icon do amuleto
+                amuletosIcon[0].enabled = false;
                 amuletosIcon[0].sprite = amuletosSprites[0];
             }
             else

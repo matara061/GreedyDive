@@ -38,6 +38,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Vitoria.unity
     guid: 8654bbb3fdea76045a8c453132a1576c
+  - enabled: 1
+    path: Assets/Scenes/Creditos.unity
+    guid: 3d04e7af64e59f147870456ef0ac3622
   m_configObjects:
     com.unity.adaptiveperformance.loader_settings: {fileID: 11400000, guid: 26d448429ad920940a18e56d909d0bb8, type: 2}
     com.unity.adaptiveperformance.simulator.provider_settings: {fileID: 11400000, guid: f552750c5eb3fa64d9c9d3b1d78a1b56, type: 2}
