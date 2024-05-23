@@ -2922,16 +2922,16 @@ MonoBehaviour:
   - {fileID: 406167737}
   - {fileID: 767433619}
   amuletosSprites:
-  - {fileID: -1743819802, guid: fec7232235473044c972529957cf9cb0, type: 3}
-  - {fileID: -1743819802, guid: fec7232235473044c972529957cf9cb0, type: 3}
-  - {fileID: -1743819802, guid: fec7232235473044c972529957cf9cb0, type: 3}
-  - {fileID: -1743819802, guid: fec7232235473044c972529957cf9cb0, type: 3}
-  - {fileID: -1743819802, guid: fec7232235473044c972529957cf9cb0, type: 3}
-  - {fileID: -1743819802, guid: fec7232235473044c972529957cf9cb0, type: 3}
-  - {fileID: -1743819802, guid: fec7232235473044c972529957cf9cb0, type: 3}
-  - {fileID: -1743819802, guid: fec7232235473044c972529957cf9cb0, type: 3}
-  - {fileID: -1743819802, guid: fec7232235473044c972529957cf9cb0, type: 3}
-  - {fileID: -1743819802, guid: fec7232235473044c972529957cf9cb0, type: 3}
+  - {fileID: 21300000, guid: ad33e0f8f1606e04c906d9f26fd8698e, type: 3}
+  - {fileID: 21300000, guid: c7c478272e0844c48bd7879d0fb66170, type: 3}
+  - {fileID: 21300000, guid: 442e737c6d36f6a4fb054f5e0513a6a6, type: 3}
+  - {fileID: 21300000, guid: 3cb1a9873381dc343acbcf238e25b9c8, type: 3}
+  - {fileID: 21300000, guid: 2d809c6e77f7a1c4a9d44ae3f87171ca, type: 3}
+  - {fileID: 21300000, guid: 4ac94e2259156a2409e3e71543833990, type: 3}
+  - {fileID: 21300000, guid: 39a712567e3908645aa758054bb55271, type: 3}
+  - {fileID: 21300000, guid: 8e539459052ce7c4a8321f943ca4d541, type: 3}
+  - {fileID: 21300000, guid: 8a401ff3e0627b24e8665a5c8f229e06, type: 3}
+  - {fileID: 21300000, guid: dfa7a5b105fe3c641afbdfddb4afdda0, type: 3}
   AmuletosPrice: 00000000000000000000000000000000000000000000000000000000000000000000000000000000
   insufficientFundsPrefab: {fileID: 8249293432758990078, guid: 3fe671f5a8bd0204f8d2de84f969b8e4, type: 3}
   canvasTransform: {fileID: 1003901767}
