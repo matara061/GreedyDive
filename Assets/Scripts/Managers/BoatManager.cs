@@ -21,30 +21,53 @@ public class BoatManager : MonoBehaviour
     public GameObject insufficientFundsPrefab; // O prefab da mensagem de aviso
     public Transform canvasTransform; // O transform do canvas onde a mensagem será exibida
 
-    // Start is called before the first frame update
+    private bool _playMusic = false;
+
+    
     void Start()
     {
-        gameManager = FindAnyObjectByType<GameManager>();
-        audioManager = FindAnyObjectByType<AudioManager>();
+       // gameManager = FindAnyObjectByType<GameManager>();
+       // audioManager = FindAnyObjectByType<AudioManager>();
 
         UpdadeScoreText();
-
-        if (audioManager != null)
-        {
-            audioManager.PlayMusic(audioManager.barcoBG);
-        }
     }
 
     // Update is called once per frame
     void Update()
     {
         UpdadeScoreText();
+        PlayMusic();
     }
 
     public void UpdadeScoreText()
     {
+        if(gameManager == null)
+        {
+            gameManager = FindAnyObjectByType<GameManager>();
+        }
+
         gold.text = gameManager.BankMoney.ToString();
         diamond.text = gameManager.BankDiamantes.ToString();
+    }
+
+    public void PlayMusic()
+    {
+        if (!_playMusic)
+        {
+            if (audioManager != null)
+            {
+                audioManager.IsPaused = false;
+                audioManager.PlayMusic(audioManager.barcoBG);
+                _playMusic = true;
+            }
+            else
+            {
+                audioManager = FindAnyObjectByType<AudioManager>();
+                audioManager.IsPaused = false;
+                audioManager.PlayMusic(audioManager.barcoBG);
+                _playMusic = true;
+            }
+        }
     }
 
     public void Loja1()

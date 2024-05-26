@@ -71,15 +71,7 @@ public class GameManager : MonoBehaviour,IDataPersistence
 
     public void LoadData(GameData data) 
     {
-        this.BankMoney = data.Money;
-        this.BankDiamantes = data.Diamantes;
-        this.CurrentHarpoon = data.CurrentHarpoon;
-        this.CurrentDivingSuit = data.CurrentDivingSuit;
-        this.CurrentDivingFins = data.CurrentDivingFins;
-        this.CurrentOxygenTank = data.CurrentOxygenTank;
-
-        this.Amuleto = data.Amuleto;
-        this.AmuletoAtivo = data.AmuletoAtivo;
+        
     }
 
     public void SaveData(ref GameData data) 

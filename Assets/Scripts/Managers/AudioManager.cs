@@ -36,7 +36,7 @@ public class AudioManager : MonoBehaviour
 
     private void Start()
     {
-        
+        IsPaused = false;
     }
 
     private void Update()
