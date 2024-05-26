@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 using TMPro;
 using UnityEngine.EventSystems;
 
-public class BoatManager : MonoBehaviour
+public class BoatManager : MonoBehaviour, IDataPersistence
 {
 
     [SerializeField]
@@ -68,6 +68,24 @@ public class BoatManager : MonoBehaviour
                 _playMusic = true;
             }
         }
+    }
+
+    public void LoadData(GameData data) 
+    {
+        
+    }
+
+    public void SaveData(ref GameData data) 
+    {
+        data.Money = gameManager.BankMoney;
+        data.Diamantes = gameManager.BankDiamantes;
+        data.CurrentHarpoon = gameManager.CurrentHarpoon;
+        data.CurrentDivingSuit = gameManager.CurrentDivingSuit;
+        data.CurrentDivingFins = gameManager.CurrentDivingFins;
+        data.CurrentOxygenTank = gameManager.CurrentOxygenTank;
+
+        data.Amuleto = gameManager.Amuleto;
+        data.AmuletoAtivo = gameManager.AmuletoAtivo;
     }
 
     public void Loja1()
