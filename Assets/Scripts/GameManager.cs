@@ -34,7 +34,7 @@ public class GameManager : MonoBehaviour,IDataPersistence
     public int BankDiamantes;
 
     // Variável estática para a instância do GameManager
-    public static GameManager instance = null;
+    public static GameManager instance;
 
     private void Awake()
     {

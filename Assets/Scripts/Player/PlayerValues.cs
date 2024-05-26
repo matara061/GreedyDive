@@ -61,15 +61,15 @@ public class PlayerValues : MonoBehaviour
     private Dictionary<string, float> O2Tank = new Dictionary<string, float>
     {
         { "Tank1", 100f },
-        { "Tank2", 10 },
-        { "Tank3", 15 },
-        { "Tank4", 20 },
-        { "Tank5", 25 },
-        { "Tank6", 30 },
-        { "Tank7", 35 },
-        { "Tank8", 40 },
-        { "Tank9", 45 },
-        { "Tank10", 50 }
+        { "Tank2", 285f },
+        { "Tank3", 470f },
+        { "Tank4", 655f },
+        { "Tank5", 840f },
+        { "Tank6", 1025f },
+        { "Tank7", 1210f },
+        { "Tank8", 1395f },
+        { "Tank9", 1480f },
+        { "Tank10", 1600f }
     };
 
     private Dictionary<string, int> AmuletoBuff = new Dictionary<string, int>

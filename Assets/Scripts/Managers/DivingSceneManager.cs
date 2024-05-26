@@ -78,7 +78,7 @@ public class DivingSceneManager : MonoBehaviour
         UpdateScoreText(Money, Diamantes);
         Stage();
 
-        if (depth >= 100 && !IsVitoria) // mudar dps???
+        if (depth >= 20 && !IsVitoria) // mudar dps???
         {
             Fim();
         }
