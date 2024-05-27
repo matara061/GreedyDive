@@ -17,11 +17,14 @@ public class VitoriaMenu : MonoBehaviour
     [SerializeField]
     DivingSceneManager divingSceneManager;
 
+    [SerializeField] private AudioManager audioManager;
+
     public string[] sceneName;
     
     void Start()
     {
         divingSceneManager = FindAnyObjectByType<DivingSceneManager>();
+        audioManager = FindAnyObjectByType<AudioManager>(); 
 
         Vitoria();
 
@@ -48,6 +51,7 @@ public class VitoriaMenu : MonoBehaviour
     public void Sair()
     {
         Time.timeScale = 1f;
+        audioManager.PlaySFX(audioManager.botao);
         StartCoroutine(CarregarCena(sceneName[0]));
     }
 

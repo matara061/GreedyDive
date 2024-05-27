@@ -395,6 +395,7 @@ public class StoreManager : MonoBehaviour
                     else
                     {
                         // O jogador não tem dinheiro suficiente, mostre a mensagem de aviso
+                        audioManager.PlaySFX(audioManager.botao);
                         ShowMessage("Golds insuficiente");
                     }
                 }
@@ -448,6 +449,7 @@ public class StoreManager : MonoBehaviour
                     else
                     {
                         // O jogador não tem dinheiro suficiente, mostre a mensagem de aviso
+                        audioManager.PlaySFX(audioManager.botao);
                         ShowMessage("Golds insuficiente");
                     }
                 }
@@ -501,6 +503,7 @@ public class StoreManager : MonoBehaviour
                     else
                     {
                         // O jogador não tem dinheiro suficiente, mostre a mensagem de aviso
+                        audioManager.PlaySFX(audioManager.botao);
                         ShowMessage("Golds insuficiente");
                     }
                 }
