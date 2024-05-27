@@ -10,7 +10,8 @@ public class Menus : MonoBehaviour
     [SerializeField]
     private Slider barraProgresso;
 
-    public AudioManager audioManager;
+    [SerializeField]
+    private AudioManager audioManager;
 
  
     public string[] sceneName;
@@ -27,6 +28,7 @@ public class Menus : MonoBehaviour
     {
         Time.timeScale = 1f;
         audioManager.IsPaused = false;
+        audioManager.PlaySFX(audioManager.botao);
         SceneManager.UnloadSceneAsync("Pause");
     }
 
@@ -34,12 +36,14 @@ public class Menus : MonoBehaviour
     {
         Time.timeScale = 1f;
         audioManager.IsPaused = false;
+        audioManager.PlaySFX(audioManager.botao);
         StartCoroutine(CarregarCena(sceneName[0]));
     }
 
     public void TentarDeNovo()
     {
         Time.timeScale = 1f;
+        audioManager.PlaySFX(audioManager.botao);
         StartCoroutine(CarregarCena(sceneName[1]));
     }
 

@@ -890,6 +890,18 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 240674633}
+        m_TargetAssemblyTypeName: BoatManager, Assembly-CSharp
+        m_MethodName: BotaoSong
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 1085047848}
         m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
         m_MethodName: SetActive
@@ -1097,6 +1109,18 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 240674633}
+        m_TargetAssemblyTypeName: BoatManager, Assembly-CSharp
+        m_MethodName: BotaoSong
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
       - m_Target: {fileID: 2087905540}
         m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
         m_MethodName: SetActive
@@ -1373,6 +1397,18 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 240674633}
+        m_TargetAssemblyTypeName: BoatManager, Assembly-CSharp
+        m_MethodName: BotaoSong
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
       - m_Target: {fileID: 2085491895}
         m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
         m_MethodName: SetActive
@@ -2686,6 +2722,39 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   barraProgresso: {fileID: 1223639529}
+  amuletosIcon:
+  - {fileID: 1630518465}
+  - {fileID: 1114806612}
+  - {fileID: 289360249}
+  - {fileID: 1403348123}
+  - {fileID: 444789337}
+  - {fileID: 1239535471}
+  - {fileID: 1413550608}
+  - {fileID: 1639426202}
+  - {fileID: 905386422}
+  - {fileID: 1939080341}
+  _amuletosOn:
+  - {fileID: 21300000, guid: a86e11efa1dd8f445afd3809a11df848, type: 3}
+  - {fileID: 21300000, guid: f1c0bbd42b9690f4faac6da831f2d644, type: 3}
+  - {fileID: 21300000, guid: 31c85bb34b24cde4dab6a5858d266b33, type: 3}
+  - {fileID: 21300000, guid: 2b29f15e7ce34844681cf54469800f54, type: 3}
+  - {fileID: 21300000, guid: 1943e724b6c980e46af47a1ee7e60911, type: 3}
+  - {fileID: 21300000, guid: 0c5d5cb71ce1f914dadec91860d79c0f, type: 3}
+  - {fileID: 21300000, guid: 53232050ba874304daa5c3177702aa43, type: 3}
+  - {fileID: 21300000, guid: 46d866ae29360f349b3069954a7cd560, type: 3}
+  - {fileID: 21300000, guid: 71b4bb5a40c3dcd4a841e53363981ad6, type: 3}
+  - {fileID: 21300000, guid: 6dcdd84064d405640aaa6ca2a00080a9, type: 3}
+  _amuletosOff:
+  - {fileID: 21300000, guid: ad33e0f8f1606e04c906d9f26fd8698e, type: 3}
+  - {fileID: 21300000, guid: c7c478272e0844c48bd7879d0fb66170, type: 3}
+  - {fileID: 21300000, guid: 442e737c6d36f6a4fb054f5e0513a6a6, type: 3}
+  - {fileID: 21300000, guid: 3cb1a9873381dc343acbcf238e25b9c8, type: 3}
+  - {fileID: 21300000, guid: 4ac94e2259156a2409e3e71543833990, type: 3}
+  - {fileID: 21300000, guid: 39a712567e3908645aa758054bb55271, type: 3}
+  - {fileID: 21300000, guid: 8e539459052ce7c4a8321f943ca4d541, type: 3}
+  - {fileID: 21300000, guid: 2d809c6e77f7a1c4a9d44ae3f87171ca, type: 3}
+  - {fileID: 21300000, guid: 8a401ff3e0627b24e8665a5c8f229e06, type: 3}
+  - {fileID: 21300000, guid: dfa7a5b105fe3c641afbdfddb4afdda0, type: 3}
   gameManager: {fileID: 0}
   audioManager: {fileID: 0}
   gold: {fileID: 2045710379}
@@ -2957,6 +3026,18 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 240674633}
         m_TargetAssemblyTypeName: BoatManager, Assembly-CSharp
+        m_MethodName: BotaoSong
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 240674633}
+        m_TargetAssemblyTypeName: BoatManager, Assembly-CSharp
         m_MethodName: Quit
         m_Mode: 1
         m_Arguments:
@@ -3168,7 +3249,7 @@ GameObject:
   - component: {fileID: 289360249}
   - component: {fileID: 289360248}
   m_Layer: 5
-  m_Name: Amuleto1 (2)
+  m_Name: Amuleto3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3442,6 +3523,18 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 240674633}
+        m_TargetAssemblyTypeName: BoatManager, Assembly-CSharp
+        m_MethodName: BotaoSong
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
       - m_Target: {fileID: 2110731364}
         m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
         m_MethodName: SetActive
@@ -4148,6 +4241,18 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 240674633}
+        m_TargetAssemblyTypeName: BoatManager, Assembly-CSharp
+        m_MethodName: BotaoSong
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
       - m_Target: {fileID: 170647147}
         m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
         m_MethodName: SetActive
@@ -5500,7 +5605,7 @@ GameObject:
   - component: {fileID: 444789337}
   - component: {fileID: 444789336}
   m_Layer: 5
-  m_Name: Amuleto1 (5)
+  m_Name: Amuleto5
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5571,7 +5676,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 240674633}
         m_TargetAssemblyTypeName: BoatManager, Assembly-CSharp
-        m_MethodName: Amuleto6
+        m_MethodName: Amuleto5
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -7884,6 +7989,18 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 240674633}
+        m_TargetAssemblyTypeName: BoatManager, Assembly-CSharp
+        m_MethodName: BotaoSong
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
       - m_Target: {fileID: 2087905540}
         m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
         m_MethodName: SetActive
@@ -8105,6 +8222,18 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 240674633}
+        m_TargetAssemblyTypeName: BoatManager, Assembly-CSharp
+        m_MethodName: BotaoSong
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
       - m_Target: {fileID: 28602186}
         m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
         m_MethodName: SetActive
@@ -8869,6 +8998,18 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 240674633}
+        m_TargetAssemblyTypeName: BoatManager, Assembly-CSharp
+        m_MethodName: BotaoSong
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
       - m_Target: {fileID: 893423065}
         m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
         m_MethodName: SetActive
@@ -10010,7 +10151,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 309849587}
   m_HandleRect: {fileID: 309849586}
   m_Direction: 2
-  m_Value: 1
+  m_Value: 0.9999998
   m_Size: 0.43031946
   m_NumberOfSteps: 0
   m_OnValueChanged:
@@ -10343,7 +10484,7 @@ GameObject:
   - component: {fileID: 905386422}
   - component: {fileID: 905386421}
   m_Layer: 5
-  m_Name: Amuleto1 (8)
+  m_Name: Amuleto9
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -10926,6 +11067,18 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 240674633}
+        m_TargetAssemblyTypeName: BoatManager, Assembly-CSharp
+        m_MethodName: BotaoSong
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
       - m_Target: {fileID: 170647147}
         m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
         m_MethodName: SetActive
@@ -11145,6 +11298,18 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 240674633}
+        m_TargetAssemblyTypeName: BoatManager, Assembly-CSharp
+        m_MethodName: BotaoSong
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 1750544331}
         m_TargetAssemblyTypeName: Trapacas, Assembly-CSharp
         m_MethodName: GoldPlus
@@ -11182,7 +11347,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 0.2}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -12703,10 +12868,34 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 240674633}
+        m_TargetAssemblyTypeName: BoatManager, Assembly-CSharp
+        m_MethodName: BotaoSong
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
       - m_Target: {fileID: 1531752862}
         m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
         m_MethodName: SetActive
         m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 240674633}
+        m_TargetAssemblyTypeName: BoatManager, Assembly-CSharp
+        m_MethodName: DisplayAmuletos
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -12811,7 +13000,7 @@ GameObject:
   - component: {fileID: 1114806612}
   - component: {fileID: 1114806611}
   m_Layer: 5
-  m_Name: Amuleto1 (1)
+  m_Name: Amuleto2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -13357,7 +13546,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 2146111908}
   m_HandleRect: {fileID: 2146111907}
   m_Direction: 2
-  m_Value: 1
+  m_Value: 0.9999998
   m_Size: 0.43031946
   m_NumberOfSteps: 0
   m_OnValueChanged:
@@ -13738,6 +13927,18 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 240674633}
+        m_TargetAssemblyTypeName: BoatManager, Assembly-CSharp
+        m_MethodName: BotaoSong
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
       - m_Target: {fileID: 235008592}
         m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
         m_MethodName: SetActive
@@ -14296,7 +14497,7 @@ GameObject:
   - component: {fileID: 1239535471}
   - component: {fileID: 1239535470}
   m_Layer: 5
-  m_Name: Amuleto1 (6)
+  m_Name: Amuleto6
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -14367,7 +14568,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 240674633}
         m_TargetAssemblyTypeName: BoatManager, Assembly-CSharp
-        m_MethodName: Amuleto7
+        m_MethodName: Amuleto6
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -15017,6 +15218,18 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 240674633}
+        m_TargetAssemblyTypeName: BoatManager, Assembly-CSharp
+        m_MethodName: BotaoSong
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
       - m_Target: {fileID: 1085047848}
         m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
         m_MethodName: SetActive
@@ -15943,7 +16156,7 @@ GameObject:
   - component: {fileID: 1403348123}
   - component: {fileID: 1403348122}
   m_Layer: 5
-  m_Name: Amuleto1 (3)
+  m_Name: Amuleto4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -16150,7 +16363,7 @@ GameObject:
   - component: {fileID: 1413550608}
   - component: {fileID: 1413550607}
   m_Layer: 5
-  m_Name: Amuleto1 (7)
+  m_Name: Amuleto7
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -16221,7 +16434,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 240674633}
         m_TargetAssemblyTypeName: BoatManager, Assembly-CSharp
-        m_MethodName: Amuleto8
+        m_MethodName: Amuleto7
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -16485,6 +16698,18 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 240674633}
+        m_TargetAssemblyTypeName: BoatManager, Assembly-CSharp
+        m_MethodName: BotaoSong
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
       - m_Target: {fileID: 1541766064}
         m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
         m_MethodName: SetActive
@@ -17072,6 +17297,18 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 240674633}
+        m_TargetAssemblyTypeName: BoatManager, Assembly-CSharp
+        m_MethodName: BotaoSong
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
       - m_Target: {fileID: 1032863464}
         m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
         m_MethodName: SetActive
@@ -17528,6 +17765,18 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 240674633}
+        m_TargetAssemblyTypeName: BoatManager, Assembly-CSharp
+        m_MethodName: BotaoSong
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
       - m_Target: {fileID: 775017882}
         m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
         m_MethodName: SetActive
@@ -17672,6 +17921,18 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 240674633}
+        m_TargetAssemblyTypeName: BoatManager, Assembly-CSharp
+        m_MethodName: BotaoSong
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
       - m_Target: {fileID: 1541766064}
         m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
         m_MethodName: SetActive
@@ -19063,7 +19324,7 @@ GameObject:
   - component: {fileID: 1639426202}
   - component: {fileID: 1639426201}
   m_Layer: 5
-  m_Name: Amuleto1 (4)
+  m_Name: Amuleto8
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -19134,7 +19395,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 240674633}
         m_TargetAssemblyTypeName: BoatManager, Assembly-CSharp
-        m_MethodName: Amuleto5
+        m_MethodName: Amuleto8
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -19934,6 +20195,18 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 240674633}
+        m_TargetAssemblyTypeName: BoatManager, Assembly-CSharp
+        m_MethodName: BotaoSong
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
       - m_Target: {fileID: 1085047848}
         m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
         m_MethodName: SetActive
@@ -20199,6 +20472,18 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 240674633}
+        m_TargetAssemblyTypeName: BoatManager, Assembly-CSharp
+        m_MethodName: BotaoSong
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
       - m_Target: {fileID: 2085491895}
         m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
         m_MethodName: SetActive
@@ -20717,6 +21002,18 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 240674633}
+        m_TargetAssemblyTypeName: BoatManager, Assembly-CSharp
+        m_MethodName: BotaoSong
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
       - m_Target: {fileID: 893423065}
         m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
         m_MethodName: SetActive
@@ -21007,6 +21304,18 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 240674633}
+        m_TargetAssemblyTypeName: BoatManager, Assembly-CSharp
+        m_MethodName: BotaoSong
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
       - m_Target: {fileID: 775017882}
         m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
         m_MethodName: SetActive
@@ -21224,6 +21533,18 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 240674633}
+        m_TargetAssemblyTypeName: BoatManager, Assembly-CSharp
+        m_MethodName: BotaoSong
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
       - m_Target: {fileID: 1085047848}
         m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
         m_MethodName: SetActive
@@ -22122,7 +22443,7 @@ GameObject:
   - component: {fileID: 1939080341}
   - component: {fileID: 1939080340}
   m_Layer: 5
-  m_Name: Amuleto1 (9)
+  m_Name: Amuleto10
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -22911,6 +23232,18 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 240674633}
+        m_TargetAssemblyTypeName: BoatManager, Assembly-CSharp
+        m_MethodName: BotaoSong
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 1239398576}
         m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
         m_MethodName: SetActive
@@ -23151,6 +23484,18 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 240674633}
+        m_TargetAssemblyTypeName: BoatManager, Assembly-CSharp
+        m_MethodName: BotaoSong
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
       - m_Target: {fileID: 1474107894}
         m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
         m_MethodName: SetActive
@@ -23728,6 +24073,18 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 240674633}
+        m_TargetAssemblyTypeName: BoatManager, Assembly-CSharp
+        m_MethodName: BotaoSong
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
       - m_Target: {fileID: 2110731364}
         m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
         m_MethodName: SetActive
@@ -24009,6 +24366,18 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 240674633}
+        m_TargetAssemblyTypeName: BoatManager, Assembly-CSharp
+        m_MethodName: BotaoSong
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 1239398576}
         m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
         m_MethodName: SetActive
@@ -24737,6 +25106,18 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 240674633}
         m_TargetAssemblyTypeName: BoatManager, Assembly-CSharp
+        m_MethodName: BotaoSong
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 240674633}
+        m_TargetAssemblyTypeName: BoatManager, Assembly-CSharp
         m_MethodName: Creditos
         m_Mode: 1
         m_Arguments:
@@ -25312,6 +25693,18 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 240674633}
+        m_TargetAssemblyTypeName: BoatManager, Assembly-CSharp
+        m_MethodName: BotaoSong
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
       - m_Target: {fileID: 1032863464}
         m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
         m_MethodName: SetActive
