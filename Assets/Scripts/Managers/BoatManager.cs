@@ -113,25 +113,16 @@ public class BoatManager : MonoBehaviour, IDataPersistence
 
     public void Loja1()
     {
-        // audioManager.PlaySFX(audioManager.botao);
-        // SceneManager.LoadScene("Loja", LoadSceneMode.Additive);
-        // Invoke("RemoveExtraEventSystems", 0.1f); // Wait a bit for the scene to load
-        // Invoke("RemoveExtraAudioListeners", 0.1f); // Wait a bit for the scene to load
-
-        StartCoroutine(CarregarLoja1());
+        SceneManager.LoadScene("Loja", LoadSceneMode.Additive);
     }
 
     public void Loja2()
     {
-        audioManager.PlaySFX(audioManager.botao);
         SceneManager.LoadScene("Loja2", LoadSceneMode.Additive);
-        Invoke("RemoveExtraEventSystems", 0.1f); // Wait a bit for the scene to load
-        Invoke("RemoveExtraAudioListeners", 0.1f); // Wait a bit for the scene to load
     }
 
     public void Dive()
     {
-        audioManager.PlaySFX(audioManager.mergulhoEfect);
         StartCoroutine(CarregarCena());
     }
 
@@ -140,14 +131,9 @@ public class BoatManager : MonoBehaviour, IDataPersistence
         audioManager.PlaySFX(audioManager.botao);
     }
 
-    private IEnumerator CarregarLoja1()
+    public void MergulhoSom()
     {
-        audioManager.PlaySFX(audioManager.botao); // Toca o efeito sonoro
-
-        // Aguarda um período de tempo (por exemplo, 1 segundo) antes de carregar a próxima cena
-        yield return new WaitForSeconds(1f);
-
-        SceneManager.LoadScene("Loja", LoadSceneMode.Additive);
+        audioManager.PlaySFX(audioManager.mergulhoEfect);
     }
 
     public void Amuleto1()
@@ -412,26 +398,6 @@ public class BoatManager : MonoBehaviour, IDataPersistence
             //Debug.Log("Carregando: " + (asyncOperation.progress * 100f) + "%");
             this.barraProgresso.value = asyncOperation.progress;
             yield return null;
-        }
-    }
-
-    private void RemoveExtraEventSystems()
-    {
-        EventSystem[] eventSystems = FindObjectsOfType<EventSystem>();
-
-        for (int i = 1; i < eventSystems.Length; i++)
-        {
-            Destroy(eventSystems[i].gameObject);
-        }
-    }
-
-    private void RemoveExtraAudioListeners()
-    {
-        AudioListener[] audioListeners = FindObjectsOfType<AudioListener>();
-
-        for (int i = 1; i < audioListeners.Length; i++)
-        {
-            Destroy(audioListeners[i]);
         }
     }
 
