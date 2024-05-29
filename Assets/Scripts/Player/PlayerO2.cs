@@ -12,6 +12,8 @@ public class PlayerO2 : MonoBehaviour
 
     public Image fill;
 
+    [SerializeField] private GameObject botao;
+
     public Color NormarColor = Color.blue;
     public Color UpColor = Color.red;
 
@@ -28,13 +30,14 @@ public class PlayerO2 : MonoBehaviour
         // Atualiza a cor da barra de O2 com base na porcentagem de O2
         float O2Percentage = oxygenSlider.value / oxygenSlider.maxValue;
         
-       /* if(O2Percentage <= 0.2f)
+        if(O2Percentage <= 0.2f)
         {
             fill.color = UpColor;
+            botao.SetActive(true);
         }else
         {
             fill.color = NormarColor;
-        } */
+        } 
 
         if (currentOxygen > 0)
         {

@@ -25,6 +25,9 @@ public class DivingSceneManager : MonoBehaviour
     public bool Isstage1 = false;
     public bool IsVitoria = false;
     public bool IsPaused = false;
+    private bool _isUp = false;
+
+    [SerializeField] private GameObject _limitArea;
 
     public float depthSpeed = 1f; // Velocidade de avanço da profundidade
 
@@ -78,7 +81,7 @@ public class DivingSceneManager : MonoBehaviour
         UpdateScoreText(Money, Diamantes);
         Stage();
 
-        if (depth >= 20 && !IsVitoria) // mudar dps???
+        if (depth >= 20 && !IsVitoria) // dps add "if _isUp" 
         {
             Fim();
         }
@@ -97,6 +100,28 @@ public class DivingSceneManager : MonoBehaviour
     public void ChangeDepthSpeed(float newSpeed)
     {
         depthSpeed = newSpeed;
+    }
+
+    public void subida() // quando O2 tive baixo, aparecer botao e se apertar chamar isso
+    {
+
+        // abrir outra cena tipo stage 1 só que com os spawners em cima 
+
+        // rodar Cutcene do player subir na corda 
+
+        /* substituir player pelo outro com novo sistema(Não ataca nem nada, na subida apenas desviar dos obstaculos
+           e predadores) */
+
+        // subida vai mais rapido (dps calcular para dar certinho 17% do O2)
+        ChangeDepthSpeed(-3f);
+
+        // desativar o collider no topo 
+        _limitArea.SetActive(false);
+
+        // aguardar alguns segundos e dar unload no stage1
+        StartCoroutine(UnloadSceneDelayed());
+
+
     }
 
     public void UpdateScoreText(int newScore, int newScore2)
@@ -130,6 +155,14 @@ public class DivingSceneManager : MonoBehaviour
         Time.timeScale = 0f;
         SceneManager.LoadScene("Pause", LoadSceneMode.Additive);
         StartCoroutine(RemoveExtraEventSystemsAndListeners());
+    }
+
+    private IEnumerator UnloadSceneDelayed()
+    {
+        yield return new WaitForSeconds(10);
+
+        // Descarrega a cena pelo nome
+        SceneManager.UnloadSceneAsync("Stage1");
     }
 
     private IEnumerator CarregarCena()
