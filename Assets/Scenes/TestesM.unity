@@ -3026,6 +3026,7 @@ GameObject:
   - component: {fileID: 1044635511}
   - component: {fileID: 1044635514}
   - component: {fileID: 1044635513}
+  - component: {fileID: 1044635515}
   m_Layer: 11
   m_Name: Graphics
   m_TagString: Untagged
@@ -3182,6 +3183,19 @@ MonoBehaviour:
   bottomHitbox: {fileID: 366793008}
   bottomSideHitbox: {fileID: 942123838}
   Attack: 0
+--- !u!114 &1044635515
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1044635509}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7e55af1d9c77fbc43a13e9118c5e5bab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fishCaught: 0
 --- !u!1 &1052478946
 GameObject:
   m_ObjectHideFlags: 0
