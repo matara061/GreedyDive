@@ -81,7 +81,7 @@ public class DivingSceneManager : MonoBehaviour
         UpdateScoreText(Money, Diamantes);
         Stage();
 
-        if (depth >= 20 && !IsVitoria) // dps add "if _isUp" 
+        if (depth >= 90 && !IsVitoria) // dps add "if _isUp" 
         {
             Fim();
         }
