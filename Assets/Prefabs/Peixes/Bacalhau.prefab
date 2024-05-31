@@ -121,7 +121,7 @@ GameObject:
   - component: {fileID: 7526138108244733647}
   m_Layer: 7
   m_Name: Bacalhau
-  m_TagString: Bagre
+  m_TagString: Peixe leao
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -156,6 +156,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   swimSpeed: 0
   rotationSpeed: 50
+  tiltSpeed: 5
   bonusAmuleto5: 0
   bonusAmuleto9: 0
   floatingGold: {fileID: 2040594193857704368, guid: 6915fa67eeafe0c45b2c2106d61a6284, type: 3}

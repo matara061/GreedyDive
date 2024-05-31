@@ -81,7 +81,7 @@ public class DivingSceneManager : MonoBehaviour
         UpdateScoreText(Money, Diamantes);
         Stage();
 
-        if (depth >= 90 && !IsVitoria) // dps add "if _isUp" 
+        if (depth <= 0 && _isUp) // dps add "if _isUp" 
         {
             Fim();
         }
@@ -104,8 +104,10 @@ public class DivingSceneManager : MonoBehaviour
 
     public void subida() // quando O2 tive baixo, aparecer botao e se apertar chamar isso
     {
+        _isUp = true;
 
         // abrir outra cena tipo stage 1 só que com os spawners em cima 
+        SceneManager.LoadScene("StageUp", LoadSceneMode.Additive);
 
         // rodar Cutcene do player subir na corda 
 

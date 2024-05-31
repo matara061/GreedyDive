@@ -44,6 +44,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Creditos.unity
     guid: 3d04e7af64e59f147870456ef0ac3622
+  - enabled: 1
+    path: Assets/Scenes/StageUp.unity
+    guid: 8a94ab57be8648543afec55e57065a28
   m_configObjects:
     com.unity.adaptiveperformance.loader_settings: {fileID: 11400000, guid: 26d448429ad920940a18e56d909d0bb8, type: 2}
     com.unity.adaptiveperformance.simulator.provider_settings: {fileID: 11400000, guid: f552750c5eb3fa64d9c9d3b1d78a1b56, type: 2}

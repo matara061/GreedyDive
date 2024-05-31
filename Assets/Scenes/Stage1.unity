@@ -1208,6 +1208,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1508638347}
     - target: {fileID: 4952042891725407499, guid: 56d3d92acaf3af349ab69419bbef0d83, type: 3}
+      propertyPath: prefabs.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 4952042891725407499, guid: 56d3d92acaf3af349ab69419bbef0d83, type: 3}
       propertyPath: prefabs.Array.data[0]
       value: 
       objectReference: {fileID: 1853929914433516229, guid: f0d1854a127e6e7448e698f3642f374d, type: 3}
@@ -1215,6 +1219,18 @@ PrefabInstance:
       propertyPath: prefabs.Array.data[1]
       value: 
       objectReference: {fileID: 7186200510810853674, guid: 17d525009c6d750489dd3d9692017a14, type: 3}
+    - target: {fileID: 4952042891725407499, guid: 56d3d92acaf3af349ab69419bbef0d83, type: 3}
+      propertyPath: prefabs.Array.data[2]
+      value: 
+      objectReference: {fileID: 4277696959464005036, guid: 95bdeedb0ca95b54baf319919ce1eb68, type: 3}
+    - target: {fileID: 4952042891725407499, guid: 56d3d92acaf3af349ab69419bbef0d83, type: 3}
+      propertyPath: prefabs.Array.data[3]
+      value: 
+      objectReference: {fileID: 3276928724063994318, guid: 86af43290507b24448d48a2fd1df407b, type: 3}
+    - target: {fileID: 4952042891725407499, guid: 56d3d92acaf3af349ab69419bbef0d83, type: 3}
+      propertyPath: prefabs.Array.data[4]
+      value: 
+      objectReference: {fileID: 3276928724063994318, guid: 86af43290507b24448d48a2fd1df407b, type: 3}
     - target: {fileID: 7396342240052390974, guid: 56d3d92acaf3af349ab69419bbef0d83, type: 3}
       propertyPath: m_Name
       value: spawPeixes1

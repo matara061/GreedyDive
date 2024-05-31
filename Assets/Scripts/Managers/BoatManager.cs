@@ -403,7 +403,7 @@ public class BoatManager : MonoBehaviour, IDataPersistence
 
     public void Creditos()
     {
-        SceneManager.LoadScene("SampleScene");
+        SceneManager.LoadScene("Creditos");
     }
 
     public void Quit()
