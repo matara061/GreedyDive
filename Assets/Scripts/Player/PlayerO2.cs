@@ -7,8 +7,10 @@ public class PlayerO2 : MonoBehaviour
 {
     public Slider oxygenSlider; // Referência ao slider de oxigênio
     public PlayerValues playerValues;
+    public DivingSceneManager _diveManager;
     public float maxOxygen = 100f; // Quantidade máxima de oxigênio
     public float oxygenDecreaseRate = 0.5f; // Taxa de diminuição de oxigênio por segundo
+    public float O2Percentage;
 
     public Image fill;
 
@@ -17,7 +19,7 @@ public class PlayerO2 : MonoBehaviour
     public Color NormarColor = Color.blue;
     public Color UpColor = Color.red;
 
-    private float currentOxygen; // Quantidade atual de oxigênio
+    public float currentOxygen; // Quantidade atual de oxigênio
 
     void Start()
     {
@@ -28,7 +30,7 @@ public class PlayerO2 : MonoBehaviour
     void Update()
     {
         // Atualiza a cor da barra de O2 com base na porcentagem de O2
-        float O2Percentage = oxygenSlider.value / oxygenSlider.maxValue;
+         O2Percentage = oxygenSlider.value / oxygenSlider.maxValue;
         
         if(O2Percentage <= 0.2f)
         {
@@ -48,6 +50,7 @@ public class PlayerO2 : MonoBehaviour
         else
         {
             // O oxigênio acabou, faça algo aqui (por exemplo, exiba uma mensagem)
+            _diveManager.Perdeu();
         }
     }
 
@@ -70,5 +73,15 @@ public class PlayerO2 : MonoBehaviour
     void UpdateOxygenUI()
     {
         oxygenSlider.value = currentOxygen; // Atualiza o valor do slider
+    }
+
+    public void Revive()
+    {
+
+        if(currentOxygen <= 0 || O2Percentage <= 0.2f)
+        {
+            currentOxygen = maxOxygen * 0.3f;
+            UpdateOxygenUI();
+        }
     }
 }

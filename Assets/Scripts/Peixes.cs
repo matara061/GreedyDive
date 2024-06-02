@@ -39,7 +39,7 @@ public class FishSwimming : MonoBehaviour
             }
         }
 
-        swimSpeed = fishValue.speed;
+       // swimSpeed = fishValue.speed;
         divingSceneManager = FindAnyObjectByType<DivingSceneManager>();
         // Inicializa a direção de natação aleatoriamente
         swimDirection = Random.insideUnitCircle.normalized;

@@ -11,6 +11,7 @@ public class DivingSceneManager : MonoBehaviour
     public GameManager gameManager;
     public AudioManager audioManager;
     public Player player;
+    public PlayerO2 _playerO2;
     public float depth;
 
     public int Money;
@@ -135,8 +136,8 @@ public class DivingSceneManager : MonoBehaviour
 
     public void Fim()
     {
-        gameManager.BankMoney += Money;
-        gameManager.BankDiamantes += Diamantes;
+       // gameManager.BankMoney += Money;
+       // gameManager.BankDiamantes += Diamantes;
         audioManager.IsPaused = true;
         IsVitoria = true;
         SceneManager.LoadScene("Vitoria", LoadSceneMode.Additive);
@@ -149,6 +150,15 @@ public class DivingSceneManager : MonoBehaviour
         Time.timeScale = 0f;
         SceneManager.LoadScene("GameOver", LoadSceneMode.Additive);
         StartCoroutine(RemoveExtraEventSystemsAndListeners());
+    }
+
+    public void Revive()
+    {
+        player.Revive();
+        _playerO2.Revive();
+        audioManager.IsPaused = false;
+        Time.timeScale = 1f;
+        SceneManager.UnloadSceneAsync("GameOver");
     }
 
     public void Pause()

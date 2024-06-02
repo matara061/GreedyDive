@@ -18,6 +18,10 @@ public class VitoriaMenu : MonoBehaviour
     DivingSceneManager divingSceneManager;
 
     [SerializeField] private AudioManager audioManager;
+    [SerializeField] private GameManager gameManager;
+
+    private int Money = 0;
+    private int Diamond = 0;
 
     public string[] sceneName;
     
@@ -25,6 +29,13 @@ public class VitoriaMenu : MonoBehaviour
     {
         divingSceneManager = FindAnyObjectByType<DivingSceneManager>();
         audioManager = FindAnyObjectByType<AudioManager>(); 
+        gameManager = FindAnyObjectByType<GameManager>();
+
+        if (divingSceneManager != null )
+        {
+            Money = divingSceneManager.Money;
+            Diamond = divingSceneManager.Diamantes;
+        }
 
         Vitoria();
 
@@ -42,15 +53,27 @@ public class VitoriaMenu : MonoBehaviour
     {
         if (divingSceneManager != null)
         {
-            gold.text = divingSceneManager.Money.ToString();
-            diamond.text = divingSceneManager.Diamantes.ToString();
+            gold.text = Money.ToString();
+            diamond.text = Diamond.ToString();
             Time.timeScale = 0f;
         }
+    }
+
+    public void Dobro()
+    {
+        Time.timeScale = 1f;
+        Money *= Money;
+        Diamond *= Diamond;
+        gold.text = Money.ToString();
+        diamond.text = Diamond.ToString();
+        Time.timeScale = 0f;
     }
 
     public void Sair()
     {
         Time.timeScale = 1f;
+        gameManager.BankMoney += Money;
+        gameManager.BankDiamantes += Diamond;
         audioManager.PlaySFX(audioManager.botao);
         StartCoroutine(CarregarCena(sceneName[0]));
     }

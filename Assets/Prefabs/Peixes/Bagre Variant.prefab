@@ -166,6 +166,10 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Bagre
       objectReference: {fileID: 0}
+    - target: {fileID: 5370729425001066506, guid: 266302dacc7951242a7594e6d32dfe00, type: 3}
+      propertyPath: swimSpeed
+      value: 2.6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects:

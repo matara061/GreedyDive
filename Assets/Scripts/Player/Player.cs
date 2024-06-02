@@ -163,6 +163,14 @@ public class Player : MonoBehaviour
         }
     }
 
+    public void Revive()
+    {
+        CurrentHealth = MaxHealth;
+        playerHealthBar.SetHealth(CurrentHealth);
+        isAlive = true;
+        Imunidade(7);
+    }
+
     public void TakeDamage(int damage)
     {
         if (isInvencivel == false)

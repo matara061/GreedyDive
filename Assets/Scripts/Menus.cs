@@ -40,6 +40,11 @@ public class Menus : MonoBehaviour
         StartCoroutine(CarregarCena(sceneName[0]));
     }
 
+    public void Sair()
+    {
+        StartCoroutine(CarregarCena(sceneName[0]));
+    }
+
     public void TentarDeNovo()
     {
         Time.timeScale = 1f;

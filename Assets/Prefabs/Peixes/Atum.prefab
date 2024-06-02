@@ -48,8 +48,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f6db3e67ebf83754a8fdadbc58c40300, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  swimSpeed: 0
+  swimSpeed: 2.5
   rotationSpeed: 50
+  tiltSpeed: 2
   bonusAmuleto5: 0
   bonusAmuleto9: 0
   floatingGold: {fileID: 2040594193857704368, guid: 6915fa67eeafe0c45b2c2106d61a6284, type: 3}

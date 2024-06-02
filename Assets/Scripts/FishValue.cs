@@ -7,13 +7,15 @@ public class FishValue : MonoBehaviour
 {
     public int moeda;
     public int diamantes;
-    public int speed;
+    public float speed;
 
-    private Dictionary<string, Tuple<int, int, int>> tagToMoeda = new Dictionary<string, Tuple<int, int, int>>
+    private Dictionary<string, Tuple<int, int, float>> tagToMoeda = new Dictionary<string, Tuple<int, int, float>>
     {
-        { "Bagre", new Tuple<int, int, int>(10, 0, 3) },
-        { "Tilapia", new Tuple< int, int, int >(20, 0, 3) },
-        { "Pacu", new Tuple< int, int, int >(0, 1, 2) }
+        { "Bagre", new Tuple<int, int, float>(10, 0, 2) },
+        { "Tilapia", new Tuple< int, int, float >(20, 0, 2.5f) },
+        { "Pacu", new Tuple< int, int, float >(0, 1, 2) },
+        { "Atum", new Tuple< int, int, float >(30, 0, 2.3f) },
+        { "Bacalhau", new Tuple< int, int, float >(35, 0, 2.5f) }
     };
 
     private void Awake()
@@ -23,7 +25,7 @@ public class FishValue : MonoBehaviour
 
     void Valor()
     {
-        if (tagToMoeda.TryGetValue(gameObject.tag, out Tuple<int, int, int> valor))
+        if (tagToMoeda.TryGetValue(gameObject.tag, out Tuple<int, int, float> valor))
         {
             moeda = valor.Item1;
             diamantes = valor.Item2;

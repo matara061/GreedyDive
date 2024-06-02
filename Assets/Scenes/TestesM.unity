@@ -529,12 +529,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   oxygenSlider: {fileID: 155353524}
   playerValues: {fileID: 1052478952}
+  _diveManager: {fileID: 545136730}
   maxOxygen: 100
   oxygenDecreaseRate: 0.5
+  O2Percentage: 0
   fill: {fileID: 603369071}
-  botao: {fileID: 0}
+  botao: {fileID: 953593008}
   NormarColor: {r: 0, g: 0, b: 1, a: 1}
   UpColor: {r: 1, g: 0, b: 0, a: 1}
+  currentOxygen: 0
 --- !u!114 &155353524
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1764,6 +1767,7 @@ MonoBehaviour:
   gameManager: {fileID: 0}
   audioManager: {fileID: 0}
   player: {fileID: 1052478949}
+  _playerO2: {fileID: 155353523}
   depth: 0
   Money: 0
   Diamantes: 0

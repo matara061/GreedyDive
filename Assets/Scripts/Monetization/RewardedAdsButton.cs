@@ -60,6 +60,32 @@ public class RewardedAdsButton : MonoBehaviour, IUnityAdsLoadListener, IUnityAds
         {
             Debug.Log("Unity Ads Rewarded Ad Completed");
             // Grant a reward.
+            if (gameObject.tag == "Revive")
+            {
+                Debug.Log("revive");
+                DivingSceneManager diveManager = FindAnyObjectByType<DivingSceneManager>();
+
+                if (diveManager != null)
+                {
+                    diveManager.Revive();
+                }
+                else
+                    Debug.Log("DiveManager é null");
+
+
+            }
+            else if(gameObject.tag == "Rewardx2")
+            {
+                Debug.Log("dinheiro em dobro");
+                VitoriaMenu vitoria = FindAnyObjectByType<VitoriaMenu>();
+
+                if (vitoria != null)
+                {
+                    vitoria.Dobro();
+                }
+                else
+                    Debug.Log("vitoria é null");
+            }
         }
     }
 

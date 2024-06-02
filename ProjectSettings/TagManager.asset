@@ -25,6 +25,8 @@ TagManager:
   - Tubarao
   - Caixa
   - PlayerAttackHitbox
+  - Revive
+  - Rewardx2
   layers:
   - Default
   - TransparentFX
