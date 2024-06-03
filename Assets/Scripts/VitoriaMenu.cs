@@ -23,6 +23,8 @@ public class VitoriaMenu : MonoBehaviour
     private int Money = 0;
     private int Diamond = 0;
 
+    public float _profundidade;
+
     public string[] sceneName;
     
     void Start()
@@ -35,6 +37,7 @@ public class VitoriaMenu : MonoBehaviour
         {
             Money = divingSceneManager.Money;
             Diamond = divingSceneManager.Diamantes;
+            _profundidade = divingSceneManager.depth;
         }
 
         Vitoria();
@@ -74,6 +77,7 @@ public class VitoriaMenu : MonoBehaviour
         Time.timeScale = 1f;
         gameManager.BankMoney += Money;
         gameManager.BankDiamantes += Diamond;
+        gameManager.Profundidade = _profundidade;
         audioManager.PlaySFX(audioManager.botao);
         StartCoroutine(CarregarCena(sceneName[0]));
     }

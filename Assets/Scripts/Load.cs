@@ -34,6 +34,7 @@ public class Load : MonoBehaviour, IDataPersistence
     {
         gameManager.BankMoney = data.Money;
         gameManager.BankDiamantes = data.Diamantes;
+        gameManager.Profundidade = data.Profundidade;
         gameManager.CurrentHarpoon = data.CurrentHarpoon;
         gameManager.CurrentDivingSuit = data.CurrentDivingSuit;
         gameManager.CurrentDivingFins = data.CurrentDivingFins;

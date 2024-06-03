@@ -32,6 +32,7 @@ public class GameManager : MonoBehaviour,IDataPersistence
 
     public int BankMoney;
     public int BankDiamantes;
+    public float Profundidade;
 
     // Variável estática para a instância do GameManager
     public static GameManager instance;
@@ -78,6 +79,7 @@ public class GameManager : MonoBehaviour,IDataPersistence
     {
         data.Money = this.BankMoney;
         data.Diamantes = this.BankDiamantes;
+        data.Profundidade = this.Profundidade;
         data.CurrentHarpoon = this.CurrentHarpoon;
         data.CurrentDivingSuit = this.CurrentDivingSuit;
         data.CurrentDivingFins = this.CurrentDivingFins;
