@@ -58,6 +58,8 @@ public class PlayerAttackTrigger : MonoBehaviour
         if (Mathf.Abs(direction.x) > Mathf.Abs(direction.y) + diagonalThreshold)
         {
             // Direção para a direita ou esquerda
+            anim.SetBool("MovingVertically", false);
+            anim.SetBool("MovingHorizontally", true);
             anim.SetBool("MovingDiagonally", false);
             anim.SetFloat("MoveX", Mathf.Sign(direction.x));
             anim.SetFloat("MoveY", 0f);
@@ -67,6 +69,8 @@ public class PlayerAttackTrigger : MonoBehaviour
         else if (Mathf.Abs(direction.y) > Mathf.Abs(direction.x) + diagonalThreshold)
         {
             // Direção para cima ou para baixo
+            anim.SetBool("MovingVertically", true);
+            anim.SetBool("MovingHorizontally", false);
             anim.SetBool("MovingDiagonally", false);
             anim.SetFloat("MoveX", 0f);
             anim.SetFloat("MoveY", Mathf.Sign(direction.y));
@@ -74,6 +78,8 @@ public class PlayerAttackTrigger : MonoBehaviour
         else
         {
             // Movimento diagonal
+            anim.SetBool("MovingVertically", false);
+            anim.SetBool("MovingHorizontally", false);
             anim.SetBool("MovingDiagonally", true);
             anim.SetFloat("MoveX", direction.x);
             anim.SetFloat("MoveY", direction.y);
