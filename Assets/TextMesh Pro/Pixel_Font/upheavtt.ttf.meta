@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: c60d6206eca77d3448f112de2f8a4615
+guid: 08cb7bdb942ebde4ebdc0cc6f0c29591
 TrueTypeFontImporter:
   externalObjects: {}
   serializedVersion: 4
@@ -9,7 +9,7 @@ TrueTypeFontImporter:
   characterPadding: 1
   includeFontData: 1
   fontNames:
-  - Joystix
+  - Upheaval TT (BRK)
   fallbackFontReferences: []
   customCharacters: 
   fontRenderingMode: 2
