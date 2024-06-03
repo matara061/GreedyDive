@@ -14,7 +14,6 @@ GameObject:
   - component: {fileID: 1710207698179972558}
   - component: {fileID: 1570530629166329346}
   - component: {fileID: 8227070035934288889}
-  - component: {fileID: 4277051464707469735}
   m_Layer: 6
   m_Name: Barracuda
   m_TagString: Barracuda
@@ -167,14 +166,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4591ac88cab57294d9f70301a83ad39a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _maxHp: 20
+  _inicialSpeed: 3
   _speed: 0
+  Damage: 10
+  _moedas: 20
+  _diamantes: 0
+  tiltSpeed: 2
   _rotationSpeed: 100
-  _values: {fileID: 0}
+  _rigidbody: {fileID: 0}
   anim: {fileID: 61010381285592380}
   spriteRenderer: {fileID: 167960253982534604}
   Collider: {fileID: 1710207698179972558}
-  CurrentHP: 0
-  Damage: 0
+  CurrentHP: 20
   bonusAmuleto5: 0
   bonusAmuleto9: 0
 --- !u!114 &8227070035934288889
@@ -191,23 +195,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _playerAwarenessDistance: 3
   _playerAttackDistance: 1
---- !u!114 &4277051464707469735
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2839123432258565568}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 562b0e4dab8a7364da2f41ea6b9382a5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  HP: 0
-  Damage: 0
-  Speed: 0
-  Moeda: 0
-  Diamante: 0
 --- !u!1 &3875540154295061347
 GameObject:
   m_ObjectHideFlags: 0
@@ -329,7 +316,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   anim: {fileID: 61010381285592380}
-  _values: {fileID: 0}
+  _predador: {fileID: 0}
   Damage: 0
 --- !u!61 &5877853636167879373
 BoxCollider2D:

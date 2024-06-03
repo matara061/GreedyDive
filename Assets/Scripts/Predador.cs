@@ -1,3 +1,4 @@
+using Newtonsoft.Json.Linq;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -5,7 +6,15 @@ using UnityEngine;
 public class Predador : MonoBehaviour
 {
     [SerializeField]
+    private int _maxHp;
+    [SerializeField] 
+    private float _inicialSpeed;
+    [SerializeField]
     private float _speed;
+  
+    public int Damage;
+    public int _moedas;
+    public int _diamantes;
 
     public float tiltSpeed = 2f; // Velocidade de inclinação
 
@@ -13,7 +22,7 @@ public class Predador : MonoBehaviour
     private float _rotationSpeed;
 
     [SerializeField]
-    private PredadorValues _values;
+    //private PredadorValues _values;
 
     private Rigidbody2D _rigidbody;
     private PlayerAwarenessController _playerAwarenessController;
@@ -28,7 +37,6 @@ public class Predador : MonoBehaviour
     GameManager gameManager;
 
     public int CurrentHP;
-    public int Damage;
     private int segundos = 0;
     private bool isCoroutineRunning = false;
     public int bonusAmuleto5;
@@ -39,7 +47,7 @@ public class Predador : MonoBehaviour
 
     private void Awake()
     {
-        _values = gameObject.GetComponent<PredadorValues>();
+       // _values = gameObject.GetComponent<PredadorValues>();
         _rigidbody = GetComponent<Rigidbody2D>();
         _playerAwarenessController = GetComponent<PlayerAwarenessController>();
     }
@@ -66,9 +74,10 @@ public class Predador : MonoBehaviour
 
         player = FindAnyObjectByType<Player>();
         diveManager = FindAnyObjectByType<DivingSceneManager>();
-        CurrentHP = _values.HP;
-        Damage = _values.Damage;   
-        _speed = _values.Speed;
+       // CurrentHP = _values.HP;
+       // Damage = _values.Damage;   
+        _speed = _inicialSpeed;
+        CurrentHP = _maxHp;
 
         // Inicializa a direção de natação aleatoriamente
         swimDirection = Random.insideUnitCircle.normalized;
@@ -148,7 +157,7 @@ public class Predador : MonoBehaviour
         }
         else
         {
-            _speed = _values.Speed;
+            _speed = _inicialSpeed;
         }
     }
 
@@ -191,7 +200,7 @@ public class Predador : MonoBehaviour
         Destroy(gameObject);
     }
 
-    void Recompensa()
+   /* void Recompensa()
     {
         if(_values != null)
         {
@@ -201,6 +210,15 @@ public class Predador : MonoBehaviour
             diveManager.Money += _values.Moeda;
             diveManager.Diamantes += _values.Diamante;
         }
+    }*/
+
+    void Recompensa()
+    {
+        _moedas *= bonusAmuleto9;
+        _diamantes *= bonusAmuleto5;
+
+        diveManager.Money += _moedas;
+        diveManager.Diamantes += _diamantes;
     }
 
     IEnumerator ReativarColliderAposDelay(int delay)

@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class Obstaculos : MonoBehaviour
 {
-    //private bool floatup;
     private Player player;
     public int dano;
 
@@ -16,7 +15,6 @@ public class Obstaculos : MonoBehaviour
     void Start()
     {
         player = FindAnyObjectByType<Player>();
-        //floatup = false;
     }
 
     void Update()
@@ -25,30 +23,7 @@ public class Obstaculos : MonoBehaviour
         transform.Rotate(Vector3.forward * velocidadeRotacao * Time.deltaTime);
 
         AccelerometerMove();
-
-      /*  if (floatup)
-        {
-            StartCoroutine(floatingUp());
-        }
-        else
-        {
-            StartCoroutine(floatingDown());
-        }*/
     }
-
-  /*  IEnumerator floatingUp()
-    {
-        transform.position += Vector3.up * 0.3f * Time.deltaTime;
-        yield return new WaitForSeconds(1);
-        floatup = false;
-    }
-
-    IEnumerator floatingDown()
-    {
-        transform.position -= Vector3.up * 0.3f * Time.deltaTime;
-        yield return new WaitForSeconds(1);
-        floatup = true;
-    }*/
 
     void OnCollisionEnter2D(Collision2D collision)
     {

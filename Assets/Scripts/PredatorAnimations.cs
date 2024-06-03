@@ -8,13 +8,13 @@ public class PredatorAnimations : MonoBehaviour
     private Player player;
 
     [SerializeField]
-    private PredadorValues _values;
+    private Predador _predador;
 
     public int Damage;
 
     private void Awake()
     {
-        _values = GetComponentInParent<PredadorValues>();
+        _predador = GetComponentInParent<Predador>();
     }
 
     // Start is called before the first frame update
@@ -25,7 +25,7 @@ public class PredatorAnimations : MonoBehaviour
 
         player = FindAnyObjectByType<Player>();
 
-        Damage = _values.Damage;
+        Damage = _predador.Damage;
     }
 
     // Update is called once per frame

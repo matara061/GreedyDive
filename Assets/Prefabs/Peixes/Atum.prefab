@@ -10,7 +10,6 @@ GameObject:
   m_Component:
   - component: {fileID: 6553411994679810976}
   - component: {fileID: 5851586925058419354}
-  - component: {fileID: 2944421872287031995}
   - component: {fileID: 2720150876953821278}
   - component: {fileID: 1308013024736472049}
   m_Layer: 7
@@ -49,28 +48,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   swimSpeed: 2.5
+  _moeda: 10
+  _diamante: 0
   rotationSpeed: 50
   tiltSpeed: 2
   bonusAmuleto5: 0
   bonusAmuleto9: 0
   floatingGold: {fileID: 2040594193857704368, guid: 6915fa67eeafe0c45b2c2106d61a6284, type: 3}
   floatingDiamond: {fileID: 3541394842797513015, guid: f798ac22549fb8246810d6574403619d, type: 3}
-  fishValue: {fileID: 7626234571075561383, guid: 17d525009c6d750489dd3d9692017a14, type: 3}
---- !u!114 &2944421872287031995
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3276928724063994318}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e80c28f0689519b4eb620b1da34a96a7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  moeda: 0
-  diamantes: 0
-  speed: 0
 --- !u!50 &2720150876953821278
 Rigidbody2D:
   serializedVersion: 4

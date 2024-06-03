@@ -121,7 +121,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   anim: {fileID: 3835088203353458058}
-  _values: {fileID: 0}
+  _predador: {fileID: 0}
   Damage: 0
 --- !u!61 &7346105931380118925
 BoxCollider2D:
@@ -182,7 +182,6 @@ GameObject:
   - component: {fileID: 2851544306672608673}
   - component: {fileID: 1269100061379532181}
   - component: {fileID: 5157464514242259126}
-  - component: {fileID: 932606768170097923}
   m_Layer: 6
   m_Name: Shark
   m_TagString: Tubarao branco
@@ -335,14 +334,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4591ac88cab57294d9f70301a83ad39a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _maxHp: 30
+  _inicialSpeed: 2.3
   _speed: 0
+  Damage: 12
+  _moedas: 30
+  _diamantes: 0
+  tiltSpeed: 2
   _rotationSpeed: 100
-  _values: {fileID: 0}
+  _rigidbody: {fileID: 0}
   anim: {fileID: 3835088203353458058}
   spriteRenderer: {fileID: 2188853204890668658}
   Collider: {fileID: 2851544306672608673}
   CurrentHP: 0
-  Damage: 0
   bonusAmuleto5: 0
   bonusAmuleto9: 0
 --- !u!114 &5157464514242259126
@@ -359,20 +363,3 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _playerAwarenessDistance: 3
   _playerAttackDistance: 1
---- !u!114 &932606768170097923
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8801970771614308063}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 562b0e4dab8a7364da2f41ea6b9382a5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  HP: 0
-  Damage: 0
-  Speed: 0
-  Moeda: 0
-  Diamante: 0
