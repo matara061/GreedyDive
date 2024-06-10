@@ -20,7 +20,7 @@ public class PredatorAnimations : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        anim.SetBool("Swimming", true);
+       // anim.SetBool("Swimming", true);
         anim.SetBool("Attacking", false);
 
         player = FindAnyObjectByType<Player>();
@@ -38,7 +38,7 @@ public class PredatorAnimations : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Player"))
         {
-            anim.SetBool("Swimming", false);
+           // anim.SetBool("Swimming", false);
             anim.SetBool("Attacking", true);
         }
 
@@ -52,7 +52,7 @@ public class PredatorAnimations : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Player"))
         {
-            anim.SetBool("Swimming", true);
+           // anim.SetBool("Swimming", true);
             anim.SetBool("Attacking", false);
         }
     }
