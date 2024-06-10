@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PlayerAttackTrigger : MonoBehaviour
 {
-    public Animator anim;
+    public Animator animator;
     public Transform playerTransform;
     public SpriteRenderer spriteRenderer;
     public GameObject topHitbox, topSideHitbox, middleHitbox, bottomHitbox, bottomSideHitbox;
@@ -26,7 +26,7 @@ public class PlayerAttackTrigger : MonoBehaviour
         if (col.gameObject.layer == LayerMask.NameToLayer("Predador"))
         {
             //Debug.Log("predador");
-            anim.SetBool("Attacking", true);
+            animator.SetLayerWeight(1, 0f);
             Attack = true;
 
             // Calcula a direção para o inimigo
@@ -45,7 +45,7 @@ public class PlayerAttackTrigger : MonoBehaviour
         if (col.gameObject.layer == LayerMask.NameToLayer("Predador"))
         {
             Attack = false;
-            anim.SetBool("Attacking", false);
+            animator.SetBool("Attacking", false);
         }
     }
 
@@ -53,38 +53,56 @@ public class PlayerAttackTrigger : MonoBehaviour
     private void SetAnimationParameters(Vector2 direction)
     {
         // Adiciona um limiar para o movimento diagonal
-        float diagonalThreshold = 0.5f;
+        //float diagonalThreshold = 0.5f;
 
-        if (Mathf.Abs(direction.x) > Mathf.Abs(direction.y) + diagonalThreshold)
+        // Verifica a direção do joystick
+        if (direction.x > 0 && direction.y < .5 && direction.y > -.5)
         {
-            // Direção para a direita ou esquerda
-            anim.SetBool("MovingVertically", false);
-            anim.SetBool("MovingHorizontally", true);
-            anim.SetBool("MovingDiagonally", false);
-            anim.SetFloat("MoveX", Mathf.Sign(direction.x));
-            anim.SetFloat("MoveY", 0f);
-
-            spriteRenderer.flipX = direction.x < 0;
+            // Direita
+            animator.SetFloat("MoveX", 1);
+            animator.SetFloat("MoveY", 0);
         }
-        else if (Mathf.Abs(direction.y) > Mathf.Abs(direction.x) + diagonalThreshold)
+        else if (direction.x < 0 && direction.y < .5 && direction.y > -.5)
         {
-            // Direção para cima ou para baixo
-            anim.SetBool("MovingVertically", true);
-            anim.SetBool("MovingHorizontally", false);
-            anim.SetBool("MovingDiagonally", false);
-            anim.SetFloat("MoveX", 0f);
-            anim.SetFloat("MoveY", Mathf.Sign(direction.y));
+            // Esquerda
+            animator.SetFloat("MoveX", -1);
+            animator.SetFloat("MoveY", 0);
         }
-        else
+        else if (direction.y > 0 && direction.x < .5 && direction.x > -.5)
         {
-            // Movimento diagonal
-            anim.SetBool("MovingVertically", false);
-            anim.SetBool("MovingHorizontally", false);
-            anim.SetBool("MovingDiagonally", true);
-            anim.SetFloat("MoveX", direction.x);
-            anim.SetFloat("MoveY", direction.y);
-
-            spriteRenderer.flipX = direction.x < 0;
+            // Cima
+            animator.SetFloat("MoveX", 0);
+            animator.SetFloat("MoveY", 1);
+        }
+        else if (direction.y < 0 && direction.x < .5 && direction.x > -.5)
+        {
+            // Baixo
+            animator.SetFloat("MoveX", 0);
+            animator.SetFloat("MoveY", -1);
+        }
+        else if (direction.x > 0 && direction.y > .5)
+        {
+            // Diagonal direita superior
+            animator.SetFloat("MoveX", 1);
+            animator.SetFloat("MoveY", 1);
+        }
+        else if (direction.x > 0 && direction.y < -.5)
+        {
+            // Diagonal direita inferior
+            animator.SetFloat("MoveX", 1);
+            animator.SetFloat("MoveY", -1);
+        }
+        else if (direction.x < 0 && direction.y > .5)
+        {
+            // Diagonal esquerda superior
+            animator.SetFloat("MoveX", -1);
+            animator.SetFloat("MoveY", 1);
+        }
+        else if (direction.x < .5 && direction.x > -.5 && direction.y < .5 && direction.y > -.5)
+        {
+            // Idle
+            animator.SetFloat("MoveX", 0);
+            animator.SetFloat("MoveY", 0);
         }
     }
 

@@ -95,62 +95,73 @@ public class Player : MonoBehaviour
     private void SetAnimationParameters(Vector2 direction)
     {
         // Define a animação para o jogador se movendo
-        animator.SetBool("Idle", false);
-        animator.SetBool("Moving", true);
+        //animator.SetBool("Idle", false);
+        //animator.SetBool("Moving", true);
 
         // Adiciona um limiar para o movimento diagonal
         //float diagonalThreshold = 0.5f;
 
         if (!trigger.Attack)
         {
+            animator.SetLayerWeight(0, 1f);
+
+            Debug.Log(direction.x);
+            Debug.Log(direction.y);
+
             // Verifica a direção do joystick
-            if (Mathf.Abs(direction.x) > 0 && Mathf.Abs(direction.y) > -.5 && Mathf.Abs(direction.y) < .5)
+            if (direction.x > 0 && direction.y < .5 && direction.y > -.5)
             {
                 // Direita
                 animator.SetFloat("MoveX", 1);
                 animator.SetFloat("MoveY", 0);
             }
-            else if (Mathf.Abs(direction.x) < 0 && Mathf.Abs(direction.y) > -.5 && Mathf.Abs(direction.y) < .5)
+            else if (direction.x < 0 && direction.y < .5 && direction.y > -.5)
             {
                 // Esquerda
                 animator.SetFloat("MoveX", -1);
                 animator.SetFloat("MoveY", 0);
             }
-            else if (Mathf.Abs(direction.y) > 0 && Mathf.Abs(direction.x) > -.5 && Mathf.Abs(direction.x) < .5)
+            else if (direction.y > 0 && direction.x < .5 && direction.x > -.5)
             {
                 // Cima
                 animator.SetFloat("MoveX", 0);
                 animator.SetFloat("MoveY", 1);
             }
-            else if (Mathf.Abs(direction.y) < 0 && Mathf.Abs(direction.x) > -.5 && Mathf.Abs(direction.x) < .5)
+            else if (direction.y < 0 && direction.x < .5 && direction.x > -.5)
             {
                 // Baixo
                 animator.SetFloat("MoveX", 0);
                 animator.SetFloat("MoveY", -1);
             }
-            else if (Mathf.Abs(direction.x) > 0 && Mathf.Abs(direction.y) > .5)
+            else if (direction.x > 0 && direction.y > .5)
             {
                 // Diagonal direita superior
                 animator.SetFloat("MoveX", 1);
                 animator.SetFloat("MoveY", 1);
             }
-            else if (Mathf.Abs(direction.x) > 0 && Mathf.Abs(direction.y) < -.5)
+            else if (direction.x > 0 && direction.y < -.5)
             {
                 // Diagonal direita inferior
                 animator.SetFloat("MoveX", 1);
                 animator.SetFloat("MoveY", -1);
             }
-            else if (Mathf.Abs(direction.x) < 0 && Mathf.Abs(direction.y) > .5)
+            else if (direction.x < 0 && direction.y > .5)
             {
                 // Diagonal esquerda superior
                 animator.SetFloat("MoveX", -1);
                 animator.SetFloat("MoveY", 1);
             }
-            else if (Mathf.Abs(direction.x) < 0 && Mathf.Abs(direction.y) < -.5)
+            else if (direction.x < 0 && direction.y < -.5)
             {
                 // Diagonal esquerda inferior
                 animator.SetFloat("MoveX", -1);
                 animator.SetFloat("MoveY", -1);
+            }
+            else if(direction.x < .5 && direction.x > -.5 && direction.y <.5 && direction.y > -.5)
+            {
+                // Idle
+                animator.SetFloat("MoveX", 0);
+                animator.SetFloat("MoveY", 0);
             }
         }
     }
