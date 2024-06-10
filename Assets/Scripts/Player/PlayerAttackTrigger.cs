@@ -26,7 +26,7 @@ public class PlayerAttackTrigger : MonoBehaviour
         if (col.gameObject.layer == LayerMask.NameToLayer("Predador"))
         {
             //Debug.Log("predador");
-            animator.SetLayerWeight(1, 0f);
+            //animator.SetLayerWeight(1, 0f);
             Attack = true;
 
             // Calcula a direção para o inimigo
@@ -56,54 +56,57 @@ public class PlayerAttackTrigger : MonoBehaviour
         //float diagonalThreshold = 0.5f;
 
         // Verifica a direção do joystick
-        if (direction.x > 0 && direction.y < .5 && direction.y > -.5)
+        if (direction.x > .1 && direction.y < 2 && direction.y > -2)
         {
             // Direita
             animator.SetFloat("MoveX", 1);
             animator.SetFloat("MoveY", 0);
         }
-        else if (direction.x < 0 && direction.y < .5 && direction.y > -.5)
+        else if (direction.x < -.1 && direction.y < 2 && direction.y > -2)
         {
             // Esquerda
             animator.SetFloat("MoveX", -1);
             animator.SetFloat("MoveY", 0);
         }
-        else if (direction.y > 0 && direction.x < .5 && direction.x > -.5)
+        else if (direction.y > .1 && direction.x < 2 && direction.y > -2)
         {
             // Cima
             animator.SetFloat("MoveX", 0);
             animator.SetFloat("MoveY", 1);
         }
-        else if (direction.y < 0 && direction.x < .5 && direction.x > -.5)
+        else if (direction.y < -.1 && direction.x < 2 && direction.y > -2)
         {
             // Baixo
             animator.SetFloat("MoveX", 0);
             animator.SetFloat("MoveY", -1);
         }
-        else if (direction.x > 0 && direction.y > .5)
+
+        /*
+        else if (direction.x > 0 && direction.y > .4)
         {
             // Diagonal direita superior
             animator.SetFloat("MoveX", 1);
             animator.SetFloat("MoveY", 1);
         }
-        else if (direction.x > 0 && direction.y < -.5)
+        else if (direction.x > 0 && direction.y < -.4)
         {
             // Diagonal direita inferior
             animator.SetFloat("MoveX", 1);
             animator.SetFloat("MoveY", -1);
         }
-        else if (direction.x < 0 && direction.y > .5)
+        else if (direction.x < 0 && direction.y > .4)
         {
             // Diagonal esquerda superior
             animator.SetFloat("MoveX", -1);
             animator.SetFloat("MoveY", 1);
         }
-        else if (direction.x < .5 && direction.x > -.5 && direction.y < .5 && direction.y > -.5)
+        else if (direction.x < 0 && direction.y < -.4)
         {
-            // Idle
-            animator.SetFloat("MoveX", 0);
-            animator.SetFloat("MoveY", 0);
+            // Diagonal esquerda inferior
+            animator.SetFloat("MoveX", -1);
+            animator.SetFloat("MoveY", -1);
         }
+        */
     }
 
     //Top Hitbox

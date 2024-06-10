@@ -52,10 +52,7 @@ public class Player : MonoBehaviour
         if (CurrentHealth <= 0 && isAlive)
         {
             isAlive = false;
-            animator.SetBool("Moving", false);
-            animator.SetBool("MovingDiagonally", false);
-            animator.SetBool("Attacking", false);
-            animator.SetBool("Dead", true);
+            animator.SetTrigger("Die");
             diveManager.Perdeu();
         }
 
@@ -85,9 +82,8 @@ public class Player : MonoBehaviour
                 rb.velocity = Vector2.zero;
 
                 // Define a animação para o jogador parado
-                animator.SetBool("Moving", false);
-                animator.SetBool("MovingDiagonally", false);
-                animator.SetBool("Idle", true);
+                animator.SetFloat("MoveX", 0);
+                animator.SetFloat("MoveY", 0);
             }
         }
     }
@@ -103,66 +99,64 @@ public class Player : MonoBehaviour
 
         if (!trigger.Attack)
         {
-            animator.SetLayerWeight(0, 1f);
+            //animator.SetLayerWeight(0, 1f);
 
             Debug.Log(direction.x);
             Debug.Log(direction.y);
 
             // Verifica a direção do joystick
-            if (direction.x > 0 && direction.y < .5 && direction.y > -.5)
+            if (direction.x > .1 && direction.y < 2 && direction.y > -2)
             {
                 // Direita
                 animator.SetFloat("MoveX", 1);
                 animator.SetFloat("MoveY", 0);
             }
-            else if (direction.x < 0 && direction.y < .5 && direction.y > -.5)
+            else if (direction.x < -.1 && direction.y < 2 && direction.y > -2)
             {
                 // Esquerda
                 animator.SetFloat("MoveX", -1);
                 animator.SetFloat("MoveY", 0);
             }
-            else if (direction.y > 0 && direction.x < .5 && direction.x > -.5)
+            else if (direction.y > .1 && direction.x < 2 && direction.x > -2)
+
             {
                 // Cima
                 animator.SetFloat("MoveX", 0);
                 animator.SetFloat("MoveY", 1);
             }
-            else if (direction.y < 0 && direction.x < .5 && direction.x > -.5)
+            else if (direction.y < -1 && direction.x < .2 && direction.x > -2)
             {
                 // Baixo
                 animator.SetFloat("MoveX", 0);
                 animator.SetFloat("MoveY", -1);
             }
-            else if (direction.x > 0 && direction.y > .5)
+
+            /*
+            else if (direction.x > 0 && direction.y > .4)
             {
                 // Diagonal direita superior
                 animator.SetFloat("MoveX", 1);
                 animator.SetFloat("MoveY", 1);
             }
-            else if (direction.x > 0 && direction.y < -.5)
+            else if (direction.x > 0 && direction.y < -.4)
             {
                 // Diagonal direita inferior
                 animator.SetFloat("MoveX", 1);
                 animator.SetFloat("MoveY", -1);
             }
-            else if (direction.x < 0 && direction.y > .5)
+            else if (direction.x < 0 && direction.y > .4)
             {
                 // Diagonal esquerda superior
                 animator.SetFloat("MoveX", -1);
                 animator.SetFloat("MoveY", 1);
             }
-            else if (direction.x < 0 && direction.y < -.5)
+            else if (direction.x < 0 && direction.y < -.4)
             {
                 // Diagonal esquerda inferior
                 animator.SetFloat("MoveX", -1);
                 animator.SetFloat("MoveY", -1);
             }
-            else if(direction.x < .5 && direction.x > -.5 && direction.y <.5 && direction.y > -.5)
-            {
-                // Idle
-                animator.SetFloat("MoveX", 0);
-                animator.SetFloat("MoveY", 0);
-            }
+            */
         }
     }
 
