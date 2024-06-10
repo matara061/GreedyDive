@@ -29,8 +29,8 @@ public class Predador : MonoBehaviour
     private Player player;
     private Vector2 _targetDirection;
 
-    public Animator anim;
-    public SpriteRenderer spriteRenderer;
+    //public Animator anim;
+    //public SpriteRenderer spriteRenderer;
 
     public BoxCollider2D Collider;
     private DivingSceneManager diveManager;

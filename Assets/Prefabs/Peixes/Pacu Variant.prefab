@@ -74,7 +74,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 8f41314b9b8af6f4fbe99127c347d58f, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 367f39b5fda89d44880951534dffecc0, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -95,7 +95,7 @@ Animator:
   m_GameObject: {fileID: 4018232694266996135}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 88b04ca8ce34cb349822322b6395c7b0, type: 2}
+  m_Controller: {fileID: 9100000, guid: 032a56b3d84c6234ba19b3785fa75808, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -116,11 +116,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1156105975599068569, guid: 266302dacc7951242a7594e6d32dfe00, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: -2.6406064
       objectReference: {fileID: 0}
     - target: {fileID: 1156105975599068569, guid: 266302dacc7951242a7594e6d32dfe00, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -2.41
+      value: -1.8347046
       objectReference: {fileID: 0}
     - target: {fileID: 1156105975599068569, guid: 266302dacc7951242a7594e6d32dfe00, type: 3}
       propertyPath: m_LocalPosition.z
@@ -174,9 +174,26 @@ PrefabInstance:
       propertyPath: swimSpeed
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 6418799736105113220, guid: 266302dacc7951242a7594e6d32dfe00, type: 3}
+      propertyPath: m_Size.x
+      value: 0.9363432
+      objectReference: {fileID: 0}
+    - target: {fileID: 6418799736105113220, guid: 266302dacc7951242a7594e6d32dfe00, type: 3}
+      propertyPath: m_Size.y
+      value: 0.53592217
+      objectReference: {fileID: 0}
+    - target: {fileID: 6418799736105113220, guid: 266302dacc7951242a7594e6d32dfe00, type: 3}
+      propertyPath: m_Offset.x
+      value: 0.006182432
+      objectReference: {fileID: 0}
+    - target: {fileID: 6418799736105113220, guid: 266302dacc7951242a7594e6d32dfe00, type: 3}
+      propertyPath: m_Offset.y
+      value: 0.002714932
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 2571243353600047332, guid: 266302dacc7951242a7594e6d32dfe00, type: 3}
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 1216061904222020199, guid: 266302dacc7951242a7594e6d32dfe00, type: 3}
     m_AddedGameObjects:
     - targetCorrespondingSourceObject: {fileID: 1156105975599068569, guid: 266302dacc7951242a7594e6d32dfe00, type: 3}
       insertIndex: -1
