@@ -151,7 +151,7 @@ public class Predador : MonoBehaviour
             _rigidbody.velocity = transform.right * _speed;
         }
 
-        if (Vector2.Distance(transform.position, player.transform.position) <= 2)
+        if (Vector2.Distance(transform.position, player.transform.position) <= 1)
         {
             _speed = 0;
         }

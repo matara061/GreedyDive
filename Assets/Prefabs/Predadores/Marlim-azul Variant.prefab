@@ -72,6 +72,18 @@ PrefabInstance:
       propertyPath: m_Constraints
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6411954931950192004, guid: 303ab627386c0e84fba20072166602f1, type: 3}
+      propertyPath: _playerMaxDistance
+      value: 1.63
+      objectReference: {fileID: 0}
+    - target: {fileID: 6411954931950192004, guid: 303ab627386c0e84fba20072166602f1, type: 3}
+      propertyPath: _playerAttackDistance
+      value: 1.39
+      objectReference: {fileID: 0}
+    - target: {fileID: 6411954931950192004, guid: 303ab627386c0e84fba20072166602f1, type: 3}
+      propertyPath: _playerAwarenessDistance
+      value: 3.59
+      objectReference: {fileID: 0}
     - target: {fileID: 7179098276420678116, guid: 303ab627386c0e84fba20072166602f1, type: 3}
       propertyPath: Damage
       value: 5

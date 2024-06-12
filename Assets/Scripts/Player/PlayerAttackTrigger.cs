@@ -13,9 +13,11 @@ public class PlayerAttackTrigger : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D col)
     {
+
         if (col.gameObject.layer == LayerMask.NameToLayer("Predador"))
         {
-            Debug.Log("predador");
+            Attack = true;
+            //Debug.Log("predador");
             anim.SetBool("IsAttack", true);
 
             // Calcula a direção para o inimigo
@@ -38,11 +40,13 @@ public class PlayerAttackTrigger : MonoBehaviour
                 anim.SetFloat("MoveY", Mathf.Sign(direction.y));
             }
         }
+        else
+            Attack = false;
     }
 
     private void OnTriggerStay2D(Collider2D col)
     {
-        
+        //Attack = true;
     }
 
     private void OnTriggerExit2D(Collider2D col)

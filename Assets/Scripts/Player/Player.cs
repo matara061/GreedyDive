@@ -108,7 +108,7 @@ public class Player : MonoBehaviour
                 animator.SetFloat("MoveX", Mathf.Sign(direction.x));
                 animator.SetFloat("MoveY", 0f);
 
-                spriteRenderer.flipX = direction.x < 0;
+               // spriteRenderer.flipX = direction.x < 0;
             }
             else if (Mathf.Abs(direction.y) > Mathf.Abs(direction.x) + diagonalThreshold)
             {
