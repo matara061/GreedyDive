@@ -93,13 +93,14 @@ public class Player : MonoBehaviour
     {
         // Define a animação para o jogador se movendo
        // animator.SetBool("Idle", false);
-        animator.SetBool("Moving", true);
+        //animator.SetBool("Moving", true);
 
         // Adiciona um limiar para o movimento diagonal
         float diagonalThreshold = 0.5f;
 
-        if (!trigger.Attack)
+        if (!trigger.Attack && direction.x != 0 && direction.y != 0)
         {
+            animator.SetBool("Moving", true);
 
             // Verifica a direção do joystick
             if (Mathf.Abs(direction.x) > Mathf.Abs(direction.y) + diagonalThreshold)
@@ -122,7 +123,8 @@ public class Player : MonoBehaviour
                 animator.SetFloat("MoveX", direction.x);
                 animator.SetFloat("MoveY", direction.y);
             }
-        }
+        }else
+            animator.SetBool("Moving", false);
     }
 
 
@@ -168,6 +170,7 @@ public class Player : MonoBehaviour
     {
         if (isInvencivel == false)
         {
+            animator.SetTrigger("Hit");
             CurrentHealth -= damage;
             playerHealthBar.SetHealth(CurrentHealth);
             Imunidade(3);
