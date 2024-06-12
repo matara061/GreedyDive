@@ -16,6 +16,10 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Untagged
       objectReference: {fileID: 0}
+    - target: {fileID: 143910896151777681, guid: 303ab627386c0e84fba20072166602f1, type: 3}
+      propertyPath: m_Size.x
+      value: 2.04
+      objectReference: {fileID: 0}
     - target: {fileID: 1344622965771336695, guid: 303ab627386c0e84fba20072166602f1, type: 3}
       propertyPath: m_Sprite
       value: 
@@ -59,6 +63,10 @@ PrefabInstance:
     - target: {fileID: 2967210071237685790, guid: 303ab627386c0e84fba20072166602f1, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7179098276420678116, guid: 303ab627386c0e84fba20072166602f1, type: 3}
+      propertyPath: Damage
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 7179098276420678116, guid: 303ab627386c0e84fba20072166602f1, type: 3}
       propertyPath: _maxHp

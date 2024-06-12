@@ -84,6 +84,7 @@ public class Player : MonoBehaviour
                 // Define a animação para o jogador parado
                 animator.SetFloat("MoveX", 0);
                 animator.SetFloat("MoveY", 0);
+                animator.SetBool("Moving", false);
             }
         }
     }
@@ -91,72 +92,36 @@ public class Player : MonoBehaviour
     private void SetAnimationParameters(Vector2 direction)
     {
         // Define a animação para o jogador se movendo
-        //animator.SetBool("Idle", false);
-        //animator.SetBool("Moving", true);
+       // animator.SetBool("Idle", false);
+        animator.SetBool("Moving", true);
 
         // Adiciona um limiar para o movimento diagonal
-        //float diagonalThreshold = 0.5f;
+        float diagonalThreshold = 0.5f;
 
         if (!trigger.Attack)
         {
-            //animator.SetLayerWeight(0, 1f);
-
-            Debug.Log(direction.x);
-            Debug.Log(direction.y);
 
             // Verifica a direção do joystick
-            if (direction.x > .1 && direction.y < 2 && direction.y > -2)
+            if (Mathf.Abs(direction.x) > Mathf.Abs(direction.y) + diagonalThreshold)
             {
-                // Direita
-                animator.SetFloat("MoveX", 1);
-                animator.SetFloat("MoveY", 0);
-            }
-            else if (direction.x < -.1 && direction.y < 2 && direction.y > -2)
-            {
-                // Esquerda
-                animator.SetFloat("MoveX", -1);
-                animator.SetFloat("MoveY", 0);
-            }
-            else if (direction.y > .1 && direction.x < 2 && direction.x > -2)
+                // Direção para a direita ou esquerda
+                animator.SetFloat("MoveX", Mathf.Sign(direction.x));
+                animator.SetFloat("MoveY", 0f);
 
-            {
-                // Cima
-                animator.SetFloat("MoveX", 0);
-                animator.SetFloat("MoveY", 1);
+                spriteRenderer.flipX = direction.x < 0;
             }
-            else if (direction.y < -1 && direction.x < .2 && direction.x > -2)
+            else if (Mathf.Abs(direction.y) > Mathf.Abs(direction.x) + diagonalThreshold)
             {
-                // Baixo
-                animator.SetFloat("MoveX", 0);
-                animator.SetFloat("MoveY", -1);
+                // Direção para cima ou para baixo
+                animator.SetFloat("MoveX", 0f);
+                animator.SetFloat("MoveY", Mathf.Sign(direction.y));
             }
-
-            /*
-            else if (direction.x > 0 && direction.y > .4)
+            else
             {
-                // Diagonal direita superior
-                animator.SetFloat("MoveX", 1);
-                animator.SetFloat("MoveY", 1);
+                // Movimento diagonal
+                animator.SetFloat("MoveX", direction.x);
+                animator.SetFloat("MoveY", direction.y);
             }
-            else if (direction.x > 0 && direction.y < -.4)
-            {
-                // Diagonal direita inferior
-                animator.SetFloat("MoveX", 1);
-                animator.SetFloat("MoveY", -1);
-            }
-            else if (direction.x < 0 && direction.y > .4)
-            {
-                // Diagonal esquerda superior
-                animator.SetFloat("MoveX", -1);
-                animator.SetFloat("MoveY", 1);
-            }
-            else if (direction.x < 0 && direction.y < -.4)
-            {
-                // Diagonal esquerda inferior
-                animator.SetFloat("MoveX", -1);
-                animator.SetFloat("MoveY", -1);
-            }
-            */
         }
     }
 

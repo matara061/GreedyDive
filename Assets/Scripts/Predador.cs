@@ -151,7 +151,7 @@ public class Predador : MonoBehaviour
             _rigidbody.velocity = transform.right * _speed;
         }
 
-        if (Vector2.Distance(transform.position, player.transform.position) <= 1)
+        if (Vector2.Distance(transform.position, player.transform.position) <= 2)
         {
             _speed = 0;
         }
@@ -165,11 +165,12 @@ public class Predador : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Player"))
         {
-            //player.TakeDamage(Damage);
+            player.TakeDamage(Damage);
         }
 
         if (other.gameObject.CompareTag("PlayerAttackHitbox"))
         {
+            Debug.Log("predador recebe: " + player.playerDam + " de dano");
             TakeDamage(player.playerDam);
         }
     }
