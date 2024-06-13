@@ -74,11 +74,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6411954931950192004, guid: 303ab627386c0e84fba20072166602f1, type: 3}
       propertyPath: _playerMaxDistance
-      value: 1.63
+      value: 2.5
       objectReference: {fileID: 0}
     - target: {fileID: 6411954931950192004, guid: 303ab627386c0e84fba20072166602f1, type: 3}
       propertyPath: _playerAttackDistance
-      value: 1.39
+      value: 2.5
       objectReference: {fileID: 0}
     - target: {fileID: 6411954931950192004, guid: 303ab627386c0e84fba20072166602f1, type: 3}
       propertyPath: _playerAwarenessDistance

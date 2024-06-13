@@ -60,6 +60,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6411954931950192004, guid: 303ab627386c0e84fba20072166602f1, type: 3}
+      propertyPath: _playerMaxDistance
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6411954931950192004, guid: 303ab627386c0e84fba20072166602f1, type: 3}
+      propertyPath: _playerAttackDistance
+      value: 1.5
+      objectReference: {fileID: 0}
     - target: {fileID: 7179098276420678116, guid: 303ab627386c0e84fba20072166602f1, type: 3}
       propertyPath: Damage
       value: 6

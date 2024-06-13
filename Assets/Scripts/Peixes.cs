@@ -115,29 +115,6 @@ public class FishSwimming : MonoBehaviour
         transform.Translate(tilt * Time.deltaTime, Space.World);
     }
 
-   /* void Recompensa()
-    {
-        if (fishValue != null)
-        {
-            fishValue.diamantes *= bonusAmuleto5;
-            fishValue.moeda *= bonusAmuleto9;
-
-            divingSceneManager.Money += fishValue.moeda;
-            divingSceneManager.Diamantes += fishValue.diamantes;
-
-            if(fishValue.moeda > 0)
-            {
-                GameObject Gold = Instantiate(floatingGold, transform.position, Quaternion.identity);
-                Gold.transform.GetChild(0).GetComponent<TextMeshPro>().text = fishValue.moeda.ToString();
-            }else 
-                if(fishValue.diamantes > 0)
-            {
-                GameObject Diamond = Instantiate(floatingDiamond, transform.position, Quaternion.identity);
-                Diamond.transform.GetChild(0).GetComponent<TextMeshPro>().text = fishValue.diamantes.ToString();
-            }
-        }
-    }*/
-
     void Recompensa()
     {
         _diamante *= bonusAmuleto5;

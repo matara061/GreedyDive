@@ -14,6 +14,8 @@ public class PlayerAwarenessController : MonoBehaviour
     [SerializeField]
     private float _playerAttackDistance;
 
+    public float _playerMaxDistance;
+
     private Transform _player;
 
     private void Awake()
@@ -57,5 +59,7 @@ public class PlayerAwarenessController : MonoBehaviour
         Gizmos.DrawWireSphere(transform.position, _playerAwarenessDistance);
         Gizmos.color = Color.red;
         Gizmos.DrawWireSphere(transform.position, _playerAttackDistance);
+        Gizmos.color = Color.green;
+        Gizmos.DrawWireSphere(transform.position, _playerMaxDistance);
     }
 }

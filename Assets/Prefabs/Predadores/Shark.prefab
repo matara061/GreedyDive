@@ -343,12 +343,12 @@ MonoBehaviour:
   tiltSpeed: 2
   _rotationSpeed: 100
   _rigidbody: {fileID: 0}
-  anim: {fileID: 3835088203353458058}
-  spriteRenderer: {fileID: 2188853204890668658}
   Collider: {fileID: 2851544306672608673}
   CurrentHP: 0
   bonusAmuleto5: 0
   bonusAmuleto9: 0
+  floatingGold: {fileID: 2040594193857704368, guid: 6915fa67eeafe0c45b2c2106d61a6284, type: 3}
+  floatingDiamond: {fileID: 3541394842797513015, guid: f798ac22549fb8246810d6574403619d, type: 3}
 --- !u!114 &5157464514242259126
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -362,4 +362,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _playerAwarenessDistance: 3
-  _playerAttackDistance: 1
+  _playerAttackDistance: 2.2
+  _playerMaxDistance: 2.2

@@ -10535,10 +10535,10 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Primeiro dia de trabalho para essa empresa, menti na entrevista dizendo
-    que estava endividado e por isso aceitei esse emprego perigoso, mas, na verdade
-    estou aqui para procurar o tesouro que meus antepassados jogaram nessa parte
-    do mar. \n\nVou sair rico barco"
+  m_text: "Estou chegando mais fundo a cada dia que passa. Fico animado ao pensar
+    que estou chegando perto do meu tesouro, mas fico ansioso ao lembrar na quantidade
+    de dinheiro que estou gastando nas melhorias de equipamentos e amuletos, j\xE1
+    est\xE3o custando quase o valor que eu sonhava em ter."
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -14292,10 +14292,10 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Primeiro dia de trabalho para essa empresa, menti na entrevista dizendo
-    que estava endividado e por isso aceitei esse emprego perigoso, mas, na verdade
-    estou aqui para procurar o tesouro que meus antepassados jogaram nessa parte
-    do mar. \n\nVou sair rico barco"
+  m_text: "\u2026 Eu encontrei o tesouro da minha fam\xEDlia\u2026 era uma espada.
+    Agora que penso sobre isso, meus av\xF3s sempre diziam que nossos antepassados
+    eram cavaleiros que serviam o rei. Acho que para eles essa espada era um tesouro
+    inestim\xE1vel."
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -14431,8 +14431,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Tutorial
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 5dd1d80e5b1cc5b4c95a278ba8510c59, type: 2}
+  m_sharedMaterial: {fileID: -2474653175583854465, guid: 5dd1d80e5b1cc5b4c95a278ba8510c59, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -14456,15 +14456,15 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 72
+  m_fontSize: 97
   m_fontSizeBase: 24
   m_fontWeight: 400
   m_enableAutoSizing: 1
   m_fontSizeMin: 18
-  m_fontSizeMax: 72
+  m_fontSizeMax: 97
   m_fontStyle: 0
   m_HorizontalAlignment: 2
-  m_VerticalAlignment: 512
+  m_VerticalAlignment: 4096
   m_textAlignment: 65535
   m_characterSpacing: 0
   m_wordSpacing: 0
@@ -17277,10 +17277,10 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Primeiro dia de trabalho para essa empresa, menti na entrevista dizendo
-    que estava endividado e por isso aceitei esse emprego perigoso, mas, na verdade
-    estou aqui para procurar o tesouro que meus antepassados jogaram nessa parte
-    do mar. \n\nVou sair rico barco"
+  m_text: "Finalmente cheguei a 3500 metros, o velho mergulhador me falou que estou
+    pr\xF3ximo da parte mais profunda dessa \xE1rea.  Pela hist\xF3ria dele, foi
+    aqui que ele se aposentou por ter se machucado ao enfrentar um predador que nunca
+    havia visto antes. \r\n\r\nEspero n\xE3o me encontrar com ele."
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -18076,8 +18076,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: "Op\xE7oes"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 5dd1d80e5b1cc5b4c95a278ba8510c59, type: 2}
+  m_sharedMaterial: {fileID: -2474653175583854465, guid: 5dd1d80e5b1cc5b4c95a278ba8510c59, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -18101,15 +18101,15 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 72
+  m_fontSize: 97
   m_fontSizeBase: 24
   m_fontWeight: 400
   m_enableAutoSizing: 1
   m_fontSizeMin: 18
-  m_fontSizeMax: 72
-  m_fontStyle: 0
+  m_fontSizeMax: 97
+  m_fontStyle: 1
   m_HorizontalAlignment: 2
-  m_VerticalAlignment: 512
+  m_VerticalAlignment: 4096
   m_textAlignment: 65535
   m_characterSpacing: 0
   m_wordSpacing: 0
@@ -18210,8 +18210,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Sair do jogo
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 5dd1d80e5b1cc5b4c95a278ba8510c59, type: 2}
+  m_sharedMaterial: {fileID: -2474653175583854465, guid: 5dd1d80e5b1cc5b4c95a278ba8510c59, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -18235,15 +18235,15 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 72
+  m_fontSize: 97
   m_fontSizeBase: 24
   m_fontWeight: 400
   m_enableAutoSizing: 1
   m_fontSizeMin: 18
-  m_fontSizeMax: 72
+  m_fontSizeMax: 97
   m_fontStyle: 0
   m_HorizontalAlignment: 2
-  m_VerticalAlignment: 512
+  m_VerticalAlignment: 4096
   m_textAlignment: 65535
   m_characterSpacing: 0
   m_wordSpacing: 0
@@ -21282,10 +21282,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Primeiro dia de trabalho para essa empresa, menti na entrevista dizendo
-    que estava endividado e por isso aceitei esse emprego perigoso, mas, na verdade
-    estou aqui para procurar o tesouro que meus antepassados jogaram nessa parte
-    do mar. \n\nVou sair rico barco"
+  m_text: "Vendo a tabela de efeitos que cada um daqueles amuletos tem, parece que
+    vai ajudar muito durante o mergulho, se for verdade \xE9 claro\u2026.\r\n\r\nQuanto
+    ser\xE1 que falta para chegar \xE0 parte mais profunda e achar meu tesouro?"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -23044,10 +23043,10 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Primeiro dia de trabalho para essa empresa, menti na entrevista dizendo
-    que estava endividado e por isso aceitei esse emprego perigoso, mas, na verdade
-    estou aqui para procurar o tesouro que meus antepassados jogaram nessa parte
-    do mar. \n\nVou sair rico barco"
+  m_text: "Aparentemente aquele gato era o dono da loja, quando tentei ver um dos
+    amuletos sem pagar antes ele arranhou minha m\xE3o. Mas o problema \xE9 que os
+    pre\xE7os daquela loja s\xE3o insanos, como pode ele querer diamantes pelos amuletos!?\r\n\r\nComo
+    esperado de uma loja gerida por um gato."
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -23181,10 +23180,10 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Primeiro dia de trabalho para essa empresa, menti na entrevista dizendo
-    que estava endividado e por isso aceitei esse emprego perigoso, mas, na verdade
-    estou aqui para procurar o tesouro que meus antepassados jogaram nessa parte
-    do mar. \n\nVou sair rico barco"
+  m_text: "Hoje realmente cheguei bem fundo, devo estar bem pr\xF3ximo do tesouro
+    a esse ponto. Mas eu n\xE3o consigo deixar de pensar\u2026 vendo o quanto eu
+    gastei melhorando equipamentos e comprando amuletos, ser\xE1 que o tesouro vai
+    ter muito mais que isso?"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -23809,10 +23808,11 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Primeiro dia de trabalho para essa empresa, menti na entrevista dizendo
-    que estava endividado e por isso aceitei esse emprego perigoso, mas, na verdade
-    estou aqui para procurar o tesouro que meus antepassados jogaram nessa parte
-    do mar. \n\nVou sair rico barco"
+  m_text: "J\xE1 se passaram alguns dias desde que comecei a mergulhar e vender os
+    peixes para aquele velho da loja de equipamentos. Ele \xE9 bem simp\xE1tico apesar
+    da apar\xEAncia. Logo logo vou ter que comprar equipamentos melhores, esse mar
+    est\xE1 cheio de predadores e destro\xE7os.\r\n\r\nSer\xE1 que o velho n\xE3o
+    me d\xE1 um desconto!?"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -26320,10 +26320,10 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Primeiro dia de trabalho para essa empresa, menti na entrevista dizendo
-    que estava endividado e por isso aceitei esse emprego perigoso, mas, na verdade
-    estou aqui para procurar o tesouro que meus antepassados jogaram nessa parte
-    do mar. \n\nVou sair rico barco"
+  m_text: "Finalmente cheguei a 1000 m de profundidade, com esse equipamento novo
+    ficou bem mais f\xE1cil, mas ainda \xE9 bem sofrido chegar t\xE3o fundo. Depois
+    de falar com o velho, ele me recomendou ver a loja ao lado.\r\n\r\nDa \xFAltima
+    vez que vi s\xF3 tinha um gato no balc\xE3o."
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -28207,8 +28207,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Creditos
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 5dd1d80e5b1cc5b4c95a278ba8510c59, type: 2}
+  m_sharedMaterial: {fileID: -2474653175583854465, guid: 5dd1d80e5b1cc5b4c95a278ba8510c59, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -28232,15 +28232,15 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 72
+  m_fontSize: 97
   m_fontSizeBase: 24
   m_fontWeight: 400
   m_enableAutoSizing: 1
   m_fontSizeMin: 18
-  m_fontSizeMax: 72
+  m_fontSizeMax: 97
   m_fontStyle: 0
   m_HorizontalAlignment: 2
-  m_VerticalAlignment: 512
+  m_VerticalAlignment: 4096
   m_textAlignment: 65535
   m_characterSpacing: 0
   m_wordSpacing: 0

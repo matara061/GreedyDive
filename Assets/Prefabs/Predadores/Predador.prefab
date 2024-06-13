@@ -175,12 +175,12 @@ MonoBehaviour:
   tiltSpeed: 2
   _rotationSpeed: 100
   _rigidbody: {fileID: 0}
-  anim: {fileID: 0}
-  spriteRenderer: {fileID: 0}
   Collider: {fileID: 143910896151777681}
   CurrentHP: 0
   bonusAmuleto5: 0
   bonusAmuleto9: 0
+  floatingGold: {fileID: 2040594193857704368, guid: 6915fa67eeafe0c45b2c2106d61a6284, type: 3}
+  floatingDiamond: {fileID: 3541394842797513015, guid: f798ac22549fb8246810d6574403619d, type: 3}
 --- !u!114 &6411954931950192004
 MonoBehaviour:
   m_ObjectHideFlags: 0

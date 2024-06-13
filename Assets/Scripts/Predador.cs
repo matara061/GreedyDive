@@ -1,6 +1,7 @@
 using Newtonsoft.Json.Linq;
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
 public class Predador : MonoBehaviour
@@ -41,6 +42,9 @@ public class Predador : MonoBehaviour
     private bool isCoroutineRunning = false;
     public int bonusAmuleto5;
     public int bonusAmuleto9;
+
+    public GameObject floatingGold;
+    public GameObject floatingDiamond;
 
     // Adicionado para movimento aleatório
     private Vector2 swimDirection;
@@ -151,7 +155,9 @@ public class Predador : MonoBehaviour
             _rigidbody.velocity = transform.right * _speed;
         }
 
-        if (Vector2.Distance(transform.position, player.transform.position) <= 1)
+        Vector2 predadorToPlayer = player.transform.position - transform.position;
+
+        if(predadorToPlayer.magnitude < _playerAwarenessController._playerMaxDistance)
         {
             _speed = 0;
         }
@@ -159,6 +165,15 @@ public class Predador : MonoBehaviour
         {
             _speed = _inicialSpeed;
         }
+
+       /* if (Vector2.Distance(transform.position, player.transform.position) <= 1)
+        {
+            _speed = 0;
+        }
+        else
+        {
+            _speed = _inicialSpeed;
+        }*/
     }
 
     private void OnTriggerEnter2D(Collider2D other)
@@ -220,6 +235,18 @@ public class Predador : MonoBehaviour
 
         diveManager.Money += _moedas;
         diveManager.Diamantes += _diamantes;
+
+        if (_moedas > 0)
+        {
+            GameObject Gold = Instantiate(floatingGold, transform.position, Quaternion.identity);
+            Gold.transform.GetChild(0).GetComponent<TextMeshPro>().text = _moedas.ToString();
+        }
+        else
+                if (_diamantes > 0)
+        {
+            GameObject Diamond = Instantiate(floatingDiamond, transform.position, Quaternion.identity);
+            Diamond.transform.GetChild(0).GetComponent<TextMeshPro>().text = _diamantes.ToString();
+        }
     }
 
     IEnumerator ReativarColliderAposDelay(int delay)
