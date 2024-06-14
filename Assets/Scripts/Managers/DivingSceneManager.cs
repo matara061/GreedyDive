@@ -26,9 +26,10 @@ public class DivingSceneManager : MonoBehaviour
     public bool Isstage1 = false;
     public bool IsVitoria = false;
     public bool IsPaused = false;
-    private bool _isUp = false;
+    public bool _isUp = false;
 
     [SerializeField] private GameObject _limitArea;
+    [SerializeField] private GameObject _playerAttackBox;
 
     public float depthSpeed = 1f; // Velocidade de avanço da profundidade
 
@@ -82,7 +83,7 @@ public class DivingSceneManager : MonoBehaviour
         UpdateScoreText(Money, Diamantes);
         Stage();
 
-        if (depth <= 0 && _isUp) // dps add "if _isUp" 
+        if (depth <= -100 && _isUp)  
         {
             Fim();
         }
@@ -112,6 +113,8 @@ public class DivingSceneManager : MonoBehaviour
 
         // rodar Cutcene do player subir na corda 
 
+        _playerAttackBox.SetActive(false);
+
         /* substituir player pelo outro com novo sistema(Não ataca nem nada, na subida apenas desviar dos obstaculos
            e predadores) */
 
@@ -138,6 +141,7 @@ public class DivingSceneManager : MonoBehaviour
     {
        // gameManager.BankMoney += Money;
        // gameManager.BankDiamantes += Diamantes;
+       _isUp = false;
         audioManager.IsPaused = true;
         IsVitoria = true;
         SceneManager.LoadScene("Vitoria", LoadSceneMode.Additive);
@@ -171,7 +175,7 @@ public class DivingSceneManager : MonoBehaviour
 
     private IEnumerator UnloadSceneDelayed()
     {
-        yield return new WaitForSeconds(10);
+        yield return new WaitForSeconds(5);
 
         // Descarrega a cena pelo nome
         SceneManager.UnloadSceneAsync("Stage1");

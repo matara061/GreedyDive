@@ -61,6 +61,11 @@ public class Player : MonoBehaviour
         {
             StartCoroutine(ReativarColliderAposDelay(segundos));
         }
+
+        if(diveManager._isUp)
+        {
+            animator.SetBool("IsUp", true);
+        }
     }
 
     private void FixedUpdate()

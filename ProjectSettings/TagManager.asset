@@ -27,6 +27,7 @@ TagManager:
   - PlayerAttackHitbox
   - Revive
   - Rewardx2
+  - Spaw
   layers:
   - Default
   - TransparentFX
