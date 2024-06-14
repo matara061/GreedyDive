@@ -12,7 +12,6 @@ public class Diario : MonoBehaviour
     public GameObject[] _contentBox;
     public GameObject[] _aviso;
 
-
     void Start()
     {
         gameManager = FindAnyObjectByType<GameManager>();
@@ -22,7 +21,11 @@ public class Diario : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if(gameManager == null)
+        {
+            gameManager = FindAnyObjectByType<GameManager>();
+            DisplayDiario();
+        }
     }
 
     public void DisplayDiario()

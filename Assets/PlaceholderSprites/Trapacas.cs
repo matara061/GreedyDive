@@ -10,8 +10,7 @@ public class Trapacas : MonoBehaviour
 {
 
     public GameManager gameManager;
-    public AudioManager audioManager;
-    // Start is called before the first frame update
+    
     void Start()
     {
         gameManager = FindAnyObjectByType<GameManager>();
@@ -20,7 +19,10 @@ public class Trapacas : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if(gameManager ==  null)
+        {
+            gameManager = FindAnyObjectByType<GameManager>();
+        }
     }
 
     public void GoldPlus()

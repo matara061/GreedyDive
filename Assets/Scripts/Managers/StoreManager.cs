@@ -855,5 +855,10 @@ public class StoreManager : MonoBehaviour
         }
     }
 
+    public void PlaySong()
+    {
+        audioManager.PlaySFX(audioManager.botao);
+    }
+
 
 }

@@ -1984,10 +1984,10 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 223815996}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 85.063, y: 60.375}
-  m_SizeDelta: {x: 140.126, y: 78.593}
+  m_AnchorMin: {x: 0.5, y: 0}
+  m_AnchorMax: {x: 0.5, y: 0}
+  m_AnchoredPosition: {x: -0.0000009536743, y: 105}
+  m_SizeDelta: {x: 165.177, y: 133.25}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1255317199
 MonoBehaviour:
@@ -2035,6 +2035,18 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1204093180}
         m_TargetAssemblyTypeName: StoreManager, Assembly-CSharp
+        m_MethodName: PlaySong
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1204093180}
+        m_TargetAssemblyTypeName: StoreManager, Assembly-CSharp
         m_MethodName: Sair
         m_Mode: 1
         m_Arguments:
@@ -2065,9 +2077,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: -1775488064, guid: 45e88ddefa2ad4e4d8a6c873c250d8e3, type: 3}
+  m_Sprite: {fileID: 21300000, guid: cb32bf3ba0dcde145962b26b0821f199, type: 3}
   m_Type: 0
-  m_PreserveAspect: 0
+  m_PreserveAspect: 1
   m_FillCenter: 1
   m_FillMethod: 4
   m_FillAmount: 1
