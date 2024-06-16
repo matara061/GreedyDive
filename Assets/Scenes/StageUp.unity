@@ -265,6 +265,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: BG2
       objectReference: {fileID: 0}
+    - target: {fileID: 5320654288323718685, guid: bf7b3d8c11511554d81b6b19799794b8, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -519,10 +523,14 @@ PrefabInstance:
     - target: {fileID: 4998592484357430675, guid: 8fc0d38f7de7c3a4f8b671f24d4d9691, type: 3}
       propertyPath: prefabs.Array.data[1]
       value: 
-      objectReference: {fileID: 8801970771614308063, guid: 1e2e9ea0b7184204abe3d04056333016, type: 3}
+      objectReference: {fileID: 5822774205267944783, guid: 53b75343484c0a44fa154f87e445054d, type: 3}
     - target: {fileID: 7440711504960124070, guid: 8fc0d38f7de7c3a4f8b671f24d4d9691, type: 3}
       propertyPath: m_Name
       value: spawPredadores1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7440711504960124070, guid: 8fc0d38f7de7c3a4f8b671f24d4d9691, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
