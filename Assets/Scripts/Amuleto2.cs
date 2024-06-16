@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Amuleto2 : MonoBehaviour
 {
-    GameManager gameManager;
+    [SerializeField] private GameManager gameManager;
 
     public GameObject bolhaSpawner;
 

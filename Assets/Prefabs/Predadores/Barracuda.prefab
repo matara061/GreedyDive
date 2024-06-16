@@ -166,11 +166,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4591ac88cab57294d9f70301a83ad39a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _maxHp: 20
-  _inicialSpeed: 3
+  _maxHp: 35
+  _inicialSpeed: 3.2
   _speed: 0
-  Damage: 10
-  _moedas: 20
+  Damage: 18
+  _moedas: 110
   _diamantes: 0
   tiltSpeed: 2
   _rotationSpeed: 100
@@ -195,6 +195,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _playerAwarenessDistance: 3
   _playerAttackDistance: 1
+  _playerMaxDistance: 0
 --- !u!1 &3875540154295061347
 GameObject:
   m_ObjectHideFlags: 0

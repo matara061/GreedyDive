@@ -69,8 +69,16 @@ PrefabInstance:
       value: 1.75
       objectReference: {fileID: 0}
     - target: {fileID: 7179098276420678116, guid: 303ab627386c0e84fba20072166602f1, type: 3}
+      propertyPath: Damage
+      value: 34
+      objectReference: {fileID: 0}
+    - target: {fileID: 7179098276420678116, guid: 303ab627386c0e84fba20072166602f1, type: 3}
       propertyPath: _maxHp
-      value: 100
+      value: 70
+      objectReference: {fileID: 0}
+    - target: {fileID: 7179098276420678116, guid: 303ab627386c0e84fba20072166602f1, type: 3}
+      propertyPath: _moedas
+      value: 180
       objectReference: {fileID: 0}
     - target: {fileID: 7179098276420678116, guid: 303ab627386c0e84fba20072166602f1, type: 3}
       propertyPath: _diamantes
@@ -78,7 +86,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7179098276420678116, guid: 303ab627386c0e84fba20072166602f1, type: 3}
       propertyPath: _inicialSpeed
-      value: 3.2
+      value: 3.5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

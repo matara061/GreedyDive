@@ -30,8 +30,9 @@ public class DivingSceneManager : MonoBehaviour
 
     [SerializeField] private GameObject _limitArea;
     [SerializeField] private GameObject _playerAttackBox;
+    [SerializeField] private GameObject _paredeTeto;
 
-    public float depthSpeed = 1f; // Velocidade de avanço da profundidade
+    public float depthSpeed = 3f; // Velocidade de avanço da profundidade
 
     // Start is called before the first frame update
     void Start()
@@ -44,7 +45,7 @@ public class DivingSceneManager : MonoBehaviour
             
             if (gameManager.AmuletoAtivo[2]) // Profundidade avança + rapido
             {
-                ChangeDepthSpeed(1.5f);
+                ChangeDepthSpeed(3.5f);
             }
 
             if (gameManager.AmuletoAtivo[3]) // + tempo de invencibilidade
@@ -114,12 +115,13 @@ public class DivingSceneManager : MonoBehaviour
         // rodar Cutcene do player subir na corda 
 
         _playerAttackBox.SetActive(false);
+        _paredeTeto.SetActive(true);
 
         /* substituir player pelo outro com novo sistema(Não ataca nem nada, na subida apenas desviar dos obstaculos
            e predadores) */
 
         // subida vai mais rapido (dps calcular para dar certinho 17% do O2)
-        ChangeDepthSpeed(-3f);
+        ChangeDepthSpeed(-6f);
 
         // desativar o collider no topo 
         _limitArea.SetActive(false);

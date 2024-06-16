@@ -649,7 +649,7 @@ Transform:
   m_GameObject: {fileID: 223170761}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.85, y: 9.62, z: 0}
+  m_LocalPosition: {x: -0.85, y: 14.84, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1474,6 +1474,7 @@ MonoBehaviour:
   _isUp: 0
   _limitArea: {fileID: 2081531702}
   _playerAttackBox: {fileID: 594895729}
+  _paredeTeto: {fileID: 1158131493}
   depthSpeed: 1
 --- !u!4 &545136731
 Transform:
@@ -1836,7 +1837,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.19438982, y: 0.97068596}
+  m_Offset: {x: 0.19438982, y: 4.2279577}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -1847,7 +1848,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.61122036, y: 25.920074}
+  m_Size: {x: 0.61122036, y: 32.434616}
   m_EdgeRadius: 0
 --- !u!1 &652516608
 GameObject:
@@ -1913,7 +1914,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.19438982, y: -0.66144276}
+  m_Offset: {x: 0.19438982, y: 2.4729118}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -1924,7 +1925,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.61122036, y: 24.968103}
+  m_Size: {x: 0.61122036, y: 31.236813}
   m_EdgeRadius: 0
 --- !u!1 &698238631
 GameObject:
@@ -3407,6 +3408,7 @@ Transform:
   - {fileID: 1631615493}
   - {fileID: 639758416}
   - {fileID: 1789984727}
+  - {fileID: 1158131494}
   - {fileID: 140082714}
   - {fileID: 223170762}
   - {fileID: 757342475}
@@ -3444,6 +3446,83 @@ Transform:
   m_Children: []
   m_Father: {fileID: 557338787}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1158131493
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1158131494}
+  - component: {fileID: 1158131495}
+  m_Layer: 3
+  m_Name: parede (7)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &1158131494
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1158131493}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.85, y: 5.04, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1139178385}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!61 &1158131495
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1158131493}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.24951494, y: 0.20500565}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 5.6165733, y: 0.4849434}
+  m_EdgeRadius: 0
 --- !u!4 &1185253290 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4580293471577044631, guid: 428e9198346a1f947a3e06e2f2a4ca2e, type: 3}

@@ -168,11 +168,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5370729425001066506, guid: 266302dacc7951242a7594e6d32dfe00, type: 3}
       propertyPath: _moeda
-      value: 50
+      value: 60
       objectReference: {fileID: 0}
     - target: {fileID: 5370729425001066506, guid: 266302dacc7951242a7594e6d32dfe00, type: 3}
       propertyPath: swimSpeed
-      value: 2.6
+      value: 3.5
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 2571243353600047332, guid: 266302dacc7951242a7594e6d32dfe00, type: 3}

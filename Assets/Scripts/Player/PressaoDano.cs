@@ -65,6 +65,14 @@ public class PressaoDano : MonoBehaviour
             ChamaDanoCoroutine = ChamaDano();
             StartCoroutine(ChamaDanoCoroutine);
         }
+        else if (depth > 3000 && depth < 4000 && Dano != 4f)
+        {
+            StopCoroutine(ChamaDanoCoroutine);
+            ChamaDanoCoroutine = null;
+            Dano = 4f;
+            ChamaDanoCoroutine = ChamaDano();
+            StartCoroutine(ChamaDanoCoroutine);
+        }
     }
 
     IEnumerator ChamaDano()

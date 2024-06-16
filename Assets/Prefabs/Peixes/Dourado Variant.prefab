@@ -52,6 +52,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: Dourado Variant
       objectReference: {fileID: 0}
+    - target: {fileID: 5370729425001066506, guid: 266302dacc7951242a7594e6d32dfe00, type: 3}
+      propertyPath: _moeda
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5370729425001066506, guid: 266302dacc7951242a7594e6d32dfe00, type: 3}
+      propertyPath: _diamante
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 5370729425001066506, guid: 266302dacc7951242a7594e6d32dfe00, type: 3}
+      propertyPath: swimSpeed
+      value: 3.2
+      objectReference: {fileID: 0}
     - target: {fileID: 6222659825817128530, guid: 266302dacc7951242a7594e6d32dfe00, type: 3}
       propertyPath: m_Sprite
       value: 

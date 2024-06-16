@@ -153,9 +153,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f6db3e67ebf83754a8fdadbc58c40300, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  swimSpeed: 2.4
-  _moeda: 0
-  _diamante: 2
+  swimSpeed: 2.5
+  _moeda: 15
+  _diamante: 0
   rotationSpeed: 50
   tiltSpeed: 5
   bonusAmuleto5: 0

@@ -102,11 +102,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7179098276420678116, guid: 303ab627386c0e84fba20072166602f1, type: 3}
       propertyPath: Damage
-      value: 6
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 7179098276420678116, guid: 303ab627386c0e84fba20072166602f1, type: 3}
       propertyPath: _maxHp
-      value: 15
+      value: 35
       objectReference: {fileID: 0}
     - target: {fileID: 7179098276420678116, guid: 303ab627386c0e84fba20072166602f1, type: 3}
       propertyPath: _moedas
@@ -114,11 +114,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7179098276420678116, guid: 303ab627386c0e84fba20072166602f1, type: 3}
       propertyPath: _diamantes
-      value: 1
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 7179098276420678116, guid: 303ab627386c0e84fba20072166602f1, type: 3}
       propertyPath: _inicialSpeed
-      value: 2.2
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 811353327174410832, guid: 303ab627386c0e84fba20072166602f1, type: 3}

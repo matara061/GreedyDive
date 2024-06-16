@@ -92,6 +92,22 @@ PrefabInstance:
       propertyPath: _playerAttackDistance
       value: 2.45
       objectReference: {fileID: 0}
+    - target: {fileID: 7179098276420678116, guid: 303ab627386c0e84fba20072166602f1, type: 3}
+      propertyPath: Damage
+      value: 28
+      objectReference: {fileID: 0}
+    - target: {fileID: 7179098276420678116, guid: 303ab627386c0e84fba20072166602f1, type: 3}
+      propertyPath: _maxHp
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 7179098276420678116, guid: 303ab627386c0e84fba20072166602f1, type: 3}
+      propertyPath: _moedas
+      value: 164
+      objectReference: {fileID: 0}
+    - target: {fileID: 7179098276420678116, guid: 303ab627386c0e84fba20072166602f1, type: 3}
+      propertyPath: _inicialSpeed
+      value: 3.2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

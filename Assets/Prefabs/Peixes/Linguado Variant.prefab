@@ -52,6 +52,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Linguado Variant
       objectReference: {fileID: 0}
+    - target: {fileID: 5370729425001066506, guid: 266302dacc7951242a7594e6d32dfe00, type: 3}
+      propertyPath: _moeda
+      value: 67
+      objectReference: {fileID: 0}
+    - target: {fileID: 5370729425001066506, guid: 266302dacc7951242a7594e6d32dfe00, type: 3}
+      propertyPath: swimSpeed
+      value: 3.6
+      objectReference: {fileID: 0}
     - target: {fileID: 6222659825817128530, guid: 266302dacc7951242a7594e6d32dfe00, type: 3}
       propertyPath: m_Sprite
       value: 

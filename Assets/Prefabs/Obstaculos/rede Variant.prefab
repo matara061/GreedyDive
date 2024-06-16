@@ -8,6 +8,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 4499074753780565913, guid: eafd70f7cb64dff4a9c609498ee5d99a, type: 3}
+      propertyPath: dano
+      value: 18
+      objectReference: {fileID: 0}
     - target: {fileID: 5468372519937347025, guid: eafd70f7cb64dff4a9c609498ee5d99a, type: 3}
       propertyPath: m_Sprite
       value: 
