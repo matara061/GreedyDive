@@ -12,6 +12,8 @@ public class Obstaculos : MonoBehaviour
     public float tiltSpeed = 2f; // Velocidade de inclinação
     public Rigidbody2D rb;
 
+    [SerializeField] private Animator anim;
+
     void Start()
     {
         player = FindAnyObjectByType<Player>();
@@ -27,16 +29,17 @@ public class Obstaculos : MonoBehaviour
 
     void OnCollisionEnter2D(Collision2D collision)
     {
-        // Verifica a layer do objeto colidido
-       /* if (gameObject.CompareTag("Barril"))
-        {
-            Destroy(gameObject);
-        }*/
-
+    
         if (collision.gameObject.CompareTag("Player"))
         {
             ObstaculoDano();
-            Destroy(gameObject);
+            if(anim != null)
+            {
+                anim.SetTrigger("Hit");
+                StartCoroutine(WaitForAnimation());
+            }
+            else
+              Destroy(gameObject);
         }
 
         if (collision.gameObject.layer == LayerMask.NameToLayer("Limit"))
@@ -110,5 +113,11 @@ public class Obstaculos : MonoBehaviour
         rb.velocity = new Vector2(speed, 0);
         //transform.Translate(Vector2.right * speed * Time.deltaTime);
         transform.eulerAngles = new Vector2(0, 0);
+    }
+
+    private IEnumerator WaitForAnimation()
+    {
+        yield return new WaitForSeconds(anim.GetCurrentAnimatorStateInfo(0).length);
+        Destroy(gameObject);
     }
 }

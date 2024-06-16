@@ -84,7 +84,7 @@ public class DivingSceneManager : MonoBehaviour
         UpdateScoreText(Money, Diamantes);
         Stage();
 
-        if (depth <= -100 && _isUp)  
+        if (depth <= 0 && _isUp)  
         {
             Fim();
         }
@@ -116,9 +116,6 @@ public class DivingSceneManager : MonoBehaviour
 
         _playerAttackBox.SetActive(false);
         _paredeTeto.SetActive(true);
-
-        /* substituir player pelo outro com novo sistema(Não ataca nem nada, na subida apenas desviar dos obstaculos
-           e predadores) */
 
         // subida vai mais rapido (dps calcular para dar certinho 17% do O2)
         ChangeDepthSpeed(-6f);

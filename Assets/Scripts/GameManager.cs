@@ -16,7 +16,7 @@ public class GameManager : MonoBehaviour,IDataPersistence
 
 
     /*   
-     Amuleto 0 = marcação o2 no tanque
+     Amuleto 0 = mais peixes
     Amuleto 1 = + bolhas de cura
     Amuleto 2 = profundidade avança mais rapido
     Amuleto 3 = + tempo de invencibilidade

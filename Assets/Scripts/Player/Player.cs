@@ -53,7 +53,8 @@ public class Player : MonoBehaviour
         {
             isAlive = false;
             animator.SetTrigger("Die");
-            diveManager.Perdeu();
+            //diveManager.Perdeu();
+            StartCoroutine(WaitForDeathAnimation());
         }
 
 
@@ -141,12 +142,6 @@ public class Player : MonoBehaviour
                 Debug.Log("You Lose");
                 diveManager.Perdeu();
             }
-
-          /*  if (other.gameObject.layer == LayerMask.NameToLayer("Cura"))
-            {
-                Cura();
-
-            }*/
         
         
     }
@@ -208,5 +203,11 @@ public class Player : MonoBehaviour
         boxCollider.enabled = true;
         segundos = 0;
         isCoroutineRunning = false;
+    }
+
+    private IEnumerator WaitForDeathAnimation()
+    {
+        yield return new WaitForSeconds(animator.GetCurrentAnimatorStateInfo(0).length);
+        diveManager.Perdeu();
     }
 }

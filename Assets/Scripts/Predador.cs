@@ -186,7 +186,8 @@ public class Predador : MonoBehaviour
         if (other.gameObject.CompareTag("PlayerAttackHitbox"))
         {
             Debug.Log("predador recebe: " + player.playerDam + " de dano");
-            TakeDamage(player.playerDam);
+            StartCoroutine(WaitPlayerAnimation());
+            //TakeDamage(player.playerDam);
         }
     }
 
@@ -201,7 +202,7 @@ public class Predador : MonoBehaviour
     public void TakeDamage(int damage)
     {
         CurrentHP -= damage;
-        Imunidade(2);
+        Imunidade(3);
     }
 
     void Imunidade(int time)
@@ -258,6 +259,12 @@ public class Predador : MonoBehaviour
         Collider.enabled = true;
         segundos = 0;
         isCoroutineRunning = false;
+    }
+
+    IEnumerator WaitPlayerAnimation()
+    {
+        yield return new WaitForSeconds(3);
+        TakeDamage(player.playerDam);
     }
 
     public void DamagePlayer()

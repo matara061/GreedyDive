@@ -7,6 +7,7 @@ public class Amuleto2 : MonoBehaviour
     [SerializeField] private GameManager gameManager;
 
     public GameObject bolhaSpawner;
+    public GameObject peixeSpawner;
 
     public GameObject[] _predadorSpaw;
     public GameObject[] _obstaculosSpaw;
@@ -18,6 +19,11 @@ public class Amuleto2 : MonoBehaviour
 
         if(gameManager != null)
         {
+            if (gameManager.AmuletoAtivo[0])
+            {
+                peixeSpawner.SetActive(true);
+            }
+
             if (gameManager.AmuletoAtivo[1]) // + bolhas de cura
             {
                 bolhaSpawner.SetActive(true);
