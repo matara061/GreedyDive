@@ -16,6 +16,7 @@ public class FishSwimming : MonoBehaviour
     private GameManager gameManager;
     public GameObject floatingGold;
     public GameObject floatingDiamond;
+    public Animator animator;
    // public FishValue fishValue;
     private DivingSceneManager divingSceneManager;
 
@@ -78,14 +79,21 @@ public class FishSwimming : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Player"))
         {
-            Recompensa();
-            Destroy(gameObject);
+            animator.SetTrigger("Die");
+            StartCoroutine(WaitPlayerAnimation());
         }
 
         if (collision.gameObject.layer == LayerMask.NameToLayer("Limit"))
         {
             Destroy(gameObject);
         }
+    }
+
+    IEnumerator WaitPlayerAnimation()
+    {
+        yield return new WaitForSeconds(1);
+        Recompensa();
+        Destroy(gameObject);
     }
     void AccelerometerMove()
     {

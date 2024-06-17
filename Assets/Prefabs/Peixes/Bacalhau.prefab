@@ -162,6 +162,7 @@ MonoBehaviour:
   bonusAmuleto9: 0
   floatingGold: {fileID: 2040594193857704368, guid: 6915fa67eeafe0c45b2c2106d61a6284, type: 3}
   floatingDiamond: {fileID: 3541394842797513015, guid: f798ac22549fb8246810d6574403619d, type: 3}
+  animator: {fileID: 7998620695611289294}
 --- !u!50 &2228811704069160870
 Rigidbody2D:
   serializedVersion: 4

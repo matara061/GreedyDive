@@ -36,10 +36,12 @@ public class Predador : MonoBehaviour
     public BoxCollider2D Collider;
     private DivingSceneManager diveManager;
     GameManager gameManager;
+    [SerializeField] private Animator anim;
 
     public int CurrentHP;
     private int segundos = 0;
     private bool isCoroutineRunning = false;
+    private bool _died = false;
     public int bonusAmuleto5;
     public int bonusAmuleto9;
 
@@ -97,7 +99,7 @@ public class Predador : MonoBehaviour
             StartCoroutine(ReativarColliderAposDelay(segundos));
         }
 
-        if (CurrentHP <= 0)
+        if (CurrentHP <= 0 && !_died)
         {
             Death();
         }
@@ -213,21 +215,29 @@ public class Predador : MonoBehaviour
 
     void Death()
     {
+        _died = true;
+        anim.SetTrigger("Die");
+        StartCoroutine(WaitDieAnimation());
+    }
+
+    IEnumerator WaitDieAnimation()
+    {
+        yield return new WaitForSeconds(1);
         Recompensa();
         Destroy(gameObject);
     }
 
-   /* void Recompensa()
-    {
-        if(_values != null)
-        {
-            _values.Diamante *= bonusAmuleto5;
-            _values.Moeda *= bonusAmuleto9;
+    /* void Recompensa()
+     {
+         if(_values != null)
+         {
+             _values.Diamante *= bonusAmuleto5;
+             _values.Moeda *= bonusAmuleto9;
 
-            diveManager.Money += _values.Moeda;
-            diveManager.Diamantes += _values.Diamante;
-        }
-    }*/
+             diveManager.Money += _values.Moeda;
+             diveManager.Diamantes += _values.Diamante;
+         }
+     }*/
 
     void Recompensa()
     {

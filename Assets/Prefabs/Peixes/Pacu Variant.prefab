@@ -171,6 +171,10 @@ PrefabInstance:
       value: 22
       objectReference: {fileID: 0}
     - target: {fileID: 5370729425001066506, guid: 266302dacc7951242a7594e6d32dfe00, type: 3}
+      propertyPath: animator
+      value: 
+      objectReference: {fileID: 577884531281833087}
+    - target: {fileID: 5370729425001066506, guid: 266302dacc7951242a7594e6d32dfe00, type: 3}
       propertyPath: swimSpeed
       value: 2.7
       objectReference: {fileID: 0}

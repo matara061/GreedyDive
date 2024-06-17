@@ -344,6 +344,7 @@ MonoBehaviour:
   _rotationSpeed: 100
   _rigidbody: {fileID: 0}
   Collider: {fileID: 2851544306672608673}
+  anim: {fileID: 3835088203353458058}
   CurrentHP: 0
   bonusAmuleto5: 0
   bonusAmuleto9: 0
