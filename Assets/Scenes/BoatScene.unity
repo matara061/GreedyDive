@@ -565,8 +565,8 @@ MonoBehaviour:
     a profundidade avan\xE7a, o mergulhador come\xE7ara a receber dano pela press\xE3o
     do mar. "
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 5dd1d80e5b1cc5b4c95a278ba8510c59, type: 2}
+  m_sharedMaterial: {fileID: -2474653175583854465, guid: 5dd1d80e5b1cc5b4c95a278ba8510c59, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -6364,8 +6364,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Loja de equipamentos
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 5dd1d80e5b1cc5b4c95a278ba8510c59, type: 2}
+  m_sharedMaterial: {fileID: -2474653175583854465, guid: 5dd1d80e5b1cc5b4c95a278ba8510c59, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -6389,7 +6389,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 44.75
+  m_fontSize: 46.45
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -6397,7 +6397,7 @@ MonoBehaviour:
   m_fontSizeMax: 72
   m_fontStyle: 0
   m_HorizontalAlignment: 2
-  m_VerticalAlignment: 256
+  m_VerticalAlignment: 4096
   m_textAlignment: 65535
   m_characterSpacing: 0
   m_wordSpacing: 0
@@ -6498,8 +6498,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Toque nos cantos da tela para se movimentar no barco
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 5dd1d80e5b1cc5b4c95a278ba8510c59, type: 2}
+  m_sharedMaterial: {fileID: -2474653175583854465, guid: 5dd1d80e5b1cc5b4c95a278ba8510c59, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -6531,7 +6531,7 @@ MonoBehaviour:
   m_fontSizeMax: 72
   m_fontStyle: 0
   m_HorizontalAlignment: 2
-  m_VerticalAlignment: 256
+  m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
   m_wordSpacing: 0
@@ -6929,8 +6929,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: "Movimenta\xE7\xE3o no barco"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 5dd1d80e5b1cc5b4c95a278ba8510c59, type: 2}
+  m_sharedMaterial: {fileID: -2474653175583854465, guid: 5dd1d80e5b1cc5b4c95a278ba8510c59, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -6954,7 +6954,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 43.1
+  m_fontSize: 42
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -6962,7 +6962,7 @@ MonoBehaviour:
   m_fontSizeMax: 72
   m_fontStyle: 0
   m_HorizontalAlignment: 1
-  m_VerticalAlignment: 256
+  m_VerticalAlignment: 4096
   m_textAlignment: 65535
   m_characterSpacing: 0
   m_wordSpacing: 0
@@ -9692,8 +9692,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Loja de amuletos
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 5dd1d80e5b1cc5b4c95a278ba8510c59, type: 2}
+  m_sharedMaterial: {fileID: -2474653175583854465, guid: 5dd1d80e5b1cc5b4c95a278ba8510c59, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -9717,7 +9717,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 44.75
+  m_fontSize: 53.3
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -9725,7 +9725,7 @@ MonoBehaviour:
   m_fontSizeMax: 72
   m_fontStyle: 0
   m_HorizontalAlignment: 2
-  m_VerticalAlignment: 256
+  m_VerticalAlignment: 4096
   m_textAlignment: 65535
   m_characterSpacing: 0
   m_wordSpacing: 0
@@ -10272,8 +10272,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Amuletos
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 5dd1d80e5b1cc5b4c95a278ba8510c59, type: 2}
+  m_sharedMaterial: {fileID: -2474653175583854465, guid: 5dd1d80e5b1cc5b4c95a278ba8510c59, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -10297,7 +10297,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 44.75
+  m_fontSize: 53.3
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -10305,7 +10305,7 @@ MonoBehaviour:
   m_fontSizeMax: 72
   m_fontStyle: 0
   m_HorizontalAlignment: 2
-  m_VerticalAlignment: 256
+  m_VerticalAlignment: 4096
   m_textAlignment: 65535
   m_characterSpacing: 0
   m_wordSpacing: 0
@@ -11234,8 +11234,8 @@ MonoBehaviour:
     \n\nNesse loja voce podera comprar melhorias para seus equipamentos: \nArpao:
     mais dano \nRoupa: mais vida\nPes: mais velocidade\nTanque: mais oxigenio"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 5dd1d80e5b1cc5b4c95a278ba8510c59, type: 2}
+  m_sharedMaterial: {fileID: -2474653175583854465, guid: 5dd1d80e5b1cc5b4c95a278ba8510c59, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -13085,8 +13085,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Mergulhando 3
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 5dd1d80e5b1cc5b4c95a278ba8510c59, type: 2}
+  m_sharedMaterial: {fileID: -2474653175583854465, guid: 5dd1d80e5b1cc5b4c95a278ba8510c59, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -13110,7 +13110,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 44.75
+  m_fontSize: 53.3
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -13118,7 +13118,7 @@ MonoBehaviour:
   m_fontSizeMax: 72
   m_fontStyle: 0
   m_HorizontalAlignment: 2
-  m_VerticalAlignment: 256
+  m_VerticalAlignment: 4096
   m_textAlignment: 65535
   m_characterSpacing: 0
   m_wordSpacing: 0
@@ -13517,8 +13517,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Dinheiro
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 5dd1d80e5b1cc5b4c95a278ba8510c59, type: 2}
+  m_sharedMaterial: {fileID: -2474653175583854465, guid: 5dd1d80e5b1cc5b4c95a278ba8510c59, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -13542,7 +13542,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 44.75
+  m_fontSize: 53.3
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -13550,7 +13550,7 @@ MonoBehaviour:
   m_fontSizeMax: 72
   m_fontStyle: 0
   m_HorizontalAlignment: 2
-  m_VerticalAlignment: 256
+  m_VerticalAlignment: 4096
   m_textAlignment: 65535
   m_characterSpacing: 0
   m_wordSpacing: 0
@@ -14831,8 +14831,8 @@ MonoBehaviour:
     para o seu alcance. Mas tome cuidado, nada garante que oque vai vir ser\xE3o
     apenas peixes."
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 5dd1d80e5b1cc5b4c95a278ba8510c59, type: 2}
+  m_sharedMaterial: {fileID: -2474653175583854465, guid: 5dd1d80e5b1cc5b4c95a278ba8510c59, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -18563,7 +18563,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 2146111908}
   m_HandleRect: {fileID: 2146111907}
   m_Direction: 2
-  m_Value: 0.9999998
+  m_Value: 1
   m_Size: 0.43031946
   m_NumberOfSteps: 0
   m_OnValueChanged:
@@ -19079,8 +19079,8 @@ MonoBehaviour:
     o mergulho, seu objetivo \xE9 descer o maximo possivel enquanto tenta pescar
     os peixes no caminho. "
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 5dd1d80e5b1cc5b4c95a278ba8510c59, type: 2}
+  m_sharedMaterial: {fileID: -2474653175583854465, guid: 5dd1d80e5b1cc5b4c95a278ba8510c59, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -24524,8 +24524,8 @@ MonoBehaviour:
     e obstaculos. \n\nAlem de dimunir sua vida, podem tambem empurralo para alem
     do limite da borda superior, gerando um fim de jogo."
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 5dd1d80e5b1cc5b4c95a278ba8510c59, type: 2}
+  m_sharedMaterial: {fileID: -2474653175583854465, guid: 5dd1d80e5b1cc5b4c95a278ba8510c59, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -24823,8 +24823,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Mergulhando 1
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 5dd1d80e5b1cc5b4c95a278ba8510c59, type: 2}
+  m_sharedMaterial: {fileID: -2474653175583854465, guid: 5dd1d80e5b1cc5b4c95a278ba8510c59, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -24848,7 +24848,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 44.75
+  m_fontSize: 53.3
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -24856,7 +24856,7 @@ MonoBehaviour:
   m_fontSizeMax: 72
   m_fontStyle: 0
   m_HorizontalAlignment: 2
-  m_VerticalAlignment: 256
+  m_VerticalAlignment: 4096
   m_textAlignment: 65535
   m_characterSpacing: 0
   m_wordSpacing: 0
@@ -25643,8 +25643,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Mergulhando 2
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 5dd1d80e5b1cc5b4c95a278ba8510c59, type: 2}
+  m_sharedMaterial: {fileID: -2474653175583854465, guid: 5dd1d80e5b1cc5b4c95a278ba8510c59, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -25668,7 +25668,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 44.75
+  m_fontSize: 53.3
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -25676,7 +25676,7 @@ MonoBehaviour:
   m_fontSizeMax: 72
   m_fontStyle: 0
   m_HorizontalAlignment: 2
-  m_VerticalAlignment: 256
+  m_VerticalAlignment: 4096
   m_textAlignment: 65535
   m_characterSpacing: 0
   m_wordSpacing: 0
@@ -28987,8 +28987,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Mecanicas
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 5dd1d80e5b1cc5b4c95a278ba8510c59, type: 2}
+  m_sharedMaterial: {fileID: -2474653175583854465, guid: 5dd1d80e5b1cc5b4c95a278ba8510c59, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -29012,7 +29012,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 44.75
+  m_fontSize: 53.3
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -29020,7 +29020,7 @@ MonoBehaviour:
   m_fontSizeMax: 72
   m_fontStyle: 0
   m_HorizontalAlignment: 2
-  m_VerticalAlignment: 256
+  m_VerticalAlignment: 4096
   m_textAlignment: 65535
   m_characterSpacing: 0
   m_wordSpacing: 0
@@ -29882,8 +29882,8 @@ MonoBehaviour:
     Diamante
     pode ser coletado ao pescar alguns peixes mais raros e comprando na loja de amuletos.'
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 5dd1d80e5b1cc5b4c95a278ba8510c59, type: 2}
+  m_sharedMaterial: {fileID: -2474653175583854465, guid: 5dd1d80e5b1cc5b4c95a278ba8510c59, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -30395,8 +30395,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: "Deseja ver o tutorial ? \n\nVoce pode acessalo a qualquer momento no menu"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 5dd1d80e5b1cc5b4c95a278ba8510c59, type: 2}
+  m_sharedMaterial: {fileID: -2474653175583854465, guid: 5dd1d80e5b1cc5b4c95a278ba8510c59, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -30428,7 +30428,7 @@ MonoBehaviour:
   m_fontSizeMax: 72
   m_fontStyle: 0
   m_HorizontalAlignment: 2
-  m_VerticalAlignment: 256
+  m_VerticalAlignment: 4096
   m_textAlignment: 65535
   m_characterSpacing: 0
   m_wordSpacing: 0
@@ -31828,8 +31828,8 @@ MonoBehaviour:
     para verificar o efeito de cada um deles, cleque no bot\xE3o da direita inferior
     da Loja.\n"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 5dd1d80e5b1cc5b4c95a278ba8510c59, type: 2}
+  m_sharedMaterial: {fileID: -2474653175583854465, guid: 5dd1d80e5b1cc5b4c95a278ba8510c59, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -34034,8 +34034,8 @@ MonoBehaviour:
     voce pode usar todos ao mesmo tempo)\n\nConfira a lista de seus efeitos antes
     de compralos."
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 5dd1d80e5b1cc5b4c95a278ba8510c59, type: 2}
+  m_sharedMaterial: {fileID: -2474653175583854465, guid: 5dd1d80e5b1cc5b4c95a278ba8510c59, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
