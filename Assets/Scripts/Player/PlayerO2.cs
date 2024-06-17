@@ -41,6 +41,11 @@ public class PlayerO2 : MonoBehaviour
             fill.color = NormarColor;
         } 
 
+        if(_diveManager.depth >= 4000)
+        {
+            botao.SetActive(true);
+        }
+
         if (currentOxygen > 0)
         {
             // Diminui o oxigênio com base na taxa de diminuição

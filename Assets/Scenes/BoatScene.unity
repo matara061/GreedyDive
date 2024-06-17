@@ -558,12 +558,12 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: " Durante o mergulho, voce tera esses dois icones indicativos na tela.\n
-    O icone da esquerda \xE9 o tanque de oxigenio. Conforme o tempo passa ele vai
-    diminuindo e se acabar completamente \xE9 fim de jogo.\n\nO numero a cima, \xE9
-    o contador de profundidade.\n\nO icone a direita \xE9 a barra de vida. Conforme
-    a profundidade avan\xE7a, o mergulhador come\xE7ara a receber dano pela press\xE3o
-    do mar. "
+  m_text: "Durante o mergulho, voc\xEA ter\xE1 esses dois \xEDcones indicativos na
+    tela.\r\nO \xEDcone da esquerda \xE9 o tanque de oxig\xEAnio. Conforme o tempo
+    passa, ele vai diminuindo e, se acabar completamente, \xE9 fim de jogo.\r\n\r\nO
+    n\xFAmero acima \xE9 o contador de profundidade.\r\n\r\nO \xEDcone \xE0 direita
+    \xE9 a barra de vida. Conforme a profundidade avan\xE7a, o mergulhador come\xE7ar\xE1
+    a receber dano pela press\xE3o do mar."
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 5dd1d80e5b1cc5b4c95a278ba8510c59, type: 2}
   m_sharedMaterial: {fileID: -2474653175583854465, guid: 5dd1d80e5b1cc5b4c95a278ba8510c59, type: 2}
@@ -2693,7 +2693,7 @@ MonoBehaviour:
   m_Content: {fileID: 918813352}
   m_Horizontal: 0
   m_Vertical: 1
-  m_MovementType: 1
+  m_MovementType: 2
   m_Elasticity: 0.1
   m_Inertia: 1
   m_DecelerationRate: 0.135
@@ -3794,8 +3794,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Lista de efeitos
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 5dd1d80e5b1cc5b4c95a278ba8510c59, type: 2}
+  m_sharedMaterial: {fileID: -2474653175583854465, guid: 5dd1d80e5b1cc5b4c95a278ba8510c59, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -3819,7 +3819,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 44.75
+  m_fontSize: 53.3
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -3827,7 +3827,7 @@ MonoBehaviour:
   m_fontSizeMax: 72
   m_fontStyle: 0
   m_HorizontalAlignment: 2
-  m_VerticalAlignment: 256
+  m_VerticalAlignment: 4096
   m_textAlignment: 65535
   m_characterSpacing: 0
   m_wordSpacing: 0
@@ -5274,8 +5274,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 136.1235, y: -69.9612}
-  m_SizeDelta: {x: 272.247, y: 139.9224}
+  m_AnchoredPosition: {x: 136.1235, y: -54.5812}
+  m_SizeDelta: {x: 272.247, y: 109.1624}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &315801296
 MonoBehaviour:
@@ -5297,10 +5297,10 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Mostra o limite do oxigenio '
+  m_text: Mais peixes
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 5dd1d80e5b1cc5b4c95a278ba8510c59, type: 2}
+  m_sharedMaterial: {fileID: -2474653175583854465, guid: 5dd1d80e5b1cc5b4c95a278ba8510c59, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -5324,8 +5324,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 36
-  m_fontSizeBase: 36
+  m_fontSize: 38
+  m_fontSizeBase: 38
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -5674,7 +5674,7 @@ MonoBehaviour:
   m_Content: {fileID: 1690583386}
   m_Horizontal: 0
   m_Vertical: 1
-  m_MovementType: 1
+  m_MovementType: 2
   m_Elasticity: 0.1
   m_Inertia: 1
   m_DecelerationRate: 0.135
@@ -7400,7 +7400,7 @@ MonoBehaviour:
   m_Content: {fileID: 1592179801}
   m_Horizontal: 0
   m_Vertical: 1
-  m_MovementType: 1
+  m_MovementType: 2
   m_Elasticity: 0.1
   m_Inertia: 1
   m_DecelerationRate: 0.135
@@ -9822,7 +9822,7 @@ MonoBehaviour:
   m_Content: {fileID: 190138265}
   m_Horizontal: 0
   m_Vertical: 1
-  m_MovementType: 1
+  m_MovementType: 2
   m_Elasticity: 0.1
   m_Inertia: 1
   m_DecelerationRate: 0.135
@@ -11230,9 +11230,10 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Ao clicar no icone a esquerda, voce pode entrar na loja de equipamentos.
-    \n\nNesse loja voce podera comprar melhorias para seus equipamentos: \nArpao:
-    mais dano \nRoupa: mais vida\nPes: mais velocidade\nTanque: mais oxigenio"
+  m_text: "Ao clicar no \xEDcone \xE0 esquerda, voc\xEA pode entrar na loja de equipamentos.\r\n\r\nNessa
+    loja, voc\xEA poder\xE1 comprar melhorias para seus equipamentos:\r\n\r\n- Arp\xE3o:
+    mais dano\r\n- Roupa: mais vida\r\n- P\xE9s: mais velocidade\r\n- Tanque: mais
+    oxig\xEAnio"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 5dd1d80e5b1cc5b4c95a278ba8510c59, type: 2}
   m_sharedMaterial: {fileID: -2474653175583854465, guid: 5dd1d80e5b1cc5b4c95a278ba8510c59, type: 2}
@@ -12017,8 +12018,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 140.827, y: -349.80597}
-  m_SizeDelta: {x: 281.654, y: 173.04239}
+  m_AnchoredPosition: {x: 140.827, y: -350.986}
+  m_SizeDelta: {x: 281.654, y: 171.6264}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &679186513
 MonoBehaviour:
@@ -12042,8 +12043,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Menos obstaculos
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 5dd1d80e5b1cc5b4c95a278ba8510c59, type: 2}
+  m_sharedMaterial: {fileID: -2474653175583854465, guid: 5dd1d80e5b1cc5b4c95a278ba8510c59, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -12067,15 +12068,15 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 36
-  m_fontSizeBase: 36
+  m_fontSize: 38
+  m_fontSizeBase: 38
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
   m_HorizontalAlignment: 2
-  m_VerticalAlignment: 512
+  m_VerticalAlignment: 4096
   m_textAlignment: 65535
   m_characterSpacing: 0
   m_wordSpacing: 0
@@ -13291,8 +13292,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 140.827, y: -675.1908}
-  m_SizeDelta: {x: 281.654, y: 131.6424}
+  m_AnchoredPosition: {x: 140.827, y: -674.7188}
+  m_SizeDelta: {x: 281.654, y: 132.5864}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &811326202
 MonoBehaviour:
@@ -13316,8 +13317,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Gold x2
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 5dd1d80e5b1cc5b4c95a278ba8510c59, type: 2}
+  m_sharedMaterial: {fileID: -2474653175583854465, guid: 5dd1d80e5b1cc5b4c95a278ba8510c59, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -13341,15 +13342,15 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 36
-  m_fontSizeBase: 36
+  m_fontSize: 38
+  m_fontSizeBase: 38
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
   m_HorizontalAlignment: 2
-  m_VerticalAlignment: 512
+  m_VerticalAlignment: 4096
   m_textAlignment: 65535
   m_characterSpacing: 0
   m_wordSpacing: 0
@@ -13866,7 +13867,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 309849587}
   m_HandleRect: {fileID: 309849586}
   m_Direction: 2
-  m_Value: 1
+  m_Value: 0.9999998
   m_Size: 0.43031946
   m_NumberOfSteps: 0
   m_OnValueChanged:
@@ -14826,9 +14827,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Os peixes que voce pode ver durante o mergulho n\xE3o s\xE3o os unicos
-    nadando nesse mar. \n\nTente balan\xE7ar o celular e arrastar os peixes escondidos
-    para o seu alcance. Mas tome cuidado, nada garante que oque vai vir ser\xE3o
+  m_text: "Os peixes que voc\xEA pode ver durante o mergulho n\xE3o s\xE3o os \xFAnicos
+    nadando neste mar.\r\n\r\nTente balan\xE7ar o celular e arrastar os peixes escondidos
+    para o seu alcance. Mas tome cuidado, nada garante que o que vir\xE1 ser\xE3o
     apenas peixes."
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 5dd1d80e5b1cc5b4c95a278ba8510c59, type: 2}
@@ -15680,8 +15681,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 140.827, y: -65.8212}
-  m_SizeDelta: {x: 281.654, y: 131.6424}
+  m_AnchoredPosition: {x: 140.827, y: -66.2932}
+  m_SizeDelta: {x: 281.654, y: 132.5864}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &974029485
 MonoBehaviour:
@@ -15705,8 +15706,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Diamantes x2
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 5dd1d80e5b1cc5b4c95a278ba8510c59, type: 2}
+  m_sharedMaterial: {fileID: -2474653175583854465, guid: 5dd1d80e5b1cc5b4c95a278ba8510c59, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -15730,15 +15731,15 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 36
-  m_fontSizeBase: 36
+  m_fontSize: 38
+  m_fontSizeBase: 38
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
   m_HorizontalAlignment: 2
-  m_VerticalAlignment: 512
+  m_VerticalAlignment: 4096
   m_textAlignment: 65535
   m_characterSpacing: 0
   m_wordSpacing: 0
@@ -17176,7 +17177,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1445097439}
   m_HandleRect: {fileID: 1445097438}
   m_Direction: 2
-  m_Value: 1
+  m_Value: 0.9999998
   m_Size: 0.43031946
   m_NumberOfSteps: 0
   m_OnValueChanged:
@@ -18563,7 +18564,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 2146111908}
   m_HandleRect: {fileID: 2146111907}
   m_Direction: 2
-  m_Value: 1
+  m_Value: 0.9999998
   m_Size: 0.43031946
   m_NumberOfSteps: 0
   m_OnValueChanged:
@@ -19075,9 +19076,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: " Ao clicar no icone da esquerda, voce iniciara o mergulho. \n\n Durante
-    o mergulho, seu objetivo \xE9 descer o maximo possivel enquanto tenta pescar
-    os peixes no caminho. "
+  m_text: "Ao clicar no \xEDcone da esquerda, voc\xEA iniciar\xE1 o mergulho.\r\n\r\nDurante
+    o mergulho, seu objetivo \xE9 descer o m\xE1ximo poss\xEDvel enquanto tenta pescar
+    os peixes no caminho."
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 5dd1d80e5b1cc5b4c95a278ba8510c59, type: 2}
   m_sharedMaterial: {fileID: -2474653175583854465, guid: 5dd1d80e5b1cc5b4c95a278ba8510c59, type: 2}
@@ -19318,8 +19319,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 136.1235, y: -531.12836}
-  m_SizeDelta: {x: 272.247, y: 139.9224}
+  m_AnchoredPosition: {x: 136.1235, y: -518.7084}
+  m_SizeDelta: {x: 272.247, y: 148.2024}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1235347492
 MonoBehaviour:
@@ -19343,8 +19344,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Mais tempo de invencibilidade
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 5dd1d80e5b1cc5b4c95a278ba8510c59, type: 2}
+  m_sharedMaterial: {fileID: -2474653175583854465, guid: 5dd1d80e5b1cc5b4c95a278ba8510c59, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -19368,8 +19369,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 36
-  m_fontSizeBase: 36
+  m_fontSize: 38
+  m_fontSizeBase: 38
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -21105,7 +21106,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 401005053}
   m_HandleRect: {fileID: 401005052}
   m_Direction: 2
-  m_Value: 1
+  m_Value: 0.9999998
   m_Size: 0.43031946
   m_NumberOfSteps: 0
   m_OnValueChanged:
@@ -21368,7 +21369,7 @@ MonoBehaviour:
   m_Content: {fileID: 220720562}
   m_Horizontal: 0
   m_Vertical: 1
-  m_MovementType: 1
+  m_MovementType: 2
   m_Elasticity: 0.1
   m_Inertia: 1
   m_DecelerationRate: 0.135
@@ -21591,8 +21592,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 136.1235, y: -671.0508}
-  m_SizeDelta: {x: 272.247, y: 139.9224}
+  m_AnchoredPosition: {x: 136.1235, y: -666.91077}
+  m_SizeDelta: {x: 272.247, y: 148.2024}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1396100336
 MonoBehaviour:
@@ -21616,8 +21617,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: "Menos dano de press\xE3o"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 5dd1d80e5b1cc5b4c95a278ba8510c59, type: 2}
+  m_sharedMaterial: {fileID: -2474653175583854465, guid: 5dd1d80e5b1cc5b4c95a278ba8510c59, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -21641,8 +21642,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 36
-  m_fontSizeBase: 36
+  m_fontSize: 38
+  m_fontSizeBase: 38
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -22064,8 +22065,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 140.827, y: -197.4636}
-  m_SizeDelta: {x: 281.654, y: 131.6424}
+  m_AnchoredPosition: {x: 140.827, y: -198.8796}
+  m_SizeDelta: {x: 281.654, y: 132.5864}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1416367814
 MonoBehaviour:
@@ -22089,8 +22090,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Cura x2
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 5dd1d80e5b1cc5b4c95a278ba8510c59, type: 2}
+  m_sharedMaterial: {fileID: -2474653175583854465, guid: 5dd1d80e5b1cc5b4c95a278ba8510c59, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -22114,15 +22115,15 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 36
-  m_fontSizeBase: 36
+  m_fontSize: 38
+  m_fontSizeBase: 38
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
   m_HorizontalAlignment: 2
-  m_VerticalAlignment: 512
+  m_VerticalAlignment: 4096
   m_textAlignment: 65535
   m_characterSpacing: 0
   m_wordSpacing: 0
@@ -24520,9 +24521,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Durante o mergulho, o mergulhador tambem deve se preocupar com os predadores
-    e obstaculos. \n\nAlem de dimunir sua vida, podem tambem empurralo para alem
-    do limite da borda superior, gerando um fim de jogo."
+  m_text: "Durante o mergulho, o mergulhador tamb\xE9m deve se preocupar com os predadores
+    e obst\xE1culos.\r\n\r\nAl\xE9m de diminuir sua vida, podem tamb\xE9m empurr\xE1-lo
+    para al\xE9m do limite da borda superior, gerando um fim de jogo."
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 5dd1d80e5b1cc5b4c95a278ba8510c59, type: 2}
   m_sharedMaterial: {fileID: -2474653175583854465, guid: 5dd1d80e5b1cc5b4c95a278ba8510c59, type: 2}
@@ -25153,8 +25154,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 140.827, y: -522.8484}
-  m_SizeDelta: {x: 281.654, y: 173.04239}
+  m_AnchoredPosition: {x: 140.827, y: -522.6124}
+  m_SizeDelta: {x: 281.654, y: 171.6264}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1587492667
 MonoBehaviour:
@@ -25178,8 +25179,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Menos predadores
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 5dd1d80e5b1cc5b4c95a278ba8510c59, type: 2}
+  m_sharedMaterial: {fileID: -2474653175583854465, guid: 5dd1d80e5b1cc5b4c95a278ba8510c59, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -25203,15 +25204,15 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 36
-  m_fontSizeBase: 36
+  m_fontSize: 38
+  m_fontSizeBase: 38
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
   m_HorizontalAlignment: 2
-  m_VerticalAlignment: 512
+  m_VerticalAlignment: 4096
   m_textAlignment: 65535
   m_characterSpacing: 0
   m_wordSpacing: 0
@@ -27144,7 +27145,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 184142786}
   m_HandleRect: {fileID: 184142785}
   m_Direction: 2
-  m_Value: 1
+  m_Value: 0.9999998
   m_Size: 0.43031946
   m_NumberOfSteps: 0
   m_OnValueChanged:
@@ -27243,7 +27244,7 @@ MonoBehaviour:
   m_Content: {fileID: 1003677702}
   m_Horizontal: 0
   m_Vertical: 1
-  m_MovementType: 1
+  m_MovementType: 2
   m_Elasticity: 0.1
   m_Inertia: 1
   m_DecelerationRate: 0.135
@@ -28021,7 +28022,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1308550420}
   m_HandleRect: {fileID: 1308550419}
   m_Direction: 2
-  m_Value: 1
+  m_Value: 0.9999998
   m_Size: 0.4085402
   m_NumberOfSteps: 0
   m_OnValueChanged:
@@ -29873,14 +29874,10 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Em Greedy Diver ha dois tipos de moedas, o "Gold" a mais comum e o "Dimante"
-    o mais raro.
-
-
-    Gold pode ser coletado ao pescar peixes durante o mergulho.
-
-    Diamante
-    pode ser coletado ao pescar alguns peixes mais raros e comprando na loja de amuletos.'
+  m_text: "Em Greedy Diver h\xE1 dois tipos de moedas, o \"Ouro\" que \xE9 mais comum
+    e o \"Diamante\" que \xE9 mais raro.\r\n\r\nOuro pode ser coletado ao pescar
+    peixes durante o mergulho.\r\nDiamante pode ser coletado ao pescar alguns peixes
+    mais raros."
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 5dd1d80e5b1cc5b4c95a278ba8510c59, type: 2}
   m_sharedMaterial: {fileID: -2474653175583854465, guid: 5dd1d80e5b1cc5b4c95a278ba8510c59, type: 2}
@@ -30888,7 +30885,7 @@ MonoBehaviour:
   m_Content: {fileID: 1591346354}
   m_Horizontal: 0
   m_Vertical: 1
-  m_MovementType: 1
+  m_MovementType: 2
   m_Elasticity: 0.1
   m_Inertia: 1
   m_DecelerationRate: 0.135
@@ -31211,8 +31208,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 136.1235, y: -209.88359}
-  m_SizeDelta: {x: 272.247, y: 139.9224}
+  m_AnchoredPosition: {x: 136.1235, y: -183.2636}
+  m_SizeDelta: {x: 272.247, y: 148.2024}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2011585890
 MonoBehaviour:
@@ -31236,8 +31233,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Mais bolhas de cura
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 5dd1d80e5b1cc5b4c95a278ba8510c59, type: 2}
+  m_sharedMaterial: {fileID: -2474653175583854465, guid: 5dd1d80e5b1cc5b4c95a278ba8510c59, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -31261,8 +31258,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 36
-  m_fontSizeBase: 36
+  m_fontSize: 38
+  m_fontSizeBase: 38
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -31510,8 +31507,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 136.1235, y: -370.50598}
-  m_SizeDelta: {x: 272.247, y: 181.32239}
+  m_AnchoredPosition: {x: 136.1235, y: -350.98602}
+  m_SizeDelta: {x: 272.247, y: 187.2424}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2030721598
 MonoBehaviour:
@@ -31535,8 +31532,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: "Profundidade avan\xE7a mais rapido"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 5dd1d80e5b1cc5b4c95a278ba8510c59, type: 2}
+  m_sharedMaterial: {fileID: -2474653175583854465, guid: 5dd1d80e5b1cc5b4c95a278ba8510c59, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -31560,8 +31557,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 36
-  m_fontSizeBase: 36
+  m_fontSize: 38
+  m_fontSizeBase: 38
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -31823,10 +31820,10 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Ao clicar no icone a esquerda, voce pode entrar na loja de amuletos. \n\nNesse
-    loja voce podera comprar amuletos que dao uma serie de bonus durante o jogo,
-    para verificar o efeito de cada um deles, cleque no bot\xE3o da direita inferior
-    da Loja.\n"
+  m_text: "Ao clicar no \xEDcone \xE0 esquerda, voc\xEA pode entrar na loja de amuletos.\r\n\r\nNessa
+    loja, voc\xEA poder\xE1 comprar amuletos que d\xE3o uma s\xE9rie de b\xF4nus
+    durante o jogo. Para verificar o efeito de cada um deles, clique no bot\xE3o
+    da direita inferior da Loja."
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 5dd1d80e5b1cc5b4c95a278ba8510c59, type: 2}
   m_sharedMaterial: {fileID: -2474653175583854465, guid: 5dd1d80e5b1cc5b4c95a278ba8510c59, type: 2}
@@ -33919,7 +33916,7 @@ MonoBehaviour:
   m_Content: {fileID: 336496053}
   m_Horizontal: 0
   m_Vertical: 1
-  m_MovementType: 1
+  m_MovementType: 2
   m_Elasticity: 0.1
   m_Inertia: 1
   m_DecelerationRate: 0.135
@@ -34029,10 +34026,10 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Os amuletos, apesar de caros,  podem trazer uma serie de beneficios durante
-    o jogo. Depois de comprados, voce pode ativalos ou desativalos pelo menu. \n(Dica,
-    voce pode usar todos ao mesmo tempo)\n\nConfira a lista de seus efeitos antes
-    de compralos."
+  m_text: "Os amuletos, apesar de caros, podem trazer uma s\xE9rie de benef\xEDcios
+    durante o jogo. Depois de comprados, voc\xEA pode ativ\xE1-los ou desativ\xE1-los
+    pelo menu.\r\n(Dica, voc\xEA pode usar todos ao mesmo tempo)\r\n\r\nConfira a
+    lista de seus efeitos antes de compr\xE1-los."
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 5dd1d80e5b1cc5b4c95a278ba8510c59, type: 2}
   m_sharedMaterial: {fileID: -2474653175583854465, guid: 5dd1d80e5b1cc5b4c95a278ba8510c59, type: 2}
