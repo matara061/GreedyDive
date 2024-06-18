@@ -84,7 +84,7 @@ public class DivingSceneManager : MonoBehaviour
         UpdateScoreText(Money, Diamantes);
         Stage();
 
-        if (depth <= 0 && _isUp)  
+        if (depth <= -200 && _isUp)  
         {
             Fim();
         }
