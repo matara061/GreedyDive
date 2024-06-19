@@ -34,7 +34,7 @@ public class MovimentJoystick : MonoBehaviour
     {
         PointerEventData pointerEventData = baseEventData as PointerEventData;
         Vector2 dragPos = pointerEventData.position;
-        joystickVec = (dragPos - joystickOriginalPos).normalized;
+        joystickVec = (dragPos - joystickTouchPos).normalized; // joystickOriginalPos
 
         float joystickDist = Vector2.Distance(dragPos, joystickTouchPos);
 
