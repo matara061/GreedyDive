@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6055822006841836666}
   - component: {fileID: 5468372519937347025}
+  - component: {fileID: 3389323327401741410}
   m_Layer: 8
   m_Name: imagem
   m_TagString: Untagged
@@ -84,6 +85,27 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!95 &3389323327401741410
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5743810235570401946}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 31956f4dd0b6f394c98fdbfc82c343af, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &7550547416566390387
 GameObject:
   m_ObjectHideFlags: 0
@@ -208,3 +230,4 @@ MonoBehaviour:
   speed: 25
   tiltSpeed: 10
   rb: {fileID: 5453101167782845662}
+  anim: {fileID: 3389323327401741410}

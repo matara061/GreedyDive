@@ -1311,7 +1311,7 @@ PrefabInstance:
       objectReference: {fileID: 2086477353}
     - target: {fileID: 7343373988970750052, guid: 78fd0713a91e06c4cb400110d9b9e153, type: 3}
       propertyPath: seconds
-      value: 60
+      value: 45
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -2199,7 +2199,7 @@ PrefabInstance:
       objectReference: {fileID: 2086477353}
     - target: {fileID: 7343373988970750052, guid: 78fd0713a91e06c4cb400110d9b9e153, type: 3}
       propertyPath: seconds
-      value: 40
+      value: 30
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

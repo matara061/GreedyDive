@@ -117,7 +117,7 @@ public class Obstaculos : MonoBehaviour
 
     private IEnumerator WaitForAnimation()
     {
-        yield return new WaitForSeconds(anim.GetCurrentAnimatorStateInfo(0).length);
-        Destroy(gameObject);
+        yield return new WaitForSeconds(2);
+        Destroy(gameObject); // anim.GetCurrentAnimatorStateInfo(0).length
     }
 }

@@ -12606,9 +12606,10 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Quando seu oxigenio estiver acabando, aparecera uma indicador de subida,
-    ao clicar nele voce podera come\xE7ar a subir devolta para o barco e finalizar
-    a partida. "
+  m_text: "Para savar o ouro e diamantes que voce coletou durante o mergulho, voce
+    deve retornar a superficie vivo. Ao clicar no icone a esquerda, voce come\xE7ara
+    a subida. \n\nMas tome cuidado com o nivel do seu oxigenio, se ele for menor
+    que certa quantidade, voce n\xE3o conseguira voltar."
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 5dd1d80e5b1cc5b4c95a278ba8510c59, type: 2}
   m_sharedMaterial: {fileID: -2474653175583854465, guid: 5dd1d80e5b1cc5b4c95a278ba8510c59, type: 2}
@@ -14322,7 +14323,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Gold x2
+  m_text: Ouro x2
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 5dd1d80e5b1cc5b4c95a278ba8510c59, type: 2}
   m_sharedMaterial: {fileID: -2474653175583854465, guid: 5dd1d80e5b1cc5b4c95a278ba8510c59, type: 2}
@@ -14874,7 +14875,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 309849587}
   m_HandleRect: {fileID: 309849586}
   m_Direction: 2
-  m_Value: 1
+  m_Value: 0.9999998
   m_Size: 0.43031946
   m_NumberOfSteps: 0
   m_OnValueChanged:
@@ -17340,7 +17341,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: e152cf9fc4c8fec46b370ef25a00fd4e, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 6f490935bfd4a5c468da1d6fc4a69c06, type: 3}
   m_Type: 0
   m_PreserveAspect: 1
   m_FillCenter: 1
@@ -18331,7 +18332,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1445097439}
   m_HandleRect: {fileID: 1445097438}
   m_Direction: 2
-  m_Value: 1
+  m_Value: 0.9999998
   m_Size: 0.43031946
   m_NumberOfSteps: 0
   m_OnValueChanged:
@@ -20008,7 +20009,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 2146111908}
   m_HandleRect: {fileID: 2146111907}
   m_Direction: 2
-  m_Value: 1
+  m_Value: 0.9999998
   m_Size: 0.43031946
   m_NumberOfSteps: 0
   m_OnValueChanged:
@@ -22794,7 +22795,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 401005053}
   m_HandleRect: {fileID: 401005052}
   m_Direction: 2
-  m_Value: 1
+  m_Value: 0.9999998
   m_Size: 0.43031946
   m_NumberOfSteps: 0
   m_OnValueChanged:
@@ -25670,7 +25671,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1234503149}
   m_HandleRect: {fileID: 1234503148}
   m_Direction: 2
-  m_Value: 1.0000002
+  m_Value: 0.9999998
   m_Size: 0.67477626
   m_NumberOfSteps: 0
   m_OnValueChanged:
@@ -29444,7 +29445,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 184142786}
   m_HandleRect: {fileID: 184142785}
   m_Direction: 2
-  m_Value: 1
+  m_Value: 0.9999998
   m_Size: 0.43031946
   m_NumberOfSteps: 0
   m_OnValueChanged:
@@ -29945,8 +29946,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0.5}
   m_AnchorMax: {x: 1, y: 0.5}
-  m_AnchoredPosition: {x: -122.34, y: -0.000019073}
-  m_SizeDelta: {x: 244.68, y: 230.785}
+  m_AnchoredPosition: {x: -126.476, y: -3.671}
+  m_SizeDelta: {x: 252.952, y: 238.127}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1752617649
 MonoBehaviour:
@@ -29968,7 +29969,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 697f2903d19353e41b289eff8e0297d2, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 3197099714b20a84fa0e362f3e747704, type: 3}
   m_Type: 0
   m_PreserveAspect: 1
   m_FillCenter: 1
@@ -30396,7 +30397,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1308550420}
   m_HandleRect: {fileID: 1308550419}
   m_Direction: 2
-  m_Value: 1
+  m_Value: 0.9999998
   m_Size: 0.4085402
   m_NumberOfSteps: 0
   m_OnValueChanged:
@@ -34976,8 +34977,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0.5}
   m_AnchorMax: {x: 1, y: 0.5}
-  m_AnchoredPosition: {x: -121.438, y: -0.0000097752}
-  m_SizeDelta: {x: 206.121, y: 217.357}
+  m_AnchoredPosition: {x: -126.8, y: -5}
+  m_SizeDelta: {x: 253.6, y: 251.71}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2059003427
 MonoBehaviour:
@@ -34999,7 +35000,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 11b3c52dc368ce442b882e7be9cabf9b, type: 3}
+  m_Sprite: {fileID: 21300000, guid: cc2fb95fc1211ea458f5a6a2a7a0dc76, type: 3}
   m_Type: 0
   m_PreserveAspect: 1
   m_FillCenter: 1

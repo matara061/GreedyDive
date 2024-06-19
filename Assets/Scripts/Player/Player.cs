@@ -52,7 +52,7 @@ public class Player : MonoBehaviour
         if (CurrentHealth <= 0 && isAlive)
         {
             isAlive = false;
-            animator.SetTrigger("Die");
+            animator.SetBool("Die", true);
             //diveManager.Perdeu();
             StartCoroutine(WaitForDeathAnimation());
         }
@@ -163,6 +163,7 @@ public class Player : MonoBehaviour
         CurrentHealth = MaxHealth;
         playerHealthBar.SetHealth(CurrentHealth);
         isAlive = true;
+        animator.SetBool("Die", false);
         Imunidade(7);
     }
 
