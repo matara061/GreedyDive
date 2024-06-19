@@ -11,6 +11,7 @@ public class PlayerO2 : MonoBehaviour
     public float maxOxygen = 100f; // Quantidade máxima de oxigênio
     public float oxygenDecreaseRate = 0.5f; // Taxa de diminuição de oxigênio por segundo
     public float O2Percentage;
+    public bool _vazio = false;
 
     public Image fill;
 
@@ -52,9 +53,10 @@ public class PlayerO2 : MonoBehaviour
             currentOxygen -= oxygenDecreaseRate * Time.deltaTime;
             UpdateOxygenUI(); // Atualiza a UI do oxigênio
         }
-        else
+        else if(!_vazio)
         {
             // O oxigênio acabou, faça algo aqui (por exemplo, exiba uma mensagem)
+            _vazio = true;
             _diveManager.Perdeu();
         }
     }
@@ -82,6 +84,7 @@ public class PlayerO2 : MonoBehaviour
 
     public void Revive()
     {
+        _vazio = false;
 
         if(currentOxygen <= 0 || O2Percentage <= 0.2f)
         {

@@ -14,7 +14,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/TestesM.unity
     guid: 25d9cd08b5d7b244c9f79b314e6bd240
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/SampleScene.unity
     guid: 3fc8acdd13e6c734bafef6554d6fdbcd
   - enabled: 1
@@ -35,7 +35,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/GameOver.unity
     guid: a946a5b3fdbeed44197a34abf8b93b5d
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Depth_1_Loop.unity
     guid: 847747e7301351b4c825de2bcf65ea5e
   - enabled: 1
