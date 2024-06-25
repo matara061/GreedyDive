@@ -123,7 +123,7 @@ public class Predador : MonoBehaviour
 
     private void UpdateTargetDirection()
     {
-        if(_playerAwarenessController.AwareOfPlayer)
+        if (_playerAwarenessController.AwareOfPlayer || _playerAwarenessController.InAttackRange)
         {
             _targetDirection = _playerAwarenessController.DirectionToPlayer;
         }

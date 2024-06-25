@@ -141,7 +141,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.09828031, y: -0.020186752}
+  m_Offset: {x: -0.033288717, y: -0.029213428}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -152,7 +152,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.2394729, y: 0.5558918}
+  m_Size: {x: 1.1094897, y: 0.47284698}
   m_EdgeRadius: 0
 --- !u!114 &7179098276420678116
 MonoBehaviour:
@@ -176,6 +176,7 @@ MonoBehaviour:
   _rotationSpeed: 100
   _rigidbody: {fileID: 0}
   Collider: {fileID: 143910896151777681}
+  anim: {fileID: 0}
   CurrentHP: 0
   bonusAmuleto5: 0
   bonusAmuleto9: 0
@@ -195,6 +196,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _playerAwarenessDistance: 3
   _playerAttackDistance: 1
+  _playerMaxDistance: 0
 --- !u!1 &7154586447491896127
 GameObject:
   m_ObjectHideFlags: 0
