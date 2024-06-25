@@ -84,7 +84,7 @@ public class DivingSceneManager : MonoBehaviour
         UpdateScoreText(Money, Diamantes);
         Stage();
 
-        if (depth <= -200 && _isUp)  
+        if (depth <= 0 && _isUp)
         {
             Fim();
         }
@@ -117,11 +117,12 @@ public class DivingSceneManager : MonoBehaviour
         _playerAttackBox.SetActive(false);
         _paredeTeto.SetActive(true);
 
-        // subida vai mais rapido (dps calcular para dar certinho 17% do O2)
-        ChangeDepthSpeed(-6f);
+        ChangeDepthSpeed(0f);
 
         // desativar o collider no topo 
         _limitArea.SetActive(false);
+
+        StartCoroutine(EsperaParaSubir());
 
         // aguardar alguns segundos e dar unload no stage1
         StartCoroutine(UnloadSceneDelayed());
@@ -189,6 +190,13 @@ public class DivingSceneManager : MonoBehaviour
             this.barraProgresso.value = asyncOperation.progress;
             yield return null;
         }
+    }
+
+    private IEnumerator EsperaParaSubir()
+    {
+        yield return new WaitForSeconds(3);
+
+        ChangeDepthSpeed(-6f);
     }
 
     IEnumerator RemoveExtraEventSystemsAndListeners()

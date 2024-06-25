@@ -24,10 +24,14 @@ PrefabInstance:
       propertyPath: m_Offset.y
       value: 0.002326727
       objectReference: {fileID: 0}
+    - target: {fileID: 3389323327401741410, guid: eafd70f7cb64dff4a9c609498ee5d99a, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 9a2d5490adb8f2a46a1c4e5074ee573d, type: 2}
     - target: {fileID: 4499074753780565913, guid: eafd70f7cb64dff4a9c609498ee5d99a, type: 3}
       propertyPath: anim
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 2828965063213010344}
     - target: {fileID: 4499074753780565913, guid: eafd70f7cb64dff4a9c609498ee5d99a, type: 3}
       propertyPath: dano
       value: 42
@@ -85,3 +89,8 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: eafd70f7cb64dff4a9c609498ee5d99a, type: 3}
+--- !u!95 &2828965063213010344 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 3389323327401741410, guid: eafd70f7cb64dff4a9c609498ee5d99a, type: 3}
+  m_PrefabInstance: {fileID: 597794745337807306}
+  m_PrefabAsset: {fileID: 0}

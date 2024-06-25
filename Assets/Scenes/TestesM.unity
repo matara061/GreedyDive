@@ -533,6 +533,7 @@ MonoBehaviour:
   maxOxygen: 100
   oxygenDecreaseRate: 0.5
   O2Percentage: 0
+  _vazio: 0
   fill: {fileID: 603369071}
   botao: {fileID: 953593008}
   NormarColor: {r: 0, g: 0, b: 1, a: 1}
@@ -1461,6 +1462,7 @@ MonoBehaviour:
   player: {fileID: 1052478949}
   _playerO2: {fileID: 155353523}
   depth: 0
+  speedChangeTimer: 3
   Money: 0
   Diamantes: 0
   scoreMoney: {fileID: 740408765}
